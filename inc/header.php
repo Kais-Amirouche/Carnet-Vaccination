@@ -17,7 +17,7 @@
             <img src="asset/img/logo.png" width="50px" alt="">
           </div>
           <div class="menu">
-            <li><a href="index.php">Home</a></li>
+            <li><a href="index.php">Acueil</a></li>
            <?php if(isLogged()) { ?>
              <?php if ($_SESSION['user']['role']=='admin'){ ?>
                <li><a href="admin\index.html">admin</a></li>
