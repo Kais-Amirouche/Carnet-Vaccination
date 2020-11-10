@@ -1,3 +1,25 @@
+<?php
+// include('../inc/pdo.php');
+// include('../inc/function.php');
+//
+// $errors = array();
+//
+// if (!empty($_POST['submitted']))
+// {
+//   $nom = cleanXss($_POST['nom']);
+//   $description = cleanXss($_POST['description']);
+//   $age = cleanXss($_POST['age']);
+//
+//   $errors = validationText($errors,$nom,'nom',3,255);
+//   $errors = validationText($errors,$description,'description',20,2000);
+//   $errors = validationText($errors,$age,'age',2,8);
+//   debug($_POST);
+//   debug($errors);
+// } ?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -372,33 +394,46 @@
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Vaccins</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
+                                            <th>Nom</th>
+                                            <th>Description</th>
                                             <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
                                         </tr>
+
+                                        <h6>Ajouter un vaccin</h6>
+                                        <form action="" method="post">
+                                          <label for="nom">Nom</label>
+                                          <input type="text" id="nom" name="nom" value="<?php if(!empty($_POST['nom'])) {echo $_POST['nom'];} ?>">
+                                          <span class="error"><?php if(!empty($errors['nom'])) {echo $errors['nom'];} ?></span>
+
+                                          <label for="description">Description</label>
+                                          <textarea id="description" name="description"><?php if(!empty($_POST['description'])) {echo $_POST['description'];} ?></textarea>
+                                          <span class="error"><?php if(!empty($errors['description'])) {echo $errors['description'];} ?></span>
+
+                                          <label for="age">Age</label>
+                                          <input type="text" id="age" name="age" value="<?php if(!empty($_POST['age'])) {echo $_POST['age'];} ?>">
+                                          <span class="error"><?php if(!empty($errors['age'])) {echo $errors['age'];} ?></span>
+
+                                          <input type="submit" name="submitted" value="Ajouter">
+                                        </form>
+
+
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
+                                            <th>Nom</th>
+                                            <th>Description</th>
                                             <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                        <tr>
+                                        <!-- <tr>
                                             <td>Tiger Nixon</td>
                                             <td>System Architect</td>
                                             <td>Edinburgh</td>
@@ -853,7 +888,7 @@
                                             <td>27</td>
                                             <td>2011/01/25</td>
                                             <td>$112,000</td>
-                                        </tr>
+                                        </tr> -->
                                     </tbody>
                                 </table>
                             </div>
