@@ -1,13 +1,5 @@
 <?php
-include('inc/pdo.php');
-include('inc/function.php');
-
-
-
-
-include('inc/header-front.php');?>
-
-
-
-
-<?php include('inc/footer-front.php'); ?>
+session_start();
+$_SESSION = array();
+session_destroy();
+header('Location: index.php');
