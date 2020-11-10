@@ -74,7 +74,7 @@ function isLogged()
 {
   if(!empty($_SESSION['user'])) {
     if(!empty($_SESSION['user']['id']) && is_numeric($_SESSION['user']['id'])) {
-      if(!empty($_SESSION['user']['pseudo'])) {
+      if(!empty($_SESSION['user']['prenom'])) {
         if(!empty($_SESSION['user']['role'])) {
           if($_SESSION['user']['role'] == 'abonne' || $_SESSION['user']['role'] == 'admin') {
             if(!empty($_SESSION['user']['ip']) && $_SESSION['user']['ip'] == $_SERVER['REMOTE_ADDR']) {
