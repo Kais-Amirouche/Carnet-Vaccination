@@ -8,7 +8,7 @@ echo 'bv';
 br();
 echo 'mon gatte';
 br();
-
+echo 'validé';
 
 include('inc/header-front.php');?>
 
