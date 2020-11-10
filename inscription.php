@@ -9,7 +9,7 @@ $errors = array();
 if(!empty($_POST['submitinscription'])) {
   // Faille xss
   $nom    = cleanXss($_POST['nom']);
-  $prenom    = cleanXss($_POST['prénom']);
+  $prenom    = cleanXss($_POST['prenom']);
   $email     = cleanXss($_POST['email']);
   $password1 = cleanXss($_POST['password1']);
   $password2 = cleanXss($_POST['password2']);
@@ -34,21 +34,21 @@ if(!empty($_POST['submitinscription'])) {
   }
   if(!empty($prenom)) {
     if(mb_strlen($prenom) < 3) {
-      $errors['prénom'] = 'Min 3 caratères';
+      $errors['prenom'] = 'Min 3 caratères';
     } elseif(mb_strlen($prenom) > 50) {
-      $errors['prénom'] = 'Max 50 caratères';
+      $errors['prenom'] = 'Max 50 caratères';
     } else {
       $sql = "SELECT id FROM nf_users WHERE prenom = :prenom";
       $query = $pdo->prepare($sql);
-      $query->bindValue(':prénom',$prenom,PDO::PARAM_STR);
+      $query->bindValue(':prenom',$prenom,PDO::PARAM_STR);
       $query->execute();
       $verifprenom = $query->fetch();
       if(!empty($verifprenom)) {
-        $errors['prénom'] = 'Ce prénom existe déjà';
+        $errors['prenom'] = 'Ce prenom existe déjà';
       }
     }
   } else {
-    $errors['prénom'] = 'Veuillez renseigner ce champ';
+    $errors['prenom'] = 'Veuillez renseigner ce champ';
   }
   // validation email (email valide, unique)
   if(!empty($email)) {
@@ -84,11 +84,12 @@ if(!empty($_POST['submitinscription'])) {
     $hashPassword = password_hash($password1,PASSWORD_DEFAULT);
     $role = 'abonne';
     $token = generateRandomString(120);
-    $sql = "INSERT INTO nf_users (nom,email,password,token,created_at,role)
-                          VALUES (:nom, :email,:password,'$token',NOW(),'$role')";
+    $sql = "INSERT INTO nf_users (nom,prenom,email,password,token,created_at,role)
+                          VALUES (:nom,:prenom, :email,:password,'$token',NOW(),'$role')";
     $query = $pdo->prepare($sql);
     //$query->bindValue(':title',$title,PDO::PARAM_STR);
     $query->bindValue(':nom',$nom,PDO::PARAM_STR);
+    $query->bindValue(':prenom',$nom,PDO::PARAM_STR);
     $query->bindValue(':email',$email,PDO::PARAM_STR);
     $query->bindValue(':password',$hashPassword,PDO::PARAM_STR);
     $query->execute();
@@ -107,8 +108,8 @@ include('inc/header.php'); ?>
       <input type="text" name="nom" id="nom" class="form-control" value="<?php if(!empty($_POST['nom'])) { echo $_POST['nom']; } ?>" placeholder="nom" />
       <span class="error"><?php if(!empty($errors['nom'])) { echo $errors['nom']; } ?></span>
       <!-- nom -->
-        <input type="text" name="prénom" id="prénom" class="form-control" value="<?php if(!empty($_POST['prénom'])) { echo $_POST['prénom']; } ?>" placeholder="prénom" />
-        <span class="error"><?php if(!empty($errors['prénom'])) { echo $errors['prénom']; } ?></span>
+        <input type="text" name="prenom" id="prenom" class="form-control" value="<?php if(!empty($_POST['prenom'])) { echo $_POST['prenom']; } ?>" placeholder="prenom" />
+        <span class="error"><?php if(!empty($errors['prenom'])) { echo $errors['prenom']; } ?></span>
     <!-- EMAIL -->
       <input type="email" name="email" id="email" class="form-control" value="<?php if(!empty($_POST['email'])) { echo $_POST['email']; } ?>" placeholder="Email" />
       <span class="error"><?php if(!empty($errors['email'])) { echo $errors['email']; } ?></span>
