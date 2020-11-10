@@ -7,28 +7,33 @@ $errors = array();
 $switch = false;
 // if form soumis
 if(!empty($_POST['submitmdp'])) {
-  $login    = cleanXss($_POST['login']);
+  // Faille xss
+  $login  = trim(strip_tags($_POST['login']));
+  // validation
+  $errors = ValidationText($errors,$login,'login',3,100);
+  // si no error
+  if(count($errors) == 0) {
+    if(!empty($login)) {
+      // request  users si il ya un user qui a soit email
+      $sql = "SELECT * FROM vac_users WHERE email = :login";
+      $query = $pdo->prepare($sql);
+      $query->bindValue(':login',$login,PDO::PARAM_STR);
+      $query->execute();
+      $user = $query->fetch();
+      debug($user);
+      // die();
+      if(!empty($user)) { // $user existe pas => $error = 'erreur credentials'
+        $switch=true;
+        $email = $user['email'];
+        $token = $user['token'];
 
-  if(!empty($login) && !empty($password)) {
-    // request  users si il ya un user qui a soit email
-    $sql = "SELECT * FROM vac_users WHERE email = :login";
-    $query = $pdo->prepare($sql);
-    $query->bindValue(':login',$login,PDO::PARAM_STR);
-    $query->execute();
-    $user = $query->fetch();
-    // debug($user);
-    // die();
-    if(!empty($user)) { // $user existe pas => $error = 'erreur credentials'
-
-      $switch = true;
-    } else {
-      $errors['login'] = 'Error credentials';
+      } else {
+        $errors['login'] = 'Error credentials';
+        }
     }
-  } else {
-    $errors['login'] = 'Veuillez renseigner les champs';
   }
-
 }
+
 
 
 include('inc/header.php'); ?>
@@ -42,5 +47,5 @@ include('inc/header.php'); ?>
 </form>
 
 <?php }else { ?>
-  <a href="modifmdp.php?email=<?php echo $email ?>&token=<?php echo $token ?>"></a>
+  <a href="modifmdp.php?email=<?php echo $email ?>&token=<?php echo $token ?>">changez de mot de passe</a>
 <?php } ?>
