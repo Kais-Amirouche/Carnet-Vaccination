@@ -10,8 +10,8 @@ if(!empty($_POST['submitconnexion'])) {
   $login    = cleanXss($_POST['login']);
   $password = cleanXss($_POST['password']);
   if(!empty($login) && !empty($password)) {
-    // request  users si il ya un user qui a soit email ou pseudo
-    $sql = "SELECT * FROM nf_users WHERE pseudo = :login OR email = :login";
+    // request  users si il ya un user qui a soit email
+    $sql = "SELECT * FROM vac_users WHERE email = :login";
     $query = $pdo->prepare($sql);
     $query->bindValue(':login',$login,PDO::PARAM_STR);
     $query->execute();
@@ -27,7 +27,7 @@ if(!empty($_POST['submitconnexion'])) {
           // nourrir $_SESSION avec des données
         $_SESSION['user'] = array(
           'id'     => $user['id'],
-          'pseudo' => $user['pseudo'],
+          'prenom'    => $user['prenom'],
           'role'   => $user['role'],
           'ip'     => $_SERVER['REMOTE_ADDR'] // ::1
         );

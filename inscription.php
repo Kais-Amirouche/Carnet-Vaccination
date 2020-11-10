@@ -20,7 +20,7 @@ if(!empty($_POST['submitinscription'])) {
     } elseif(mb_strlen($nom) > 50) {
       $errors['nom'] = 'Max 50 caratères';
     } else {
-      $sql = "SELECT id FROM nf_users WHERE nom = :nom";
+      $sql = "SELECT id FROM vac_users WHERE nom = :nom";
       $query = $pdo->prepare($sql);
       $query->bindValue(':nom',$nom,PDO::PARAM_STR);
       $query->execute();
@@ -38,14 +38,11 @@ if(!empty($_POST['submitinscription'])) {
     } elseif(mb_strlen($prenom) > 50) {
       $errors['prenom'] = 'Max 50 caratères';
     } else {
-      $sql = "SELECT id FROM nf_users WHERE prenom = :prenom";
+      $sql = "SELECT id FROM vac_users WHERE prenom = :prenom";
       $query = $pdo->prepare($sql);
       $query->bindValue(':prenom',$prenom,PDO::PARAM_STR);
       $query->execute();
       $verifprenom = $query->fetch();
-      if(!empty($verifprenom)) {
-        $errors['prenom'] = 'Ce prenom existe déjà';
-      }
     }
   } else {
     $errors['prenom'] = 'Veuillez renseigner ce champ';
@@ -55,7 +52,7 @@ if(!empty($_POST['submitinscription'])) {
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
       $errors['email'] =  'Veuillez renseigner un email valide';
     } else {
-      $sql = "SELECT id FROM nf_users WHERE email = :email";
+      $sql = "SELECT id FROM vac_users WHERE email = :email";
       $query = $pdo->prepare($sql);
       $query->bindValue(':email',$email,PDO::PARAM_STR);
       $query->execute();
@@ -84,7 +81,7 @@ if(!empty($_POST['submitinscription'])) {
     $hashPassword = password_hash($password1,PASSWORD_DEFAULT);
     $role = 'abonne';
     $token = generateRandomString(120);
-    $sql = "INSERT INTO nf_users (nom,prenom,email,password,token,created_at,role)
+    $sql = "INSERT INTO vac_users (nom,prenom,email,password,token,created_at,role)
                           VALUES (:nom,:prenom, :email,:password,'$token',NOW(),'$role')";
     $query = $pdo->prepare($sql);
     //$query->bindValue(':title',$title,PDO::PARAM_STR);
