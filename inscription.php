@@ -9,6 +9,7 @@ $errors = array();
 if(!empty($_POST['submitinscription'])) {
   // Faille xss
   $nom    = cleanXss($_POST['nom']);
+  $prenom    = cleanXss($_POST['prénom']);
   $email     = cleanXss($_POST['email']);
   $password1 = cleanXss($_POST['password1']);
   $password2 = cleanXss($_POST['password2']);
@@ -30,6 +31,24 @@ if(!empty($_POST['submitinscription'])) {
     }
   } else {
     $errors['nom'] = 'Veuillez renseigner ce champ';
+  }
+  if(!empty($prenom)) {
+    if(mb_strlen($prenom) < 3) {
+      $errors['prénom'] = 'Min 3 caratères';
+    } elseif(mb_strlen($prenom) > 50) {
+      $errors['prénom'] = 'Max 50 caratères';
+    } else {
+      $sql = "SELECT id FROM nf_users WHERE prenom = :prenom";
+      $query = $pdo->prepare($sql);
+      $query->bindValue(':prénom',$prenom,PDO::PARAM_STR);
+      $query->execute();
+      $verifprenom = $query->fetch();
+      if(!empty($verifprenom)) {
+        $errors['prénom'] = 'Ce prénom existe déjà';
+      }
+    }
+  } else {
+    $errors['prénom'] = 'Veuillez renseigner ce champ';
   }
   // validation email (email valide, unique)
   if(!empty($email)) {
