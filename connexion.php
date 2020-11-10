@@ -49,7 +49,7 @@ include('inc/header.php'); ?>
 <h1>Connexion</h1>
   <form action="" method="post">
     <!-- LOGIN -->
-      <input type="text" id="login" name="login" value="<?php if(!empty($_POST['login'])) { echo $_POST['login']; } ?>" placeholder="Pseudo ou Email">
+      <input type="text" id="login" name="login" value="<?php if(!empty($_POST['login'])) { echo $_POST['login']; } ?>" placeholder="Email">
       <span class="error"><?php if(!empty($errors['login'])) { echo $errors['login']; } ?></span>
     <!-- PASSWORD -->
       <input type="password" name="password" id="password" class="form-control" value="" placeholder="Mot De Passe"/>

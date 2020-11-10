@@ -4,32 +4,32 @@ session_start();
 include('inc/pdo.php');
 include('inc/function.php');
 // TABLE users
-// id,pseudo (60),email(120),password(255),created_at(datetime), token(255), role (admin, abonne)  varchar (10)
+// id,nom (60),email(120),password(255),created_at(datetime), token(255), role (admin, abonne)  varchar (10)
 $errors = array();
 if(!empty($_POST['submitinscription'])) {
   // Faille xss
-  $pseudo    = cleanXss($_POST['pseudo']);
+  $nom    = cleanXss($_POST['nom']);
   $email     = cleanXss($_POST['email']);
   $password1 = cleanXss($_POST['password1']);
   $password2 = cleanXss($_POST['password2']);
-  // validation pseudo (3, 50, unique)
-  if(!empty($pseudo)) {
-    if(mb_strlen($pseudo) < 3) {
-      $errors['pseudo'] = 'Min 3 caratères';
-    } elseif(mb_strlen($pseudo) > 50) {
-      $errors['pseudo'] = 'Max 50 caratères';
+  // validation nom (3, 50, unique)
+  if(!empty($nom)) {
+    if(mb_strlen($nom) < 3) {
+      $errors['nom'] = 'Min 3 caratères';
+    } elseif(mb_strlen($nom) > 50) {
+      $errors['nom'] = 'Max 50 caratères';
     } else {
-      $sql = "SELECT id FROM nf_users WHERE pseudo = :pseudo";
+      $sql = "SELECT id FROM nf_users WHERE nom = :nom";
       $query = $pdo->prepare($sql);
-      $query->bindValue(':pseudo',$pseudo,PDO::PARAM_STR);
+      $query->bindValue(':nom',$nom,PDO::PARAM_STR);
       $query->execute();
-      $verifPseudo = $query->fetch();
-      if(!empty($verifPseudo)) {
-        $errors['pseudo'] = 'Ce pseudo existe déjà';
+      $verifnom = $query->fetch();
+      if(!empty($verifnom)) {
+        $errors['nom'] = 'Ce nom existe déjà';
       }
     }
   } else {
-    $errors['pseudo'] = 'Veuillez renseigner ce champ';
+    $errors['nom'] = 'Veuillez renseigner ce champ';
   }
   // validation email (email valide, unique)
   if(!empty($email)) {
@@ -65,11 +65,11 @@ if(!empty($_POST['submitinscription'])) {
     $hashPassword = password_hash($password1,PASSWORD_DEFAULT);
     $role = 'abonne';
     $token = generateRandomString(120);
-    $sql = "INSERT INTO nf_users (pseudo,email,password,token,created_at,role)
-                          VALUES (:pseudo, :email,:password,'$token',NOW(),'$role')";
+    $sql = "INSERT INTO nf_users (nom,email,password,token,created_at,role)
+                          VALUES (:nom, :email,:password,'$token',NOW(),'$role')";
     $query = $pdo->prepare($sql);
     //$query->bindValue(':title',$title,PDO::PARAM_STR);
-    $query->bindValue(':pseudo',$pseudo,PDO::PARAM_STR);
+    $query->bindValue(':nom',$nom,PDO::PARAM_STR);
     $query->bindValue(':email',$email,PDO::PARAM_STR);
     $query->bindValue(':password',$hashPassword,PDO::PARAM_STR);
     $query->execute();
@@ -84,9 +84,12 @@ if(!empty($_POST['submitinscription'])) {
 include('inc/header.php'); ?>
 <h1>Inscription</h1>
 <form method="POST" action="inscription.php" id="forminscription" novalidate>
-    <!-- PSEUDO -->
-      <input type="text" name="pseudo" id="pseudo" class="form-control" value="<?php if(!empty($_POST['pseudo'])) { echo $_POST['pseudo']; } ?>" placeholder="Pseudo" />
-      <span class="error"><?php if(!empty($errors['pseudo'])) { echo $errors['pseudo']; } ?></span>
+    <!-- nom -->
+      <input type="text" name="nom" id="nom" class="form-control" value="<?php if(!empty($_POST['nom'])) { echo $_POST['nom']; } ?>" placeholder="nom" />
+      <span class="error"><?php if(!empty($errors['nom'])) { echo $errors['nom']; } ?></span>
+      <!-- nom -->
+        <input type="text" name="prénom" id="prénom" class="form-control" value="<?php if(!empty($_POST['prénom'])) { echo $_POST['prénom']; } ?>" placeholder="prénom" />
+        <span class="error"><?php if(!empty($errors['prénom'])) { echo $errors['prénom']; } ?></span>
     <!-- EMAIL -->
       <input type="email" name="email" id="email" class="form-control" value="<?php if(!empty($_POST['email'])) { echo $_POST['email']; } ?>" placeholder="Email" />
       <span class="error"><?php if(!empty($errors['email'])) { echo $errors['email']; } ?></span>
