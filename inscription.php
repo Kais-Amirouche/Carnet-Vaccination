@@ -10,4 +10,4 @@ include('inc/header.php');?>
 
 
 
-<?phpinclude('inc/header.php'); ?>
+<?php include('inc/footer-front.php'); ?>

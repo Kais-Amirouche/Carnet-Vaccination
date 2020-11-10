@@ -5,9 +5,9 @@ include('inc/function.php');
 
 
 
-include('inc/header.php');?>
+include('inc/header-front.php');?>
 
 
 
 
-<?php include('inc/header.php'); ?>
+<?php include('inc/footer-front.php'); ?>
