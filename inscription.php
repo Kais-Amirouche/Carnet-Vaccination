@@ -25,9 +25,6 @@ if(!empty($_POST['submitinscription'])) {
       $query->bindValue(':nom',$nom,PDO::PARAM_STR);
       $query->execute();
       $verifnom = $query->fetch();
-      if(!empty($verifnom)) {
-        $errors['nom'] = 'Ce nom existe déjà';
-      }
     }
   } else {
     $errors['nom'] = 'Veuillez renseigner ce champ';
@@ -86,7 +83,7 @@ if(!empty($_POST['submitinscription'])) {
     $query = $pdo->prepare($sql);
     //$query->bindValue(':title',$title,PDO::PARAM_STR);
     $query->bindValue(':nom',$nom,PDO::PARAM_STR);
-    $query->bindValue(':prenom',$nom,PDO::PARAM_STR);
+    $query->bindValue(':prenom',$prenom,PDO::PARAM_STR);
     $query->bindValue(':email',$email,PDO::PARAM_STR);
     $query->bindValue(':password',$hashPassword,PDO::PARAM_STR);
     $query->execute();

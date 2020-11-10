@@ -27,7 +27,7 @@ if(!empty($_POST['submitconnexion'])) {
           // nourrir $_SESSION avec des données
         $_SESSION['user'] = array(
           'id'     => $user['id'],
-          'prenom'    => $user['prenom'],
+          'prenom' => $user['prenom'],
           'role'   => $user['role'],
           'ip'     => $_SERVER['REMOTE_ADDR'] // ::1
         );

@@ -10,17 +10,20 @@
 <body>
 
   <header>
-    <ul>
-      <li><a href="index.php">Home</a></li>
-      <li><a href="admin\index.html">admin</a></li>
-      <?php if(isLogged()) { ?>
+    <nav>
+      <ul>
+        <li><a href="index.php">Home</a></li>
+       <?php if(isLogged()) { ?>
+         <?php if ($_SESSION['user']['role']=='admin'){ ?>
+           <li><a href="admin\index.html">admin</a></li>
+         <?php } ?>
         <li><a href="logout.php">Deconnexion</a></li>
         <li><p class="Bonjour">Bonjour <?php echo ucfirst($_SESSION['user']['prenom']); ?></p></li>
-      <?php } else { ?>
+       <?php } else { ?>
         <li><a href="inscription.php">Inscription</a></li>
         <li><a href="connexion.php">Connexion</a></li>
-      <?php } ?>
-    </ul>
-
+       <?php } ?>
+      </ul>
+    </nav>
   </header>
   <div class="container">
