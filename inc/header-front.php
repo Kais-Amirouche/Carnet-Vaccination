@@ -7,14 +7,12 @@
     <link rel="stylesheet" href="asset/css/style.css">
   </head>
   <body>
-    <?php debug($_SESSION); ?>
     <header>
       <nav>
         <ul>
           <li><a href="index.php">home</a></li>
-          <?php if(islogged()) ?>
           <li><a href="inscription.php">inscription</a></li>
-          <li>bonjour <?php echo ucfirst($_SESSION['users'] ?></li>
+          <li>bonjour</li>
           <li><a href="connexion.php">connexion</a></li>
         </ul>
       </nav>
