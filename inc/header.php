@@ -15,7 +15,7 @@
         <li><a href="index.php">Home</a></li>
        <?php if(isLogged()) { ?>
          <?php if ($_SESSION['user']['role']=='admin'){ ?>
-           <li><a href="admin\index.html">admin</a></li>
+           <li><a href="admin\index.php">admin</a></li>
          <?php } ?>
         <li><a href="logout.php">Deconnexion</a></li>
         <li><p class="Bonjour">Bonjour <?php echo ucfirst($_SESSION['user']['prenom']); ?></p></li>
