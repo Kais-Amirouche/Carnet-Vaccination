@@ -10,20 +10,27 @@
 <body>
 
   <header>
-    <nav>
-      <ul>
-        <li><a href="index.php">Home</a></li>
-       <?php if(isLogged()) { ?>
-         <?php if ($_SESSION['user']['role']=='admin'){ ?>
-           <li><a href="admin\index.php">admin</a></li>
-         <?php } ?>
-        <li><a href="logout.php">Deconnexion</a></li>
-        <li><p class="Bonjour">Bonjour <?php echo ucfirst($_SESSION['user']['prenom']); ?></p></li>
-       <?php } else { ?>
-        <li><a href="inscription.php">Inscription</a></li>
-        <li><a href="connexion.php">Connexion</a></li>
-       <?php } ?>
-      </ul>
-    </nav>
+    <div class="top">
+      <nav>
+        <ul>
+          <div class="log">
+            <img src="asset/img/logo.png" width="50px" alt="">
+          </div>
+          <div class="menu">
+            <li><a href="index.php">Accueil</a></li>
+           <?php if(isLogged()) { ?>
+             <?php if ($_SESSION['user']['role']=='admin'){ ?>
+               <li><a href="admin\index.html">admin</a></li>
+             <?php } ?>
+            <li><a href="logout.php">Deconnexion</a></li>
+            <li><p class="Bonjour">Bonjour <?php echo ucfirst($_SESSION['user']['prenom']); ?></p></li>
+           <?php } else { ?>
+            <li><a href="inscription.php">Inscription</a></li>
+            <li><a href="connexion.php">Connexion</a></li>
+          <?php } ?>
+          </div>
+        </ul>
+      </nav>
+    </div>
   </header>
   <div class="container">
