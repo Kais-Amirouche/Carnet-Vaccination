@@ -48,6 +48,13 @@
                       <span>Dashboard</span></a>
               </li>
 
+              <!-- Nav Item - Retour -->
+              <li class="nav-item">
+                  <a class="nav-link" href="../index.php">
+                      <!-- <i class="fas fa-fw fa-tachometer-alt"></i> -->
+                      <span>Retour au site</span></a>
+              </li>
+
               <!-- Divider -->
               <hr class="sidebar-divider">
 

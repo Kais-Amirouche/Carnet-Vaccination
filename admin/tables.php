@@ -4,6 +4,19 @@ include('../inc/function.php');
 
 $title = 'Tableaux';
 
+$sql = "SELECT * FROM vac_users ORDER BY created_at ASC";
+$var = $pdo->prepare($sql);
+$var->execute();
+$users = $var->fetchAll();
+// debug($users);
+
+$sql = "SELECT * FROM vac_vaccins ORDER BY id ASC";
+$var = $pdo->prepare($sql);
+$var->execute();
+$vaccins = $var->fetchAll();
+// debug($vaccins);
+
+
 include('inc/header-back.php'); ?>
 
 
@@ -23,46 +36,39 @@ include('inc/header-back.php'); ?>
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
+                                            <th>ID</th>
                                             <th>Nom</th>
                                             <th>Prénom</th>
                                             <th>Date de naissance</th>
                                             <th>E-mail</th>
+                                            <th>Role</th>
+                                            <th>Date d'inscription</th>
                                         </tr>
 
                                     </thead>
                                     <tfoot>
                                         <tr>
+                                          <th>ID</th>
                                           <th>Nom</th>
                                           <th>Prénom</th>
                                           <th>Date de naissance</th>
                                           <th>E-mail</th>
+                                          <th>Role</th>
+                                          <th>Date d'inscription</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
+                                  <?php foreach ($users as $user) { ?>
                                         <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
-                                            <td>61</td>
-                                            <td>2011/04/25</td>
-                                            <td>$320,800</td>
+                                            <td><?php echo $user['id']; ?></td>
+                                            <td><?php echo $user['nom']; ?></td>
+                                            <td><?php echo $user['prenom']; ?></td>
+                                            <td><?php echo $user['birth_date']; ?></td>
+                                            <td><?php echo $user['email']; ?></td>
+                                            <td><?php echo $user['role']; ?></td>
+                                            <td><?php echo $user['created_at']; ?></td>
                                         </tr>
-                                        <tr>
-                                            <td>Garrett Winters</td>
-                                            <td>Accountant</td>
-                                            <td>Tokyo</td>
-                                            <td>63</td>
-                                            <td>2011/07/25</td>
-                                            <td>$170,750</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Ashton Cox</td>
-                                            <td>Junior Technical Author</td>
-                                            <td>San Francisco</td>
-                                            <td>66</td>
-                                            <td>2009/01/12</td>
-                                            <td>$86,000</td>
-                                        </tr>
+                                  <?php } ?>
                                     </tbody>
                                 </table>
                             </div>
@@ -92,30 +98,13 @@ include('inc/header-back.php'); ?>
                                         </tr>
                                     </tfoot>
                                     <tbody>
+                                  <?php foreach ($vaccins as $vaccin) { ?>
                                         <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
-                                            <td>61</td>
-                                            <td>2011/04/25</td>
-                                            <td>$320,800</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Garrett Winters</td>
-                                            <td>Accountant</td>
-                                            <td>Tokyo</td>
-                                            <td>63</td>
-                                            <td>2011/07/25</td>
-                                            <td>$170,750</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Ashton Cox</td>
-                                            <td>Junior Technical Author</td>
-                                            <td>San Francisco</td>
-                                            <td>66</td>
-                                            <td>2009/01/12</td>
-                                            <td>$86,000</td>
-                                        </tr>
+                                            <td><?php echo $vaccin['name']; ?></td>
+                                            <td><?php echo $vaccin['date']; ?></td>
+                                            <td><?php echo $vaccin['date']; ?></td>
+                                            </tr>
+                                  <?php } ?>
                                     </tbody>
                                 </table>
                             </div>
