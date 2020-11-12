@@ -13,7 +13,7 @@
       <div class="top">
         <nav class="nav">
           <div class="logo">
-            <img src="asset/img/logo.png" width="50px" alt="">
+            <img src="asset/img/logo.png" width="70px" alt="">
           </div>
           <div class="menu">
             <ul>
