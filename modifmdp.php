@@ -78,9 +78,12 @@ include('inc/header.php'); ?>
 
   <input type="submit" name="submitmdp" value="Nouveau mot de passe" />
 </form>
-
-<?php }elseif($switch=='lien') { echo '<p class=token>copié ceci:</p>'.$token;?>
-  <a href="modifmdp.php?email=<?php echo $email ?>&token=<?php echo $token ?>">changez de mot de passe</a>
+<div class="token">
+  <?php }elseif($switch=='lien') { echo '<p class=token>copié ceci:</p>'.$token;?>
+</div>
+  <div class="newmdp">
+      <a href="modifmdp.php?email=<?php echo $email ?>&token=<?php echo $token ?>">changez de mot de passe</a>
+  </div>
 <?php  }elseif($switch=='paix') {
 
 } ?>
