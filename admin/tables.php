@@ -4,12 +4,14 @@ include('../inc/function.php');
 
 $title = 'Tableaux';
 
+// afficher les détails utilisateurs
 $sql = "SELECT * FROM vac_users ORDER BY created_at ASC";
 $var = $pdo->prepare($sql);
 $var->execute();
 $users = $var->fetchAll();
 // debug($users);
 
+// afficher les détails vaccins
 $sql = "SELECT * FROM vac_vaccins ORDER BY id ASC";
 $var = $pdo->prepare($sql);
 $var->execute();
@@ -22,9 +24,6 @@ include('inc/header-back.php'); ?>
 
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">Tableaux</h1>
-                    <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
-                        For more information about DataTables, please visit the <a target="_blank"
-                            href="https://datatables.net">official DataTables documentation</a>.</p>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
