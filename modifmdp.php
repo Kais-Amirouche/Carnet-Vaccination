@@ -63,6 +63,9 @@ if(!empty($_GET['email']) && !empty($_GET['token'])) {
           $query->bindValue(':token',$token,PDO::PARAM_STR);
           $query->bindValue(':hashPassword',$hashPassword,PDO::PARAM_STR);
           $query->execute();
+          die('ok');
+        }else {
+          die('not');
         }
     }
   }
