@@ -5,7 +5,7 @@ include('inc/pdo.php');
 include('inc/function.php');
 $errors = array();
 $switch = false;
-$switch2=false;
+$switch2= false;
 
 // if form soumis
 if(!empty($_POST['submitmdp'])) {
@@ -34,14 +34,9 @@ if(!empty($_POST['submitmdp'])) {
       // die();
       if(!empty($user)) { // $user existe pas => $error = 'erreur credentials'
         $switch=true;
-        $id = $user['id'];
+        $email = $user['email'];
         $token = $user['token'];
-        if(!empty($_GET['id']) && is_numeric($_GET['id']) && !empty($_GET['token'])) {
-          $switch2 = true;
-          echo 'copié le: '.$token;
-        }else {
-
-          }
+        $switch='lien';
       } else {
         $errors['login'] = 'Error credentials';
         }
@@ -49,30 +44,56 @@ if(!empty($_POST['submitmdp'])) {
   }
 }
 
-
-
+if(!empty($_GET['email']) && !empty($_GET['token'])) {
+  $email_user = $_GET['email'];
+  $token_user = $_GET['token'];
+  $switch2=true;
+  $switch='paix';
+  if (!empty($_POST['submittoken'])) {
+    $token_user  = cleanXss($_POST['token_user']);
+    $token = $user['token'];
+    $Newpassword = cleanXss($_POST['Newpassword']);
+    $errors = ValidationText($errors,$token_user,'token_user',120,121);
+    $errors = ValidationText($errors,$Newpassword,'Newpassword',5,120);
+    if(count($errors) == 0) {
+        if ($token_user==$token) {
+          $hashPassword = password_hash($Newpassword,PASSWORD_DEFAULT);
+          $token = generateRandomString(120);
+          $sql = "UPDATE vac_users SET token = :token, password = :hashPassword WHERE email=$email";
+          $query->bindValue(':token',$token,PDO::PARAM_STR);
+          $query->bindValue(':hashPassword',$hashPassword,PDO::PARAM_STR);
+          $query->execute();
+        }
+    }
+  }
+}
 
 include('inc/header.php'); ?>
 <?php if ($switch==false) { ?>
 <form action="" method="post" novalidate>
   <!-- LOGIN -->
+  <div class="loginn">
     <input type="text" id="login" name="login" value="<?php if(!empty($_POST['login'])) { echo $_POST['login']; } ?>" placeholder="Email">
     <span class="error"><?php if(!empty($errors['login'])) { echo $errors['login']; } ?></span>
 
   <input type="submit" name="submitmdp" value="Nouveau mot de passe" />
 </form>
 
-<?php }else { ?>
-  <a href="modifmdp.php?id=<?php echo $id ?>&token=<?php echo $token ?>">changez de mot de passe</a>
-<?php $switch2 = true; } ?>
+<?php }elseif($switch=='lien') { echo '<p class=token>copié ceci:</p>'.$token;?>
+  <a href="modifmdp.php?email=<?php echo $email ?>&token=<?php echo $token ?>">changez de mot de passe</a>
+<?php  }elseif($switch=='paix') {
+
+} ?>
+
 <?php if ($switch2==true) { ?>
 <form action="" method="post" novalidate>
   <!-- token -->
     <input type="text" id="token_user" name="token_user" value="<?php if(!empty($_POST['token_user'])) { echo $_POST['token_user']; } ?>" placeholder="collé le ici">
     <span class="error"><?php if(!empty($errors['token_user'])) { echo $errors['token_user']; } ?></span>
-  <!-- PASSWORD -->
-    <input type="password" name="password" id="password" class="form-control" value="" placeholder="Nouveau Mot De Passe"/>
+  <!-- Newpassword -->
+    <input type="password" name="Newpassword" id="Newpassword" class="form-control" value="" placeholder="Nouveau Mot De Passe"/>
 
   <input type="submit" name="submittoken" value="Nouveau mot de passe" />
 </form>
 <?php } ?>
+  </div>

@@ -62,22 +62,35 @@ table {
 body{
   background-color: #7FFFD4;
 }
-h1{
-  margin-top: 30px;
-  font-size: 300%;
-  text-align: center;
-	color: #FFF;
+/* header */
+
+.wrap{
+	max-width: 100%;
+	background-color: #333;
 }
-ul {
+.top .nav{
+	width: 100%;
+	display: flex;
+}
+.nav .logo{
+	flex: 1;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.nav .menu {
+	display: flex;
+	flex:1;
   list-style-type: none;
-  margin: 0;
+  margin-left:750px;
+	margin-top: 10px;
   padding: 0;
   overflow: hidden;
   background-color: #333;
+	font-size: 1.2em;
 }
 
-li {
-  float: left;
+.nav .menu li{
+float: left;
 }
 
 li a {
@@ -91,6 +104,15 @@ li a {
 li a:hover {
   background-color: #111;
 }
+h1{
+  margin-top: 30px;
+  font-size: 300%;
+  text-align: center;
+	color: #000;
+}
+
+
+/* formulaire */
 form{
   display: flex;
   flex-direction: column;
@@ -104,6 +126,7 @@ form input{
   height: 50px;
   font-size: 100%;
   border-radius: 10px;
+	outline: none;
 }
 form input::placeholder{
   padding-left: 30px;
@@ -120,6 +143,9 @@ form input[type="submit"]:hover{
   color: #000;
   border: 5px solid #000;
 }
+
+
+/* connexion */
 .error{
   margin-bottom: 10px;
   font-size: 1.3em;
@@ -134,7 +160,21 @@ form input[type="submit"]:hover{
   border-radius: 20px;
 }
 .Bonjour{
-  margin-top: 15px;
-  margin-left: 40px;
-  color: #7FFFD4;
+  text-align: center;
+	padding-bottom: 5px;
+  color: #12D0FA;
+	font-size: 1.2em;
+}
+
+.mdp {
+text-align: center;
+margin: 0 auto;
+}
+.mdp a{
+	background-color: #333;
+	color: white;
+	border-radius: 8px;
+	padding: 5px 75px;
+	cursor:pointer;
+	text-decoration: none;
 }
