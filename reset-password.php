@@ -5,8 +5,8 @@ include('inc/function.php');
 $errors = array();
 debug($_SESSION);
 if(!empty($_GET['email']) && !empty($_GET['token'])) {
-  $email_user = $_GET['email'];
-  $token_user= $_GET['token'];
+  $email = $_GET['email'];
+  $token = $_GET['token'];
   $switch2=true;
   $switch='paix';
   if (!empty($_POST['submittoken'])) {
