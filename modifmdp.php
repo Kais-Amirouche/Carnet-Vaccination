@@ -37,6 +37,31 @@ if(!empty($_POST['submitmdp'])) {
         $email = $user['email'];
         $token = $user['token'];
         $switch='lien';
+        if(!empty($_GET['email']) && !empty($_GET['token'])) {
+          $email_user = $_GET['email'];
+          $token_user = $_GET['token'];
+          $switch2=true;
+          $switch='paix';
+          if (!empty($_POST['submittoken'])) {
+            $token_user  = cleanXss($_POST['token_user']);
+            $token = $user['token'];
+            $Newpassword = cleanXss($_POST['Newpassword']);
+            $errors = ValidationText($errors,$token_user,'token_user',120,121);
+            $errors = ValidationText($errors,$Newpassword,'Newpassword',5,120);
+            if(count($errors) == 0) {
+                if ($token_user==$token) {
+                  $hashPassword = password_hash($Newpassword,PASSWORD_DEFAULT);
+                  $token = generateRandomString(120);
+                  $sql = "UPDATE vac_users SET token = :token, password = :hashPassword WHERE email=$email";
+                  $query->bindValue(':token',$token,PDO::PARAM_STR);
+                  $query->bindValue(':hashPassword',$hashPassword,PDO::PARAM_STR);
+                  $query->execute();
+                }
+              }
+            }
+          }
+        }
+
       } else {
         $errors['login'] = 'Error credentials';
         }
@@ -44,29 +69,6 @@ if(!empty($_POST['submitmdp'])) {
   }
 }
 
-if(!empty($_GET['email']) && !empty($_GET['token'])) {
-  $email_user = $_GET['email'];
-  $token_user = $_GET['token'];
-  $switch2=true;
-  $switch='paix';
-  if (!empty($_POST['submittoken'])) {
-    $token_user  = cleanXss($_POST['token_user']);
-    $Newpassword = cleanXss($_POST['Newpassword']);
-    $errors = ValidationText($errors,$token_user,'token_user',120,121);
-    $errors = ValidationText($errors,$Newpassword,'Newpassword',5,120);
-    if(count($errors) == 0) {
-      if ($token_user==$token) {
-        $hashPassword = password_hash($Newpassword,PASSWORD_DEFAULT);
-        $token = generateRandomString(120);
-        $sql = "UPDATE vac_users SET token = :token, password = :hashPassword WHERE email=$email";
-        $query->bindValue(':token',$token,PDO::PARAM_STR);
-        $query->bindValue(':hashPassword',$hashPassword,PDO::PARAM_STR);
-        $query->execute();
-
-      }
-    }
-  }
-}
 
 include('inc/header.php'); ?>
 <?php if ($switch==false) { ?>
@@ -78,7 +80,7 @@ include('inc/header.php'); ?>
   <input type="submit" name="submitmdp" value="Nouveau mot de passe" />
 </form>
 
-<?php }elseif($switch=='lien') { ?>
+<?php }elseif($switch=='lien') { echo '<p class=token>copié ceci:</p>'.$token;?>
   <a href="modifmdp.php?email=<?php echo $email ?>&token=<?php echo $token ?>">changez de mot de passe</a>
 <?php  }elseif($switch=='paix') {
 
