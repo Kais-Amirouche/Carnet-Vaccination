@@ -183,6 +183,12 @@ margin: 0 auto;
 	color: #000;
 	border: 5px solid #000;
 }
+.token{
+	text-align: center;
+}
+.token span{
+	font-size: 1.2em;
+}
 .newmdp{
 	text-align: center;
 	margin:0 auto;
@@ -201,12 +207,33 @@ margin: 0 auto;
 	color: #000;
 	border: 5px solid #000;
 }
-.token{
-	text-align: center;
-	margin:0 auto;
-	font-size: 1.3em;
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+.contact{
+margin-left: 1300px
 }
-.token2{
-	text-align: center;
-	margin:0 auto;
+.contact a{
+	background-color: red;
+	color: white;
+	border-radius: 8px;
+	padding: 5px;
+	cursor:pointer;
+	text-decoration: none;
+}
+.contact a:hover{
+	background-color: #FFF;
+	color: #000;
+	border: 5px solid #000;
 }
