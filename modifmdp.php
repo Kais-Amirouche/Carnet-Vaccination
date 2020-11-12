@@ -34,8 +34,14 @@ if(!empty($_POST['submitmdp'])) {
       // die();
       if(!empty($user)) { // $user existe pas => $error = 'erreur credentials'
         $switch=true;
-        $email = $user['email'];
-        $token = $user['token'];
+        $_SESSION['user'] = array(
+          'id'     => $user['id'],
+          'email' => $user['email'],
+          'token_user'   => $user['token'],
+          'ip'     => $_SERVER['REMOTE_ADDR'] // ::1
+        );
+        $token =$user['token'];
+        $email= $user['email'];
         $switch='lien';
       } else {
         $errors['login'] = 'Error credentials';

@@ -1,16 +1,18 @@
 <?php
+session_start();
 include('inc/pdo.php');
 include('inc/function.php');
 $errors = array();
+debug($_SESSION);
 if(!empty($_GET['email']) && !empty($_GET['token'])) {
   $email_user = $_GET['email'];
-  $token_user = $_GET['token'];
+  $token_user= $_GET['token'];
   $switch2=true;
   $switch='paix';
   if (!empty($_POST['submittoken'])) {
-    $token_user  = cleanXss($_POST['token_user']);
+    $token_user  = cleanXss($_POST['token']);
     $Newpassword = cleanXss($_POST['Newpassword']);
-    $errors = ValidationText($errors,$token_user,'token_user',120,121);
+    $errors = ValidationText($errors,$token_user,'token',120,121);
     $errors = ValidationText($errors,$Newpassword,'Newpassword',5,120);
     if(count($errors) == 0) {
         if ($token_user==$token) {
@@ -36,8 +38,8 @@ include('inc/header.php');?>
 <?php if ($switch2==true) { ?>
 <form action="" method="post" novalidate>
   <!-- token -->
-    <input type="text" id="token_user" name="token_user" value="<?php if(!empty($_POST['token_user'])) { echo $_POST['token_user']; } ?>" placeholder="collé le ici">
-    <span class="error"><?php if(!empty($errors['token_user'])) { echo $errors['token_user']; } ?></span>
+    <input type="text" id="token" name="token" value="<?php if(!empty($_POST['token'])) { echo $_POST['token']; } ?>" placeholder="collé le ici">
+    <span class="error"><?php if(!empty($errors['token'])) { echo $errors['token']; } ?></span>
   <!-- Newpassword -->
     <input type="password" name="Newpassword" id="Newpassword" class="form-control" value="" placeholder="Nouveau Mot De Passe"/>
 
