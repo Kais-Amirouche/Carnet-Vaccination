@@ -100,8 +100,8 @@ include('inc/header-back.php'); ?>
                                   <?php foreach ($vaccins as $vaccin) { ?>
                                         <tr>
                                             <td><?php echo $vaccin['name']; ?></td>
-                                            <td><?php echo $vaccin['date']; ?></td>
-                                            <td><?php echo $vaccin['date']; ?></td>
+                                            <td><?php echo $vaccin['age']; ?></td>
+                                            <td><?php echo $vaccin['description']; ?></td>
                                             </tr>
                                   <?php } ?>
                                     </tbody>

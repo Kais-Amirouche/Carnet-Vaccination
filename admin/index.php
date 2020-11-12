@@ -4,6 +4,28 @@ include('../inc/function.php');
 
 $title = 'Dashboard';
 
+$errors = array();
+if(!empty($_POST['submitted']))
+{
+  $name = cleanXss($_POST['name']);
+  $description = cleanXss($_POST['description']);
+  $age = cleanXss($_POST['age']);
+
+  $errors = validationText($errors,$name,'name',2,150);
+  $errors = validationText($errors,$description,'description',20,5000);
+  $errors = validationText($errors,$age,'age',2,20);
+
+  if(count($errors) == 0)
+  {
+    $sql = "INSERT INTO vac_vaccins (name,description,age)
+            VALUES (:name,:description,:age)";
+    $var = $pdo->prepare($sql);
+    $var->bindValue(':name',$name,PDO::PARAM_STR);
+    $var->bindValue(':description',$description,PDO::PARAM_STR);
+    $var->bindValue(':age',$age,PDO::PARAM_STR);
+    $var->execute();
+  }
+}
 
 include('inc/header-back.php'); ?>
 
@@ -73,17 +95,18 @@ include('inc/header-back.php'); ?>
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tâches
+                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Nombre de vaccin recensé sur le site
                                             </div>
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="progress progress-sm mr-2">
-                                                        <div class="progress-bar bg-info" role="progressbar"
-                                                            style="width: 50%" aria-valuenow="50" aria-valuemin="0"
-                                                            aria-valuemax="100"></div>
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
+                                                      <?php
+                                                      $sql = "SELECT * FROM vac_vaccins";
+                                                      $var = $pdo->prepare($sql);
+                                                      $var->execute();
+                                                      $vaccinsAll = $var->rowCount();
+                                                      echo $vaccinsAll;
+                                                      ?>
                                                     </div>
                                                 </div>
                                             </div>
@@ -242,73 +265,6 @@ include('inc/header-back.php'); ?>
                                 </div>
                             </div>
 
-                            <!-- Color System -->
-                            <div class="row">
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-primary text-white shadow">
-                                        <div class="card-body">
-                                            Primary
-                                            <div class="text-white-50 small">#4e73df</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-success text-white shadow">
-                                        <div class="card-body">
-                                            Success
-                                            <div class="text-white-50 small">#1cc88a</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-info text-white shadow">
-                                        <div class="card-body">
-                                            Info
-                                            <div class="text-white-50 small">#36b9cc</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-warning text-white shadow">
-                                        <div class="card-body">
-                                            Warning
-                                            <div class="text-white-50 small">#f6c23e</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-danger text-white shadow">
-                                        <div class="card-body">
-                                            Danger
-                                            <div class="text-white-50 small">#e74a3b</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-secondary text-white shadow">
-                                        <div class="card-body">
-                                            Secondary
-                                            <div class="text-white-50 small">#858796</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-light text-black shadow">
-                                        <div class="card-body">
-                                            Light
-                                            <div class="text-black-50 small">#f8f9fc</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-dark text-white shadow">
-                                        <div class="card-body">
-                                            Dark
-                                            <div class="text-white-50 small">#5a5c69</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
                         </div>
 
@@ -335,11 +291,23 @@ include('inc/header-back.php'); ?>
                             <!-- Approach -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">CASE VIDE</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Ajout de vaccin</h6>
                                 </div>
                                 <div class="card-body">
-                                    <p>A remplir si on veut</p>
-                                    <p class="mb-0">Pareil ici aussi</p>
+                                    <form action="" method="post">
+
+                                      <input type="text" id="name" name="name" value="<?php if(!empty($_POST['name'])) {echo $_POST['name'];} ?>" placeholder="Nom du virus">
+                                      <span class="errorform"><?php if(!empty($errors['name'])) {echo $errors['name'];} ?></span>
+
+                                      <input type="text" id="description" name="description" value="<?php if(!empty($_POST['description'])) {echo $_POST['description'];} ?>" placeholder="Description du virus">
+                                      <span class="errorform"><?php if(!empty($errors['description'])) {echo $errors['description'];} ?></span>
+
+                                      <input type="text" id="age" name="age" value="<?php if(!empty($_POST['age'])) {echo $_POST['age'];} ?>" placeholder="Age pour faire le vaccin">
+                                      <span class="errorform"><?php if(!empty($errors['age'])) {echo $errors['age'];} ?></span>
+
+                                      <input type="submit" name="submitted" value="Ajouter">
+
+                                    </form>
                                 </div>
                             </div>
 
