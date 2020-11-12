@@ -62,22 +62,39 @@ table {
 body{
   background-color: #7FFFD4;
 }
+
+
 h1{
   margin-top: 30px;
   font-size: 300%;
   text-align: center;
 	color: #000;
+/* header */
+
+.wrap{
+	max-width: 100%;
+	background-color: #333;
 }
-ul {
+.top .nav{
+	width: 100%;
+	display: flex;
+}
+.nav .logo{
+	flex: 1;
+}
+.nav .menu {
+	display: flex;
+	flex:1;
   list-style-type: none;
-  margin: 0;
+  margin-left:700px;
   padding: 0;
   overflow: hidden;
   background-color: #333;
 }
 
-li {
-  float: left;
+.nav .menu li{
+float: left;
+
 }
 
 li a {
@@ -91,6 +108,15 @@ li a {
 li a:hover {
   background-color: #111;
 }
+h1{
+  margin-top: 30px;
+  font-size: 300%;
+  text-align: center;
+	color: #FFF;
+}
+
+
+/* formulaire */
 form{
   display: flex;
   flex-direction: column;
@@ -120,6 +146,9 @@ form input[type="submit"]:hover{
   color: #000;
   border: 5px solid #000;
 }
+
+
+/* connexion */
 .error{
   margin-bottom: 10px;
   font-size: 1.3em;
@@ -134,7 +163,8 @@ form input[type="submit"]:hover{
   border-radius: 20px;
 }
 .Bonjour{
+text-align: center;
   margin-top: 15px;
-  margin-left: 40px;
+  margin:0 auto;
   color: #7FFFD4;
 }
