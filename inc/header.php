@@ -8,15 +8,12 @@
   <title>mon carnet santé</title>
 </head>
 <body>
-
   <header>
-    <div class="top">
       <nav>
         <ul>
           <div class="log">
             <img src="asset/img/logo.png" width="50px" alt="">
           </div>
-          <div class="menu">
             <li><a href="index.php">Accueil</a></li>
            <?php if(isLogged()) { ?>
              <?php if ($_SESSION['user']['role']=='admin'){ ?>
@@ -28,9 +25,7 @@
             <li><a href="inscription.php">Inscription</a></li>
             <li><a href="connexion.php">Connexion</a></li>
           <?php } ?>
-          </div>
         </ul>
       </nav>
-    </div>
   </header>
   <div class="container">

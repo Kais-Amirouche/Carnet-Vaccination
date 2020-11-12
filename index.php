@@ -11,7 +11,7 @@ include('inc/header.php');
 
 ?>
 
-<h1>Acueil</h1>
+<h1>Accueil</h1>
 
 
 
