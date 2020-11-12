@@ -165,3 +165,16 @@ form input[type="submit"]:hover{
   color: #12D0FA;
 	font-size: 1.2em;
 }
+
+.mdp {
+text-align: center;
+margin: 0 auto;
+}
+.mdp a{
+	background-color: #333;
+	color: white;
+	border-radius: 8px;
+	padding: 5px 75px;
+	cursor:pointer;
+	text-decoration: none;
+}

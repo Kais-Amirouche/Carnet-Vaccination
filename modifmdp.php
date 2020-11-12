@@ -72,6 +72,7 @@ include('inc/header.php'); ?>
 <?php if ($switch==false) { ?>
 <form action="" method="post" novalidate>
   <!-- LOGIN -->
+  <div class="loginn">
     <input type="text" id="login" name="login" value="<?php if(!empty($_POST['login'])) { echo $_POST['login']; } ?>" placeholder="Email">
     <span class="error"><?php if(!empty($errors['login'])) { echo $errors['login']; } ?></span>
 
@@ -95,3 +96,4 @@ include('inc/header.php'); ?>
   <input type="submit" name="submittoken" value="Nouveau mot de passe" />
 </form>
 <?php } ?>
+  </div>
