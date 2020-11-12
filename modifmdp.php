@@ -37,7 +37,7 @@ if(!empty($_POST['submitmdp'])) {
         $_SESSION['user'] = array(
           'id'     => $user['id'],
           'email' => $user['email'],
-          'token_user'   => $user['token'],
+          'token'   => $user['token'],
           'ip'     => $_SERVER['REMOTE_ADDR'] // ::1
         );
         $token =$user['token'];
@@ -62,9 +62,8 @@ include('inc/header.php'); ?>
 
   <input type="submit" name="submitmdp" value="recevoir un mail" />
 </form>
-<div class="token">
-  <?php }elseif($switch=='lien') { echo '<p class=token>copié ceci:</p>'.$token;?>
-</div>
+
+<?php }elseif($switch=='lien') { echo '<p class=token><span>copié ceci:</span><br>'.$token.';</p>';?>
   <div class="newmdp">
       <a href="reset-password.php?email=<?php echo $email ?>&token=<?php echo $token ?>">changez de mot de passe</a>
   </div>
