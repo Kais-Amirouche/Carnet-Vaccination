@@ -237,3 +237,16 @@ margin-left: 1300px
 	color: #000;
 	border: 5px solid #000;
 }
+
+/* contact */
+.form-container {
+	background-color: gray;
+	border-radius: 8px;
+}
+.form-group{
+	padding: 5px;
+	text-align: center;
+}
+.from-group{
+
+}
