@@ -12,10 +12,7 @@ include('inc/header.php');
 ?>
 
 <h1>Accueil</h1>
-<<<<<<< HEAD
-=======
 
->>>>>>> 9a86eafd44d2168f3d7b657ee7d31cb1720963c9
 
 
 
