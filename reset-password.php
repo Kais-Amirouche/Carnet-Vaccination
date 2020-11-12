@@ -4,6 +4,7 @@ include('inc/pdo.php');
 include('inc/function.php');
 $errors = array();
 debug($_SESSION);
+$id = $_SESSION['user']['id'];
 if(!empty($_GET['email']) && !empty($_GET['token'])) {
   $email = $_GET['email'];
   $token = $_GET['token'];
@@ -18,11 +19,12 @@ if(!empty($_GET['email']) && !empty($_GET['token'])) {
         if ($token_user==$token) {
           $hashPassword = password_hash($Newpassword,PASSWORD_DEFAULT);
           $token = generateRandomString(120);
-          $sql = "UPDATE vac_users SET token = :token, password = :hashPassword WHERE email=$email";
+          $sql = "UPDATE vac_users SET token=:token, password=:password WHERE id=:id";
+          $query = $pdo->prepare($sql);
           $query->bindValue(':token',$token,PDO::PARAM_STR);
-          $query->bindValue(':hashPassword',$hashPassword,PDO::PARAM_STR);
+          $query->bindValue(':password',$hashPassword,PDO::PARAM_STR);
+          $query->bindValue(':id',$id,PDO::PARAM_INT);
           $query->execute();
-          die('ok');
         }else {
           die('not');
         }
