@@ -61,18 +61,19 @@ include('inc/header-back.php'); ?>
                                     </h6>
                                 </div>
                                 <div class="card-body">
-                                    <div class="px-3 py-5 bg-gradient-primary text-white">.bg-gradient-primary</div>
-                                    <div class="px-3 py-5 bg-gradient-secondary text-white">.bg-gradient-secondary</div>
-                                    <div class="px-3 py-5 bg-gradient-success text-white">.bg-gradient-success</div>
-                                    <div class="px-3 py-5 bg-gradient-info text-white">.bg-gradient-info</div>
-                                    <div class="px-3 py-5 bg-gradient-warning text-white">.bg-gradient-warning</div>
-                                    <div class="px-3 py-5 bg-gradient-danger text-white">.bg-gradient-danger</div>
-                                    <div class="px-3 py-5 bg-gradient-light text-white">.bg-gradient-light</div>
-                                    <div class="px-3 py-5 bg-gradient-dark text-white">.bg-gradient-dark</div>
+                                    <div class="px-3 py-5 bg-gradient-primary text-white">.bg-gradient-primary<div class="text-white-50 small">#4e73df</div></div>
+                                    <div class="px-3 py-5 bg-gradient-secondary text-white">.bg-gradient-secondary<div class="text-white-50 small">#858796</div></div>
+                                    <div class="px-3 py-5 bg-gradient-success text-white">.bg-gradient-success<div class="text-white-50 small">#1cc88a</div></div>
+                                    <div class="px-3 py-5 bg-gradient-info text-white">.bg-gradient-info<div class="text-white-50 small">#36b9cc</div></div>
+                                    <div class="px-3 py-5 bg-gradient-warning text-white">.bg-gradient-warning<div class="text-white-50 small">#f6c23e</div></div>
+                                    <div class="px-3 py-5 bg-gradient-danger text-white">.bg-gradient-danger<div class="text-white-50 small">#e74a3b</div></div>
+                                    <div class="px-3 py-5 bg-gradient-light text-white">.bg-gradient-light<div class="text-black-50 small">#f8f9fc</div></div>
+                                    <div class="px-3 py-5 bg-gradient-dark text-white">.bg-gradient-dark<div class="text-white-50 small">#5a5c69</div></div>
                                 </div>
                             </div>
 
                         </div>
+
 
                         <!-- Third Column -->
                         <div class="col-lg-4">
@@ -96,6 +97,7 @@ include('inc/header-back.php'); ?>
                                 </div>
                             </div>
                         </div>
+
 
                     </div>
 
