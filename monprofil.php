@@ -55,14 +55,6 @@ if(!empty($_SESSION['user']['id'])) {
    }
 }
 
-if(count($errors) == 0) {
-  $hashPassword = password_hash($Newpassword,PASSWORD_DEFAULT);
-  $sql = "UPDATE vac_users SET password=:password WHERE id=:id";
-  $query = $pdo->prepare($sql);
-  $query->bindValue(':password',$hashPassword,PDO::PARAM_STR);
-  $query->bindValue(':id',$id,PDO::PARAM_INT);
-  $query->execute();
-}
 
 
 
