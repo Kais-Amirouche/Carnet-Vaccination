@@ -64,7 +64,13 @@ include('inc/header-back.php'); ?>
                                             <td><?php echo $user['prenom']; ?></td>
                                             <td><?php echo $user['birth_date']; ?></td>
                                             <td><?php echo $user['email']; ?></td>
-                                            <td><?php echo $user['role']; ?></td>
+                                            <td><?php echo $user['role'];
+                                              if($user['role'] == 'admin') { ?>
+                                                <a href="deleteadmin.php?id=<?php echo $user['id']; ?>">[passer abonne]</a>
+                                              <?php } else {?>
+                                                <a href="upadmin.php?id=<?php echo $user['id']; ?>">[passer admin]</a>
+                                              <?php } ?>
+                                            </td>
                                             <td><?php echo $user['created_at']; ?></td>
                                         </tr>
                                   <?php } ?>

@@ -22,11 +22,13 @@
                  <?php if ($_SESSION['user']['role']=='admin'){ ?>
                    <li><a href="admin/index.php">admin</a></li>
                  <?php } ?>
+                 <li><a href="monprofil.php"><img width=40px src="membres/avatars/<?php echo $_SESSION['user']['avatar']; ?>" alt="logo profil"></a></li>
                 <li><a href="logout.php">Deconnexion</a></li>
                <?php } else { ?>
                 <li><a href="inscription.php">Inscription</a></li>
                 <li><a href="connexion.php">Connexion</a></li>
               <?php } ?>
+                <li><a href="singlevaccin.php?id=">Information vaccins</a></li>
             </ul>
           </div>
         </nav>
