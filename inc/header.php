@@ -17,12 +17,14 @@
           </div>
           <div class="menu">
             <ul>
+                <?php if(isLogged()) { ?>
+                <li><a href="monprofil.php"><img width=40px height="40px" style="border-radius:50%" src="membres/avatars/<?php echo $_SESSION['user']['avatar']; ?>" alt="logo profil"></a></li>
+                <?php } ?>
                 <li><a href="index.php">Accueil</a></li>
                <?php if(isLogged()) { ?>
                  <?php if ($_SESSION['user']['role']=='admin'){ ?>
                    <li><a href="admin/index.php">admin</a></li>
                  <?php } ?>
-                 <li><a href="monprofil.php"><img width=40px src="membres/avatars/<?php echo $_SESSION['user']['avatar']; ?>" alt="logo profil"></a></li>
                 <li><a href="logout.php">Deconnexion</a></li>
                <?php } else { ?>
                 <li><a href="inscription.php">Inscription</a></li>
