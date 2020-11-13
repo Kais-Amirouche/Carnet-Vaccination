@@ -2,15 +2,22 @@
 
 
   </div>  <!-- container -->
-  <footer>
-    <div class="foot">
-      <div class="contact">
-        <p>Besoin d'aide ? Posez-vos <a href="contact.php">questions</a></p>
-        <?php if(isLogged()) { ?>
-        <p><a href="mesquestions.php">Mes questions</a></p>
-        <?php } ?>
+    <footer>
+      <div class="foot-bg">
+        <div class="foot">
+          <nav>
+            <ul>
+              <div class="contact">
+                <li><a href="contact.php">Besoin d'aide?</a></li>
+                <?php if(isLogged()) { ?>
+                <br>
+                <li><a href="mesquestions.php">Mes questions?</a></li>
+                <?php } ?>
+              </div>
+            </ul>
+          </nav>
+        </div>
       </div>
-    </div>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>
