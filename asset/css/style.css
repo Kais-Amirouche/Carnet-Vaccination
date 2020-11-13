@@ -60,8 +60,16 @@ table {
 }
 /* perso */
 
+<<<<<<< HEAD
 header{
 	background-color: black;
+=======
+.wrap{
+	max-width: 100%;
+	/* background-color: #333; */
+background-image: url('../img/cell.jpg') ;
+
+>>>>>>> 4df7636922f89cb0f9744b2c74b2053064b47840
 }
 .menu{
 	height: 5em;
