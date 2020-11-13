@@ -39,6 +39,5 @@
        <?php } ?>
       </div>
     </div>
-    <img src="asset/img/visuel-defenses.jpg" width="100%" alt="">
   </header>
   <div class="container">
