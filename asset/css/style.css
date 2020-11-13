@@ -59,17 +59,25 @@ table {
   margin: 0 auto;
 }
 /* perso */
-
-<<<<<<< HEAD
+h1{
+	text-align: center;
+	font-size: 200%;
+	margin-top: 40px;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 26px;
+	letter-spacing: 4px;
+	word-spacing: 0.2px;
+	color: #666;
+	font-weight: 700;
+	font-variant: small-caps;
+	transition: .7s;
+}
+h1:hover{
+	color: #000;
+	text-shadow: 4px 4px 7px rgba(0, 0, 0, 1);
+}
 header{
 	background-color: black;
-=======
-.wrap{
-	max-width: 100%;
-	/* background-color: #333; */
-background-image: url('../img/cell.jpg') ;
-
->>>>>>> 4df7636922f89cb0f9744b2c74b2053064b47840
 }
 .menu{
 	height: 5em;
@@ -128,10 +136,21 @@ form input{
   font-size: 100%;
   border-radius: 10px;
 	outline: none;
+	transition: .7s;
 }
 form input::placeholder{
   padding-left: 30px;
 }
+form input:hover{
+	text-shadow: 10px 2px 4px rgba(0, 0, 0, 1);
+	color: #333;
+
+}
+form input:focus:hover{
+text-shadow: none;
+
+}
+
 
 form input[type="submit"]{
  cursor:pointer;
