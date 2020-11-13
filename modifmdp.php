@@ -30,7 +30,7 @@ if(!empty($_POST['submitmdp'])) {
       $query->bindValue(':login',$login,PDO::PARAM_STR);
       $query->execute();
       $user = $query->fetch();
-      debug($user);
+      // debug($user);
       // die();
       if(!empty($user)) { // $user existe pas => $error = 'erreur credentials'
         $switch=true;
@@ -63,7 +63,7 @@ include('inc/header.php'); ?>
   <input type="submit" name="submitmdp" value="recevoir un mail" />
 </form>
 
-<?php }elseif($switch=='lien') { echo '<p class=token><span>copié ceci:</span><br>'.$token.';</p>';?>
+<?php }elseif($switch=='lien') { echo '<p class=token><span>copié ceci:</span><br>'.$token.'</p>';?>
   <div class="newmdp">
       <a href="reset-password.php?email=<?php echo $email ?>&token=<?php echo $token ?>">changez de mot de passe</a>
   </div>
