@@ -183,12 +183,20 @@ margin: 0 auto;
 	color: #000;
 	border: 5px solid #000;
 }
-.token{
+.container{
 	text-align: center;
 }
-.token span{
-	font-size: 1.2em;
+.container h1{
+	font-size: 1.5em;
 }
+.container p span{
+	font-size: 1em;
+	background-color: white;
+	padding: 6px;
+	border-radius: 5px;
+	margin: 5px;
+}
+
 .newmdp{
 	text-align: center;
 	margin:0 auto;
