@@ -10,20 +10,27 @@ if(!empty($_POST['submitted']))
   $name = cleanXss($_POST['name']);
   $description = cleanXss($_POST['description']);
   $age = cleanXss($_POST['age']);
+  $rappel = cleanXss($_POST['rappel']);
+  $statuts = cleanXss($_POST['statuts']);
 
   $errors = validationText($errors,$name,'name',2,150);
   $errors = validationText($errors,$description,'description',20,5000);
   $errors = validationText($errors,$age,'age',2,20);
+  $errors = validationText($errors,$rappel,'rappel',2,5000);
 
   if(count($errors) == 0)
   {
-    $sql = "INSERT INTO vac_vaccins (name,description,age)
-            VALUES (:name,:description,:age)";
+    $sql = "INSERT INTO vac_vaccins (name,description,age,rappel,statuts)
+            VALUES (:name,:description,:age,:rappel,:statuts)";
     $var = $pdo->prepare($sql);
     $var->bindValue(':name',$name,PDO::PARAM_STR);
     $var->bindValue(':description',$description,PDO::PARAM_STR);
     $var->bindValue(':age',$age,PDO::PARAM_STR);
+    $var->bindValue(':rappel',$rappel,PDO::PARAM_STR);
+    $var->bindValue(':statuts',$statuts,PDO::PARAM_STR);
     $var->execute();
+
+
   }
 }
 
@@ -307,6 +314,15 @@ include('inc/header-back.php'); ?>
 
                                       <input type="text" id="age" name="age" value="<?php if(!empty($_POST['age'])) {echo $_POST['age'];} ?>" placeholder="Age pour faire le vaccin">
                                       <span class="errorform"><?php if(!empty($errors['age'])) {echo $errors['age'];} ?></span>
+
+                                      <input type="text" id="rappel" name="rappel" value="<?php if(!empty($_POST['rappel'])) {echo $_POST['rappel'];} ?>" placeholder="Les rappels">
+                                      <span class="errorform"><?php if(!empty($errors['rappel'])) {echo $errors['rappel'];} ?></span>
+
+                                      <input type="radio" name="statuts" value="obligatoire">
+                                      <label for="statuts">Obligatoire</label>
+
+                                      <input type="radio" name="statuts" value="facultatif">
+                                      <label for="statuts">Facultatif</label>
 
                                       <input type="submit" name="submitted" value="Ajouter">
 

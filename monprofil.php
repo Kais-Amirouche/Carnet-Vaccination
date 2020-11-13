@@ -13,6 +13,8 @@ if(!empty($_SESSION['user']['id'])) {
     $query->execute(array($_SESSION['user']['id']));
     $user = $query->fetch();
     // debug($user);
+    $token =$user['token'];
+    $email= $user['email'];
     if(isset($_POST['prenom']) AND !empty($_POST['prenom']) AND $_POST['prenom'] != $user['prenom']) {
        $newprenom = cleanXss($_POST['prenom']);
        $insertmail = $pdo->prepare("UPDATE vac_users SET email = ? WHERE id = ?");
@@ -25,15 +27,7 @@ if(!empty($_SESSION['user']['id'])) {
       $insertmail->execute(array($newmail, $user['id']));
       $valid= '<p style="color:green;">ce champ a bien été modifié</p>';
    }
-   if(!empty($Newpassword) && !empty($password2)) {
-     if($Newpassword != $password2) {
-       $errors['password2'] = 'Veuillez renseigner des mot de passe identiques';
-     } elseif(mb_strlen($Newpassword) < 6) {
-       $errors['Newpassword'] = 'Min 6 caractères';
-     }
-   } else {
-     $errors['Newpassword'] = 'Veuillez renseigner vos mots de passe';
-   }
+
    if(isset($_FILES['avatar']) AND !empty($_FILES['avatar']['name'])) {
     $tailleMax = 2097152;
     $extensionsValides = array('jpg', 'jpeg', 'gif', 'png');
@@ -61,14 +55,6 @@ if(!empty($_SESSION['user']['id'])) {
    }
 }
 
-if(count($errors) == 0) {
-  $hashPassword = password_hash($Newpassword,PASSWORD_DEFAULT);
-  $sql = "UPDATE vac_users SET password=:password WHERE id=:id";
-  $query = $pdo->prepare($sql);
-  $query->bindValue(':password',$hashPassword,PDO::PARAM_STR);
-  $query->bindValue(':id',$id,PDO::PARAM_INT);
-  $query->execute();
-}
 
 
 
@@ -81,18 +67,13 @@ include('inc/header.php');?>
   <label>Email :<?php if(!empty($valid)){ echo $valid; } ?></label>
   <input type="text" name="newmail" placeholder="Email" value="<?php echo $user['email']; ?>" /><br /><br />
   <!-- Newpassword -->
-  <label>Mot de Passe :</label>
-  <input type="password" name="Newpassword" id="Newpassword" class="form-control" value="" placeholder="Mot De Passe"/>
-  <span class="error"><?php if(!empty($errors['Newpassword'])) { echo $errors['Newpassword']; } ?></span>
-  <!-- PASSWORD2 -->
-  <label>Confirmer le Mot de Passe :</label>
-  <input type="password" name="password2" id="password2" class="form-control" value="" placeholder="Confirmer Le Mot De Passe"/>
-  <span class="error"><?php if(!empty($errors['password2'])) { echo $errors['password2']; } ?></span>
+  <p>copier ceci pour modifié votre mot de passe:<br><?php echo $user['token'] ?></p>
+  <a href="reset-password.php?email=<?php echo $email ?>&token=<?php echo $token ?>">changez de mot de passe</a><br /><br />
   <!-- photo de profil -->
   <label>photo de profil:</label>
   <input type="file" name="avatar" value="">
   <span class="error"><?php if(!empty($errors['avatar'])) { echo $errors['avatar']; } ?></span>
-  <input type="submit" value="Mettre à jour mon profil !" />
+  <input type="submit" name="submitprofil" value="Mettre à jour mon profil !" />
 </form>
 
 
