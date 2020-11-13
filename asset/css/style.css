@@ -68,6 +68,12 @@ header{
   line-height: 5em;
   white-space: nowrap;
 }
+.logohome{
+	width: 50px;
+	height: 50px;
+	margin-left: 10px;
+	margin-top: 20px;
+}
 nav{
 	display: flex;
 	justify-content: space-between;
@@ -98,4 +104,11 @@ nav ul li a:hover{
 }
 .imgprofil:hover{
 	opacity: .7;
+}
+
+form{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-content: center;
 }
