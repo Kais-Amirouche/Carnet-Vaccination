@@ -7,7 +7,6 @@ $title = 'Mes Questions';
 
 
 
-
 include('inc/header.php'); ?>
 
 <h2>En attente</h2>
