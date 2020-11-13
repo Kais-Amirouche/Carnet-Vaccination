@@ -92,7 +92,15 @@ body{
 .nav .menu li{
 float: left;
 }
-
+.accimage img{
+	position: relative;
+}
+.accimage h1{
+	position: absolute;
+	margin-top: -800px;
+	margin-left: 300px;
+	font-size: 1.5em;
+}
 li a {
   display: block;
   color: white;
