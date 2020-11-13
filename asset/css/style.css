@@ -178,3 +178,75 @@ margin: 0 auto;
 	cursor:pointer;
 	text-decoration: none;
 }
+.mdp a:hover{
+	background-color: #FFF;
+	color: #000;
+	border: 5px solid #000;
+}
+.token{
+	text-align: center;
+}
+.token span{
+	font-size: 1.2em;
+}
+.newmdp{
+	text-align: center;
+	margin:0 auto;
+	margin: 15px;
+}
+.newmdp a{
+	background-color: #333;
+	color: white;
+	border-radius: 8px;
+	padding: 5px 75px;
+	cursor:pointer;
+	text-decoration: none;
+}
+.newmdp a:hover{
+	background-color: #FFF;
+	color: #000;
+	border: 5px solid #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+.contact{
+margin-left: 1300px
+}
+.contact a{
+	background-color: red;
+	color: white;
+	border-radius: 8px;
+	padding: 5px;
+	cursor:pointer;
+	text-decoration: none;
+}
+.contact a:hover{
+	background-color: #FFF;
+	color: #000;
+	border: 5px solid #000;
+}
+
+/* contact */
+.form-container {
+	background-color: gray;
+	border-radius: 8px;
+}
+.form-group{
+	padding: 5px;
+	text-align: center;
+}
+.from-group{
+
+}

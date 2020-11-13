@@ -127,18 +127,25 @@
                   </div>
               </li>
 
-              <!-- Nav Item - Charts -->
+              <!-- Nav Item - Graphiques -->
               <li class="nav-item">
                   <a class="nav-link" href="charts.php">
                       <i class="fas fa-fw fa-chart-area"></i>
                       <span>Graphiques</span></a>
               </li>
 
-              <!-- Nav Item - Tables -->
+              <!-- Nav Item - Tableaux -->
               <li class="nav-item">
                   <a class="nav-link" href="tables.php">
                       <i class="fas fa-fw fa-table"></i>
                       <span>Tableaux</span></a>
+              </li>
+
+              <!-- Nav Item - Questions -->
+              <li class="nav-item">
+                  <a class="nav-link" href="contactadmin.php">
+                      <i class="fas fa-comments fa-2x text-gray-300"></i>
+                      <span>Questions</span></a>
               </li>
 
               <!-- Divider -->
