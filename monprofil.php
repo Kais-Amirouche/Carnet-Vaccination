@@ -69,6 +69,7 @@ include('inc/header.php');?>
   <!-- photo de profil -->
   <label>photo de profil:</label>
   <input type="file" name="avatar" value="">
+  <span class="error"><?php if(!empty($errors['avatar'])) { echo $errors['avatar']; } ?></span>
   <input type="submit" value="Mettre à jour mon profil !" />
 </form>
 
