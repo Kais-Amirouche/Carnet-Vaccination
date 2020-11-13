@@ -25,6 +25,15 @@ if(!empty($_SESSION['user']['id'])) {
       $insertmail->execute(array($newmail, $user['id']));
       $valid= '<p style="color:green;">ce champ a bien été modifié</p>';
    }
+   if(!empty($Newpassword) && !empty($password2)) {
+     if($Newpassword != $password2) {
+       $errors['password2'] = 'Veuillez renseigner des mot de passe identiques';
+     } elseif(mb_strlen($Newpassword) < 6) {
+       $errors['Newpassword'] = 'Min 6 caractères';
+     }
+   } else {
+     $errors['Newpassword'] = 'Veuillez renseigner vos mots de passe';
+   }
    if(isset($_FILES['avatar']) AND !empty($_FILES['avatar']['name'])) {
     $tailleMax = 2097152;
     $extensionsValides = array('jpg', 'jpeg', 'gif', 'png');
@@ -41,18 +50,25 @@ if(!empty($_SESSION['user']['id'])) {
                 ));
              header('Location: monprofil.php');
           } else {
-             $errors = "Erreur durant l'importation de votre photo de profil";
+             $errors['avatar'] = "Erreur durant l'importation de votre photo de profil";
           }
        } else {
-          $errors = "Votre photo de profil doit être au format jpg, jpeg, gif ou png";
+          $errors['avatar'] = "Votre photo de profil doit être au format jpg, jpeg, gif ou png";
        }
     } else {
-       $errors = "Votre photo de profil ne doit pas dépasser 2Mo";
+       $errors['avatar'] = "Votre photo de profil ne doit pas dépasser 2Mo";
     }
    }
 }
 
-
+if(count($errors) == 0) {
+  $hashPassword = password_hash($Newpassword,PASSWORD_DEFAULT);
+  $sql = "UPDATE vac_users SET password=:password WHERE id=:id";
+  $query = $pdo->prepare($sql);
+  $query->bindValue(':password',$hashPassword,PDO::PARAM_STR);
+  $query->bindValue(':id',$id,PDO::PARAM_INT);
+  $query->execute();
+}
 
 
 
@@ -64,16 +80,16 @@ include('inc/header.php');?>
   <span class="error"><?php if(!empty($errors['prenom'])) { echo $errors['prenom']; } ?></span>
   <label>Email :<?php if(!empty($valid)){ echo $valid; } ?></label>
   <input type="text" name="newmail" placeholder="Email" value="<?php echo $user['email']; ?>" /><br /><br />
-  <!-- PASSWORD1 -->
+  <!-- Newpassword -->
   <label>Mot de Passe :</label>
-  <input type="password" name="password1" id="password1" class="form-control" value="" placeholder="Mot De Passe"/>
-  <span class="error"><?php if(!empty($errors['password'])) { echo $errors['password']; } ?></span>
+  <input type="password" name="Newpassword" id="Newpassword" class="form-control" value="" placeholder="Mot De Passe"/>
+  <span class="error"><?php if(!empty($errors['Newpassword'])) { echo $errors['Newpassword']; } ?></span>
   <!-- PASSWORD2 -->
   <label>Confirmer le Mot de Passe :</label>
   <input type="password" name="password2" id="password2" class="form-control" value="" placeholder="Confirmer Le Mot De Passe"/>
   <span class="error"><?php if(!empty($errors['password2'])) { echo $errors['password2']; } ?></span>
   <!-- photo de profil -->
-  <label>photo de profil:<?php if(!empty($errors['avatar'])) { echo $errors['avatar']; } ?></label>
+  <label>photo de profil:</label>
   <input type="file" name="avatar" value="">
   <span class="error"><?php if(!empty($errors['avatar'])) { echo $errors['avatar']; } ?></span>
   <input type="submit" value="Mettre à jour mon profil !" />
