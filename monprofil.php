@@ -59,19 +59,19 @@ if(!empty($_SESSION['user']['id'])) {
 
 
 include('inc/header.php');?>
-<h2>Edition de mon profil</h2>
+<h1>Edition de mon profil</h1>
 <form method="POST" action="" enctype="multipart/form-data">
-  <label>prenom :<?php if(!empty($valid)){ echo $valid; } ?></label>
-  <input type="text" name="prenom" id="prenom" class="form-control" value="<?php if(!empty($_POST['prenom'])) { echo $_POST['prenom']; }else {echo $user['prenom'];} ?>" placeholder="prenom" />
+  <label for="prenom">prenom :<?php if(!empty($valid)){ echo $valid; } ?></label>
+  <input type="text" id="prenom" name="prenom" id="prenom" class="form-control" value="<?php if(!empty($_POST['prenom'])) { echo $_POST['prenom']; }else {echo $user['prenom'];} ?>" placeholder="prenom" />
   <span class="error"><?php if(!empty($errors['prenom'])) { echo $errors['prenom']; } ?></span>
-  <label>Email :<?php if(!empty($valid)){ echo $valid; } ?></label>
-  <input type="text" name="newmail" placeholder="Email" value="<?php echo $user['email']; ?>" /><br /><br />
+  <label for="email"for>Email :<?php if(!empty($valid)){ echo $valid; } ?></label>
+  <input type="text" id="email"name="newmail" placeholder="Email" value="<?php echo $user['email']; ?>" /><br /><br />
   <!-- Newpassword -->
   <p>copier ceci pour modifié votre mot de passe:<br><?php echo $user['token'] ?></p>
   <a href="reset-password.php?email=<?php echo $email ?>&token=<?php echo $token ?>">changez de mot de passe</a><br /><br />
   <!-- photo de profil -->
-  <label>photo de profil:</label>
-  <input type="file" name="avatar" value="">
+  <label for="avatar">photo de profil:</label>
+  <input type="file" id="avatar" name="avatar" value="">
   <span class="error"><?php if(!empty($errors['avatar'])) { echo $errors['avatar']; } ?></span>
   <input type="submit" name="submitprofil" value="Mettre à jour mon profil !" />
 </form>
