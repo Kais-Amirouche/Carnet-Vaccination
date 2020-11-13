@@ -216,35 +216,30 @@ margin: 0 auto;
 	border: 5px solid #000;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* footer */
-/* footer{
+.foot {
+  text-align: center;
+	height: 100px;
+	color: #fff;
 	width: 100%;
- background-color: #333;
-} */
-.contact{
+}
+.foot-bg{
+	background-image: url('../img/footer.jpeg');
+}
+.contact nav{
 margin-left: 1300px;
 }
-.contact a{
+.contact li a{
 	background-color: red;
 	color: white;
 	border-radius: 8px;
 	padding: 5px;
 	cursor:pointer;
 	text-decoration: none;
+  width: 250px;
+	display: block;
+
 }
-.contact a:hover{
+.contact li a:hover{
 	background-color: #FFF;
 	color: #000;
 	border: 5px solid #000;
