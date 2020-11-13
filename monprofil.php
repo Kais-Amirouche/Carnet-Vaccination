@@ -14,6 +14,7 @@ if(!empty($_SESSION['id'])) {
    $query->execute(array($_SESSION['id']));
    $user = $query->fetch();
    debug($user);
+   
    if(isset($_POST['newmail']) AND !empty($_POST['newmail']) AND $_POST['newmail'] != $user['email']) {
       $newmail = cleanXss($_POST['newmail']);
       $insertmail = $pdo->prepare("UPDATE vac_users SET mail = ? WHERE id = ?");
