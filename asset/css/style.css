@@ -66,7 +66,9 @@ body{
 
 .wrap{
 	max-width: 100%;
-	background-color: #333;
+	/* background-color: #333; */
+background-image: url('../img/cell.jpg') ;
+
 }
 .top .nav{
 	width: 100%;
@@ -81,11 +83,11 @@ body{
 	display: flex;
 	flex:1;
   list-style-type: none;
-  margin-left:400px;
+  margin-left:300px;
 	margin-top: 10px;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  /* background-color: #333; */
 	font-size: 1.2em;
 }
 
@@ -218,12 +220,12 @@ margin: 0 auto;
 
 .foot {
   text-align: center;
-	height: 100px;
+	height: 200px;
 	color: #fff;
 	width: 100%;
 }
 .foot-bg{
-	background-image: url('../img/footer.jpeg');
+	background-image: url('../img/baba.png');
 }
 .contact nav{
 margin-left: 1300px;
@@ -254,6 +256,45 @@ margin-left: 1300px;
 	padding: 5px;
 	text-align: center;
 }
-.from-group{
-
+.column {
+	float: left;
+	width: 22%;
+	margin-left: 3%;
+}
+/* social */
+.social-icons {
+	margin-top: 20px;
+}
+.social-icons li {
+	float: left;
+	margin-right: 5px;
+}
+.social-icons a {
+	width: 46px;
+	height: 46px;
+	display: block;
+	background: url('../img/social-icons.png') no-repeat 0 0;
+	transition: all .3s;
+	border-radius: 50%;
+}
+.social-icons a.twitter {
+	background-position: -52px 0;
+}
+.social-icons a.dribble {
+	background-position: -104px 0;
+}
+.social-icons a.rss {
+	background-position: -156px 0;
+}
+.social-icons a.facebook:hover {
+	background-position: 0 -47px;
+}
+.social-icons a.twitter:hover {
+	background-position: -52px -47px;
+}
+.social-icons a.dribble:hover {
+	background-position: -104px -47px;
+}
+.social-icons a.rss:hover {
+	background-position: -156px -47px;
 }

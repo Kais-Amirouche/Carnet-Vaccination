@@ -14,10 +14,18 @@
                 <li><a href="mesquestions.php">Mes questions?</a></li>
                 <?php } ?>
               </div>
-            </ul>
-          </nav>
+                <div class="column">
+                  <ul class="social-icons">
+                    <li><a href="#" class="facebook"></a></li>
+                    <li><a href="#" class="twitter"></a></li>
+                    <li><a href="#" class="dribble"></a></li>
+                    <li><a href="#" class="rss"></a></li>
+                  </ul>
+                </div>
+              </ul>
+            </nav>
+          </div>
         </div>
-      </div>
-    </footer>
-  </body>
-</html>
+      </footer>
+    </body>
+  </html>
