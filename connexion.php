@@ -16,7 +16,7 @@ if(!empty($_POST['submitconnexion'])) {
     $query->bindValue(':login',$login,PDO::PARAM_STR);
     $query->execute();
     $user = $query->fetch();
-    debug($user);
+    // debug($user);
     // die();
     if(!empty($user)) { // $user existe pas => $error = 'erreur credentials'
       // password_verify()
