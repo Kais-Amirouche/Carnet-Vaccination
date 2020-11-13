@@ -30,10 +30,9 @@ if(!empty($_POST['submitted']))
     $var->bindValue(':statuts',$statuts,PDO::PARAM_STR);
     $var->execute();
 
-
+    header('Location: index.php');
   }
 }
-
 include('inc/header-back.php'); ?>
 
 
