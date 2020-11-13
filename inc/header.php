@@ -22,6 +22,7 @@
                  <?php if ($_SESSION['user']['role']=='admin'){ ?>
                    <li><a href="admin/index.php">admin</a></li>
                  <?php } ?>
+                 <li><a href="monprofil.php"><img width=40px src="asset\img\logoprofil.png" alt="logo profil"></a></li>
                 <li><a href="logout.php">Deconnexion</a></li>
                <?php } else { ?>
                 <li><a href="inscription.php">Inscription</a></li>

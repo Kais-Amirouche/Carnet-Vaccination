@@ -27,8 +27,10 @@ if(!empty($_POST['submitconnexion'])) {
           // nourrir $_SESSION avec des données
         $_SESSION['user'] = array(
           'id'     => $user['id'],
+          'email'  => $user['email'],
           'prenom' => $user['prenom'],
           'role'   => $user['role'],
+          'avatar' => $user['avatar'],
           'ip'     => $_SERVER['REMOTE_ADDR'] // ::1
         );
         // redirection index.php
