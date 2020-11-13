@@ -126,10 +126,15 @@ include('inc/header-back.php'); ?>
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Requêtes en attente</div>
+                                                Questions en attente</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">
                                               <?php
-                                              echo 'attente page contact+bdd';
+                                              // nombre d'utilisateurs inscrit sur notre site
+                                              $sql = "SELECT * FROM vac_contact WHERE statuts = 'attente'";
+                                              $var = $pdo->prepare($sql);
+                                              $var->execute();
+                                              $asksAll = $var->rowCount();
+                                              echo $asksAll;
                                               ?>
                                             </div>
                                         </div>

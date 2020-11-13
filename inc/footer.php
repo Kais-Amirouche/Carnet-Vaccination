@@ -4,7 +4,10 @@
   </div>  <!-- container -->
   <footer>
     <div class="contact">
-      <p><a href="contact.php">Besoin d'aide?</a></p>
+      <?php if(isLogged()) { ?>
+      <p>Besoin d'aide ? Posez-vos <a href="contact.php">questions</a></p>
+      <p><a href="mesquestions.php">Mes questions</a></p>
+      <?php } ?>
     </div>
   </footer>
 </body>
