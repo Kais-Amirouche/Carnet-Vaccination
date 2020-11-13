@@ -59,201 +59,43 @@ table {
   margin: 0 auto;
 }
 /* perso */
-body{
-  background-color: #7FFFD4;
-}
-/* header */
 
-.wrap{
-	max-width: 100%;
-	background-color: #333;
+header{
+	background-color: black;
 }
-.top .nav{
-	width: 100%;
+.menu{
+	height: 5em;
+  line-height: 5em;
+  white-space: nowrap;
+}
+nav{
 	display: flex;
+	justify-content: space-between;
 }
-.nav .logo{
-	flex: 1;
-	margin-top: 10px;
-	margin-left: 10px;
-}
-.nav .menu {
+nav ul{
 	display: flex;
-	flex:1;
-  list-style-type: none;
-  margin-left:400px;
-	margin-top: 10px;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-	font-size: 1.2em;
-}
-
-.nav .menu li{
-float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover {
-  background-color: #111;
-}
-h1{
-  margin-top: 30px;
-  font-size: 300%;
-  text-align: center;
-	color: #000;
-}
-
-
-/* formulaire */
-form{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 60px;
-}
-
-form input{
-  margin: 20px 10px;
-  width: 300px;
-  height: 50px;
-  font-size: 100%;
-  border-radius: 10px;
-	outline: none;
-}
-form input::placeholder{
-  padding-left: 30px;
-}
-
-form input[type="submit"]{
- cursor:pointer;
- background-color: #333;
- color: #fff;
-  text-transform: uppercase;
-}
-form input[type="submit"]:hover{
-  background-color: #FFF;
-  color: #000;
-  border: 5px solid #000;
-}
-
-
-/* connexion */
-.error{
-  margin-bottom: 10px;
-  font-size: 1.3em;
-  color: red;
-}
-.valid{
-  margin-top: 30px;
-  text-align: center;
-  display: inline;
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 20px;
-}
-.Bonjour{
-  text-align: center;
-	padding-bottom: 5px;
-  color: #12D0FA;
-	font-size: 1.2em;
-}
-
-.mdp {
-text-align: center;
-margin: 0 auto;
-}
-.mdp a{
-	background-color: #333;
-	color: white;
-	border-radius: 8px;
-	padding: 5px 75px;
-	cursor:pointer;
-	text-decoration: none;
-}
-.mdp a:hover{
-	background-color: #FFF;
-	color: #000;
-	border: 5px solid #000;
-}
-.container{
 	text-align: center;
 }
-.container h1{
-	font-size: 1.5em;
-}
-.container p span{
-	font-size: 1em;
-	background-color: white;
-	padding: 6px;
-	border-radius: 5px;
-	margin: 5px;
-}
 
-.newmdp{
-	text-align: center;
-	margin:0 auto;
-	margin: 15px;
-}
-.newmdp a{
-	background-color: #333;
-	color: white;
-	border-radius: 8px;
-	padding: 5px 75px;
-	cursor:pointer;
-	text-decoration: none;
-}
-.newmdp a:hover{
-	background-color: #FFF;
-	color: #000;
-	border: 5px solid #000;
-}
-
-.foot {
-  text-align: center;
-	height: 100px;
-	color: #fff;
-	width: 100%;
-}
-.foot-bg{
-	background-image: url('../img/footer.jpeg');
-}
-.contact nav{
-margin-left: 1300px;
-}
-.contact li a{
-	background-color: red;
-	color: white;
-	border-radius: 8px;
-	padding: 5px;
-	cursor:pointer;
-	text-decoration: none;
-  width: 250px;
-	display: block;
-
-}
-.contact li a:hover{
-	background-color: #FFF;
-	color: #000;
-	border: 5px solid #000;
-}
-
-/* contact */
-.form-container {
-	background-color: gray;
-	border-radius: 8px;
-}
-.form-group{
-	padding: 5px;
+nav ul li {
 	text-align: center;
 }
-.from-group{
+nav ul li a {
+	padding: 15px;
+	text-decoration: none;
+	color: #ddc798;
+}
 
+nav ul li a:hover{
+	text-decoration: none;
+	color: #726f69;
+}
+.imgprofil{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	margin-top: 1.5em;
+}
+.imgprofil:hover{
+	opacity: .7;
 }
