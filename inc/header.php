@@ -27,6 +27,7 @@
                 <li><a href="inscription.php">Inscription</a></li>
                 <li><a href="connexion.php">Connexion</a></li>
               <?php } ?>
+                <li><a href="singlevaccin.php?id=">Information vaccins</a></li>
             </ul>
           </div>
         </nav>
