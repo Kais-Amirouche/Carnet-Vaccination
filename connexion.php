@@ -48,7 +48,7 @@ if(!empty($_POST['submitconnexion'])) {
 }
 
 include('inc/header.php'); ?>
-<h1>Connexion</h1>
+<h1 id="action">Connexion</h1>
   <form action="" method="post">
     <!-- LOGIN -->
       <input type="text" id="login" name="login" value="<?php if(!empty($_POST['login'])) { echo $_POST['login']; } ?>" placeholder="Email">
@@ -57,8 +57,9 @@ include('inc/header.php'); ?>
       <input type="password" name="password" id="password" class="form-control" value="" placeholder="Mot De Passe"/>
 
     <input type="submit" name="submitconnexion" value="Connexion" />
+    <div class="mdp">
+      <a href="modifmdp.php">mot de passe oublié ?</a>
+    </div>
   </form>
-  <div class="mdp">
-    <a href="modifmdp.php">mot de passe oublié ?</a>
-  </div>
+
 <?php include('inc/footer.php');

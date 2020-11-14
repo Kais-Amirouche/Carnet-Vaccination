@@ -59,7 +59,8 @@ if(!empty($_SESSION['user']['id'])) {
 
 
 include('inc/header.php');?>
-<h1>Edition de mon profil</h1>
+
+<h1 id="action">Edition de mon profil</h1>
 <form method="POST" action="" enctype="multipart/form-data">
   <label for="prenom">prenom :<?php if(!empty($valid)){ echo $valid; } ?></label>
   <input type="text" id="prenom" name="prenom" id="prenom" class="form-control" value="<?php if(!empty($_POST['prenom'])) { echo $_POST['prenom']; }else {echo $user['prenom'];} ?>" placeholder="prenom" />
@@ -67,11 +68,12 @@ include('inc/header.php');?>
   <label for="email"for>Email :<?php if(!empty($valid)){ echo $valid; } ?></label>
   <input type="text" id="email"name="newmail" placeholder="Email" value="<?php echo $user['email']; ?>" /><br /><br />
   <!-- Newpassword -->
-  <p>copier ceci pour modifié votre mot de passe:<br><?php echo $user['token'] ?></p>
-  <a href="reset-password.php?email=<?php echo $email ?>&token=<?php echo $token ?>">changez de mot de passe</a><br /><br />
+  <label for="tok" class="copier">copier ceci pour modifié votre mot de passe:</label>
+  <textarea id="tok" class="tokencopié" name="tokencopié" rows="8" cols="80"> <?php echo $user['token'] ?></textarea>
+  <a class="redirect" href="reset-password.php?email=<?php echo $email ?>&token=<?php echo $token ?>">changez de mot de passe</a><br /><br />
   <!-- photo de profil -->
-  <label for="avatar">photo de profil:</label>
-  <input type="file" id="avatar" name="avatar" value="">
+  <label for="avatar" class="label-file"><p>changez votre avatar</p><img class="avatarimg" src="asset/img/avatar.png" alt=""></label>
+  <input type="file" class="input-file" id="avatar" name="avatar" value="">
   <span class="error"><?php if(!empty($errors['avatar'])) { echo $errors['avatar']; } ?></span>
   <input type="submit" name="submitprofil" value="Mettre à jour mon profil !" />
 </form>

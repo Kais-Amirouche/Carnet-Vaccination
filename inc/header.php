@@ -18,7 +18,7 @@
           <div class="menu">
             <ul>
                 <?php if(isLogged()) { ?>
-                <li><a href="monprofil.php"><img class="imgprofil" src="membres/avatars/<?php echo $_SESSION['user']['avatar']; ?>" alt="logo profil"></a></li>
+                <li><a href="monprofil.php#action"><img class="imgprofil" src="membres/avatars/<?php echo $_SESSION['user']['avatar']; ?>" alt="logo profil"></a></li>
                 <?php } ?>
                 <li><a href="index.php">Accueil</a></li>
                <?php if(isLogged()) { ?>
@@ -27,17 +27,18 @@
                  <?php } ?>
                 <li><a href="logout.php">Deconnexion</a></li>
                <?php } else { ?>
-                <li><a href="inscription.php">Inscription</a></li>
-                <li><a href="connexion.php">Connexion</a></li>
+                <li><a href="inscription.php#action">Inscription</a></li>
+                <li><a href="connexion.php#action">Connexion</a></li>
               <?php } ?>
                 <li><a href="singlevaccin.php?id=">Information vaccins</a></li>
             </ul>
           </div>
         </nav>
         <?php if(isLogged()) { ?>
-        <div class="Bonjour"><p>Bonjour <?php echo ucfirst($_SESSION['user']['prenom']); ?></p></div>
+        <div class="Bonjour"><p class="hello">Bonjour <?php echo ucfirst($_SESSION['user']['prenom']); ?></p></div>
        <?php } ?>
       </div>
     </div>
+    <img class="backgroundheader" src="asset/img/visuel-defenses.jpg" alt="">
   </header>
   <div class="container">
