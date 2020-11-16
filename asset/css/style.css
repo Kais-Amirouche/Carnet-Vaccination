@@ -59,6 +59,23 @@ table {
   margin: 0 auto;
 }
 /* perso */
+::-WebKit-scrollbar{
+width: 3px;
+height: 7px;
+}
+::-WebKit-scrollbar-track{
+	background-color:silver;
+}
+::-WebKit-scrollbar-thumb{
+	background-color: gold;
+	height: 10px;
+}
+::-WebKit-scrollbar-track-piece{
+	height: 30px;
+}
+
+
+
 h1{
 	text-align: center;
 	font-size: 200%;
