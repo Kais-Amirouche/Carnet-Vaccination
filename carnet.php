@@ -5,6 +5,12 @@ include('inc/function.php');
 
 $title = 'Mon Carnet';
 
+// $errors = array();
+// if(!empty($_GET['id']) && is_numeric($_GET['id']))
+// {
+//   $id = $_GET['id'];
+//   $sql = "SELECT * FROM vac_users"
+// }
 
 include('inc/header.php'); ?>
   <div class="carnet">
