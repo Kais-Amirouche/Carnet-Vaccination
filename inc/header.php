@@ -30,7 +30,7 @@
                 <li><a href="inscription.php#action">Inscription</a></li>
                 <li><a href="connexion.php#action">Connexion</a></li>
               <?php } ?>
-                <li><a href="singlevaccin.php?id=">Information vaccins</a></li>
+                <li><a href="allvaccin.php">Information vaccins</a></li>
             </ul>
           </div>
         </nav>
