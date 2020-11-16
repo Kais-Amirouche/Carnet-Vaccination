@@ -107,22 +107,43 @@ header{
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	border-radius: 30px;
 	text-align: center;
 	color: #fff;
 }
 .presentation {
 	text-align: left;
+	text-align: center;
+	margin-top: 40px;
+	position:absolute;
+	top:360px;
+	width:600px;
+	height:400px;
 
 }
 .presentation h3{
-
+color: red;
+font-family: "Trebuchet MS", Helvetica, sans-serif;
+font-size: 26px;
+letter-spacing: 4px;
+word-spacing: 0.2px;
+font-weight: 700;
 }
 .presentation h4{
-
+color: red;
+font-family: "Trebuchet MS", Helvetica, sans-serif;
+font-size: 26px;
+letter-spacing: 4px;
+word-spacing: 0.2px;
+font-weight: 700;
 }
 .presentation p{
+	color: black;
+	text-align: left;
 
+}
+center b span {
+	font-weight: bolder;
+	color: red;
 }
 .menu{
 	height: 5em;
@@ -198,7 +219,6 @@ nav ul li a:hover{
 	opacity: .7;
 }
 .top{
-	position: fixed;
 	z-index: 3;
 	background-color:#048ABF;
 	width: 100%;
