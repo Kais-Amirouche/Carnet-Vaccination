@@ -3,17 +3,16 @@
 include('../inc/pdo.php');
 include('../inc/function.php');
 
-// if(isLogged()){
-//   if ($_SESSION['user']['role']=='admin'){
-//
-//   }else {
-//     header('Location: ../index.php');
-//     die();
-//   }
-// }else {
-//   header('Location: ../index.php');
-//   die();
-// }
+if(isLogged()){
+  if ($_SESSION['user']['role']=='admin'){
+
+  }else {
+    header('Location: ../index.php');
+    die();
+  }
+}else {
+  die('no');
+}
 $title = 'Dashboard';
 
 $errors = array();
