@@ -9,8 +9,8 @@
 </head>
 <body>
   <header>
-    <div class="wrap">
       <div class="top">
+        <div class="wrap">
         <nav class="nav">
           <div class="logo">
             <img class="logohome" src="asset/img/logo.png"  alt="">
