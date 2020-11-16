@@ -32,11 +32,13 @@
               <?php } ?>
               <div class="dropdown">
                 <li class="dropdown">
-                  <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+                  <a href="javascript:void(0)" class="dropbtn">Information</a>
                   <div class="dropdown-content">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 4</a>
+                    <a href="#">Generalisation sur les vaccins</a>
+                    <a href="#">Les maladies et leur vaccins</a>
+                    <a href="#">La vaccination au cours de la vie</a>
+                    <a href="#">Vaccination et maldie chronique</a>
+                    <a href="#">les vaccins existant en France</a>
                   </div>
                 </li>
               </div>
@@ -49,22 +51,20 @@
       </div>
     </div>
     <img class="backgroundheader" src="asset/img/vac-vac.jpeg" alt="">
-        <div class="presentation">
-   <div style="position:absolute;top:360px; width:600px; height:400px;">
-      <center><b>Mon carnet de vaccination électronique
-Pour être mieux vacciné, sans défaut ni excès.
-Le carnet de vaccination est un carnet dans lequel sont notées toutes les vaccinations d’une personne. Le professionnel de santé qui vous vaccine (médecin ou infirmier) écrit dans ce carnet :
+    <div class="presentation">
+      <h1>Mon carnet de vaccination électronique
+      <P>Pour être mieux vacciné, sans défaut ni excès.
+      Le carnet de vaccination est un carnet dans lequel sont notées toutes les vaccinations d’une personne. Le professionnel de santé qui vous vaccine (médecin ou infirmier) écrit dans ce carnet :
 
-le nom du vaccin ;
-la date de l’injection ;
-le numéro du lot (étiquette) ;
-la date du prochain vaccin à faire.
-Ce carnet est très pratique : il vous permet de savoir quelles vaccinations vous avez reçues et si vous êtes à jour de vos vaccinations. Il faut donc le ranger précieusement pour ne pas le perdre et ne pas oublier de le présenter au professionnel de santé à chaque fois que vous vous faites vacciner. Il est valable toute la vie !
+      le nom du vaccin ;
+      la date de l’injection ;
+      le numéro du lot (étiquette) ;
+      la date du prochain vaccin à faire.
+      Ce carnet est très pratique : il vous permet de savoir quelles vaccinations vous avez reçues et si vous êtes à jour de vos vaccinations. Il faut donc le ranger précieusement pour ne pas le perdre et ne pas oublier de le présenter au professionnel de santé à chaque fois que vous vous faites vacciner. Il est valable toute la vie !
 
-Pour l’obtenir, il suffit de le demander aux professionnels de santé. Il est gratuit.
+      Pour l’obtenir, il suffit de le demander aux professionnels de santé. Il est gratuit.
 
-À noter : Pour les enfants, le carnet de santé sert aussi de carnet de vaccination. Le carnet de vaccination remplace le carnet de santé lorsque l’on est adulte (surtout si on ne retrouve plus son carnet de santé).</b></center>
+      À noter : Pour les enfants, le carnet de santé sert aussi de carnet de vaccination. Le carnet de vaccination remplace le carnet de santé lorsque l’on est adulte (surtout si on ne retrouve plus son carnet de santé).</b></center>
     </div>
-</div>
   </header>
   <div class="container">
