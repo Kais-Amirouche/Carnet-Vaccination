@@ -50,7 +50,6 @@
     </div>
     <img class="backgroundheader" src="asset/img/vac-vac.jpeg" alt="">
         <div class="presentation">
-   <div style="position:absolute;top:360px; width:600px; height:400px;">
       <center><b><span>Mon carnet de vaccination électronique
 Pour être mieux vacciné, sans défaut ni excès.</span>
 Le carnet de vaccination est un carnet dans lequel sont notées toutes les vaccinations d’une personne. Le professionnel de santé qui vous vaccine (médecin ou infirmier) écrit dans ce carnet :
