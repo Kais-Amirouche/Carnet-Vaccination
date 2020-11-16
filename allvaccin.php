@@ -1,16 +1,21 @@
 <?php
-
+session_start();
 include('inc/pdo.php');
-include('inc/function.php');?>
+include('inc/function.php');
+$title = 'Tous les vaccins';
 
-<a href="singlevaccin.php">La Diphtérie</a>
-<a href="singlevaccin.php">Le Tétanos</a>
-<a href="singlevaccin.php">La Poliomyélite</a>
-<a href="singlevaccin.php">l’Haemophilus influenzae B</a>
-<a href="singlevaccin.php">La Coqueluche</a>
-<a href="singlevaccin.php">Hépatite B </a>
-<a href="singlevaccin.php">La rougeole </a>
-<a href="singlevaccin.php">Les oreillons</a>
-<a href="singlevaccin.php">La rubéole</a>
-<a href="singlevaccin.php">Le méningocoque C</a>
-<a href="singlevaccin.php">Le pneumocoque</a>
+$sql = "SELECT * FROM vac_vaccins";
+$var = $pdo->prepare($sql);
+$var->execute();
+$vaccins = $var->fetchAll();
+// debug($vaccins);
+include('inc/header.php');
+
+foreach ($vaccins as $vaccin) { ?>
+
+  <div class="part-vaccin">
+    <a href="singlevaccin.php?id=<?php echo $vaccin['id']; ?>"><?php echo $vaccin['name']; ?></a>
+  </div>
+
+<?php }
+include('inc/footer.php');

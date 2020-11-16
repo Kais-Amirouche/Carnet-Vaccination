@@ -92,6 +92,8 @@ include('inc/header-back.php'); ?>
                                             <th>Nom</th>
                                             <th>A quel âge</th>
                                             <th>Description</th>
+                                            <th>Rappel</th>
+                                            <th>Statut</th>
                                         </tr>
 
                                     </thead>
@@ -100,6 +102,8 @@ include('inc/header-back.php'); ?>
                                           <th>Nom</th>
                                           <th>A quel âge</th>
                                           <th>Description</th>
+                                          <th>Rappel</th>
+                                          <th>Statut</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
@@ -108,6 +112,8 @@ include('inc/header-back.php'); ?>
                                             <td><?php echo $vaccin['name']; ?></td>
                                             <td><?php echo $vaccin['age']; ?></td>
                                             <td><?php echo $vaccin['description']; ?></td>
+                                            <td><?php echo $vaccin['rappel']; ?></td>
+                                            <td><?php echo $vaccin['statuts']; ?></td>
                                             </tr>
                                   <?php } ?>
                                     </tbody>
