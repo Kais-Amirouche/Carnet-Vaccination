@@ -146,21 +146,19 @@ nav ul li a:hover{
 .dropdown-content {
 	text-align: center;
   display: none;
-  position: absolute;
   background-color: black;
   min-width: 60px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.7);
   z-index: 1;
-}
-.dropdown-content li {
-	height: 30px;
 }
 
 .dropdown-content a {
+	text-align: center;
+	padding: 5px 10px;
+	height: auto;
 	display: block;
   color: #ddc798;
   text-decoration: none;
-  text-align: left;
 }
 
 .dropdown-content a:hover {
@@ -263,6 +261,9 @@ form input[type="submit"]:hover{
 	text-transform:capitalize;
 	text-decoration: none;
 	transition: .7s;
+}
+.redirect a{
+
 }
 .redirect a:hover{
 	background-color: #FFF;

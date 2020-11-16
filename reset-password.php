@@ -63,3 +63,4 @@ include('inc/header.php');?>
 </form>
 <?php } ?>
   </div>
+<?php include('inc/footer.php');
