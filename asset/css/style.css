@@ -162,7 +162,7 @@ nav ul li a:hover{
 .dropdown-content {
 	text-align: center;
   display: none;
-  background-color: black;
+  background-color: #048ABF;
   min-width: 60px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.7);
   z-index: 1;
