@@ -48,10 +48,11 @@
        <?php } ?>
       </div>
     </div>
-    <div class="presentation">
-      <img class="backgroundheader" src="asset/img/visuel-defenses.jpg" alt="">
-      <p>Mon carnet de vaccination électronique
-Pour être mieux vacciné, sans défaut ni excès
+    <img class="backgroundheader" src="asset/img/visuel-defenses.jpg" alt="">
+        <div class="presentation">
+   <div style="position:absolute;top:360px; width:600px; height:400px;">
+      <center><b>Mon carnet de vaccination électronique
+Pour être mieux vacciné, sans défaut ni excès.
 Le carnet de vaccination est un carnet dans lequel sont notées toutes les vaccinations d’une personne. Le professionnel de santé qui vous vaccine (médecin ou infirmier) écrit dans ce carnet :
 
 le nom du vaccin ;
@@ -62,8 +63,8 @@ Ce carnet est très pratique : il vous permet de savoir quelles vaccinations vou
 
 Pour l’obtenir, il suffit de le demander aux professionnels de santé. Il est gratuit.
 
-À noter : Pour les enfants, le carnet de santé sert aussi de carnet de vaccination. Le carnet de vaccination remplace le carnet de santé lorsque l’on est adulte (surtout si on ne retrouve plus son carnet de santé).</p>
-
+À noter : Pour les enfants, le carnet de santé sert aussi de carnet de vaccination. Le carnet de vaccination remplace le carnet de santé lorsque l’on est adulte (surtout si on ne retrouve plus son carnet de santé).</b></center>
     </div>
+</div>
   </header>
   <div class="container">

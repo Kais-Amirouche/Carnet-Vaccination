@@ -111,8 +111,12 @@ header{
 	color: #fff;
 }
 .presentation {
+	padding-left: 450px;
+}
+center b  {
 	text-align: center;
 	color: #fff;
+	padding-left: 30px;
 }
 .menu{
 	height: 5em;
