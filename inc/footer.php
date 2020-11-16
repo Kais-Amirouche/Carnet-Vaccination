@@ -4,10 +4,10 @@
   </div>  <!-- container -->
   <footer class="footer-world">
   			<div class="footer-right">
-  				<a href="#"><img src="asset\img\reseau-facebook.png" alt=""></a>
-  				<a href="#"><img src="asset\img\reseau-instagram.png" alt=""></a>
-  				<a href="#"><img src="asset\img\reseau-twitter.png" alt=""></a>
-  				<a href="#"><img src="asset\img\reseau-whatsapp.png" alt=""></a>
+  				<a href="#"><img src="asset\img\reseau-facebook2.png" alt=""></a>
+  				<a href="#"><img src="asset\img\reseau-instagram2.png" alt=""></a>
+  				<a href="#"><img src="asset\img\reseau-twitter2.png" alt=""></a>
+  				<a href="#"><img src="asset\img\reseau-whatsapp2.png" alt=""></a>
   			</div>
   			<div class="footer-left">
   				<p class="footer-links">
