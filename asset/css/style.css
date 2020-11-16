@@ -113,10 +113,14 @@ header{
 .presentation {
 	padding-left: 450px;
 }
-center b  {
+center b {
 	text-align: center;
 	color: #fff;
 	padding-left: 30px;
+}
+center b span {
+	font-weight: bolder;
+	color: red;
 }
 .menu{
 	height: 5em;
