@@ -60,7 +60,7 @@ table {
 }
 /* perso */
 ::-WebKit-scrollbar{
-width: 3px;
+width: 5px;
 height: 7px;
 }
 ::-WebKit-scrollbar-track{
