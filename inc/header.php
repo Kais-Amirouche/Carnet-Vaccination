@@ -32,11 +32,13 @@
               <?php } ?>
               <div class="dropdown">
                 <li class="dropdown">
-                  <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+                  <a href="javascript:void(0)" class="dropbtn">Information</a>
                   <div class="dropdown-content">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 4</a>
+                    <a href="#">Generalisation sur les vaccins</a>
+                    <a href="#">Les maladies et leur vaccins</a>
+                    <a href="#">La vaccination au cours de la vie</a>
+                    <a href="#">Vaccination et maldie chronique</a>
+                    <a href="#">les vaccins existant en France</a>
                   </div>
                 </li>
               </div>
