@@ -58,7 +58,7 @@ include('inc/header.php'); ?>
 
     <input type="submit" name="submitconnexion" value="Connexion" />
     <div class="mdp">
-      <a href="modifmdp.php">mot de passe oublié ?</a>
+      <a href="modifmdp.php#action">mot de passe oublié ?</a>
     </div>
   </form>
 
