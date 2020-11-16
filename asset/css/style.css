@@ -136,11 +136,47 @@ nav ul li a:hover{
 	position: fixed;
 	background-color: #000;
 	width: 100%;
+<<<<<<< HEAD
 	margin-left: -260px;
+=======
+>>>>>>> 93a6a4112d39ec03c0d91b3599a7e835f2590f8c
 }
 .hello{
 	padding-left: 20px;
 }
+
+/* menu deroulant */
+.boutonmenuprincipal {
+background-color:black;
+color: #ddc798;
+border: none;
+cursor: pointer;
+padding:5px;
+margin-top:5px;
+font-size: 1em;
+}
+.boutonmenuprincipal:hover {
+background-color: silver;
+}
+.dropdown {
+position: relative;
+display: inline-block;
+}
+.dropdown-child {
+display: none;
+background-color: black;
+min-width: 50px;
+}
+.dropdown-child a {
+color: white;
+padding: 20px;
+text-decoration: none;
+display: block;
+}
+.dropdown:hover .dropdown-child {
+display: block;
+}
+
 form{
   display: flex;
   flex-direction: column;
