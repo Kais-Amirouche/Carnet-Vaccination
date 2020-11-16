@@ -112,11 +112,17 @@ header{
 	color: #fff;
 }
 .presentation {
-	padding-left: 250px;
+	text-align: left;
+
 }
-center b {
-	color: yellow;
-	padding-left: 30px;
+.presentation h3{
+
+}
+.presentation h4{
+
+}
+.presentation p{
+
 }
 center b span {
 	font-weight: bolder;
