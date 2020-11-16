@@ -113,16 +113,38 @@ header{
 }
 .presentation {
 	text-align: left;
+	text-align: center;
+	margin-top: 40px;
+	position:absolute;
+	top:360px;
+	width:600px;
+	height:400px;
 
 }
 .presentation h3{
-
+color: red;
+font-family: "Trebuchet MS", Helvetica, sans-serif;
+font-size: 26px;
+letter-spacing: 4px;
+word-spacing: 0.2px;
+font-weight: 700;
 }
 .presentation h4{
-
+color: red;
+font-family: "Trebuchet MS", Helvetica, sans-serif;
+font-size: 26px;
+letter-spacing: 4px;
+word-spacing: 0.2px;
+font-weight: 700;
 }
 .presentation p{
+	color: black;
+	text-align: left;
 
+}
+center b span {
+	font-weight: bolder;
+	color: red;
 }
 .menu{
 	height: 5em;
