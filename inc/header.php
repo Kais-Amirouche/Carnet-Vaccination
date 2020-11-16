@@ -9,8 +9,8 @@
 </head>
 <body>
   <header>
-    <div class="wrap">
       <div class="top">
+        <div class="wrap">
         <nav class="nav">
           <div class="logo">
             <img class="logohome" src="asset/img/logo.png"  alt="">
@@ -30,7 +30,16 @@
                 <li><a href="inscription.php#action">Inscription</a></li>
                 <li><a href="connexion.php#action">Connexion</a></li>
               <?php } ?>
-                <li><a href="allvaccin.php">Information vaccins</a></li>
+              <div class="dropdown">
+                <button class="boutonmenuprincipal">Information</button>
+                <div class="dropdown-child">
+                   <a href="#">Menu enfant 1</a>
+                  <a href="#">Menu enfant 2</a>
+                  <a href="#">Menu enfant 3</a>
+                  <a href="#">Menu enfant 4</a>
+                  <a href="#">Menu enfant 5</a>
+                </div>
+              </div>
             </ul>
           </div>
         </nav>
