@@ -31,14 +31,14 @@
                 <li><a href="connexion.php#action">Connexion</a></li>
               <?php } ?>
               <div class="dropdown">
-                <button class="boutonmenuprincipal">Information</button>
-                <div class="dropdown-child">
-                   <a href="#">Menu enfant 1</a>
-                  <a href="#">Menu enfant 2</a>
-                  <a href="#">Menu enfant 3</a>
-                  <a href="#">Menu enfant 4</a>
-                  <a href="#">Menu enfant 5</a>
-                </div>
+                <li class="dropdown">
+                  <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+                  <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                  </div>
+                </li>
               </div>
             </ul>
           </div>
