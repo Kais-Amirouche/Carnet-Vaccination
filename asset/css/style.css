@@ -519,7 +519,7 @@ section {
 	margin-top: 2px;
 }
 .footer-world .footer-right a img:hover{
-	opacity: .3;
+	filter: brightness(.3);
 }
 .footer-world .footer-right a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);}
 
