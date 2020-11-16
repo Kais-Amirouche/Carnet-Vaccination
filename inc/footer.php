@@ -2,7 +2,6 @@
 
 
   </div>  <!-- container -->
-<<<<<<< HEAD
   <footer class="footer-world">
   			<div class="footer-right">
   				<a href="#"><img src="asset\img\reseau-facebook.png" alt=""></a>
