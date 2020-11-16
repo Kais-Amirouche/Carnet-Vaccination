@@ -60,9 +60,10 @@ table {
 }
 /* perso */
 ::-WebKit-scrollbar{
-width: 3px;
+width: 10px;
 height: 7px;
 }
+
 ::-WebKit-scrollbar-track{
 	background-color:silver;
 }
@@ -70,8 +71,12 @@ height: 7px;
 	background-color: gold;
 	height: 10px;
 }
+::-WebKit-scrollbar-thumb:hover{
+	background-color: #DAA520;
+}
+
 ::-WebKit-scrollbar-track-piece{
-	height: 30px;
+	height: 10px;
 }
 
 
@@ -152,6 +157,7 @@ nav ul li a:hover{
 }
 
 .dropdown-content a {
+	display: block;
   color: #ddc798;
   text-decoration: none;
   text-align: left;
@@ -186,37 +192,7 @@ nav ul li a:hover{
 	padding-left: 20px;
 }
 
-/* menu deroulant */
-.boutonmenuprincipal {
-background-color:black;
-color: #ddc798;
-border: none;
-cursor: pointer;
-padding:5px;
-margin-top:5px;
-font-size: 1em;
-}
-.boutonmenuprincipal:hover {
-background-color: silver;
-}
-.dropdown {
-position: relative;
-display: inline-block;
-}
-.dropdown-child {
-display: none;
-background-color: black;
-min-width: 50px;
-}
-.dropdown-child a {
-color: white;
-padding: 20px;
-text-decoration: none;
-display: block;
-}
-.dropdown:hover .dropdown-child {
-display: block;
-}
+
 
 form{
   display: flex;
