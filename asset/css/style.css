@@ -194,6 +194,7 @@ nav ul li a:hover{
 }
 .top{
 	position: fixed;
+	z-index: 3;
 	background-color:#048ABF;
 	width: 100%;
 }
