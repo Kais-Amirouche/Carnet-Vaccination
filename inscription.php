@@ -96,7 +96,7 @@ if(!empty($_POST['submitinscription'])) {
 }
 
 include('inc/header.php'); ?>
-<h1>Inscription</h1>
+<h1 id="action">Inscription</h1>
 <form method="POST" action="inscription.php" id="forminscription" novalidate>
     <!-- nom -->
       <input type="text" name="nom" id="nom" class="form-control" value="<?php if(!empty($_POST['nom'])) { echo $_POST['nom']; } ?>" placeholder="nom" />
