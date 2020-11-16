@@ -10,13 +10,13 @@ include('inc/header.php');?>
 <div class="presentation">
   <h3>Mon carnet de vaccination électronique</h3>
   <h4>  Pour être mieux vacciné, sans défaut ni excès.</h4>
-  <p> Le carnet de vaccination est un carnet dans lequel sont notées toutes les vaccinations d’une personne. Le professionnel de santé qui vous vaccine (médecin ou infirmier) écrit dans ce carnet :
+  <p> Le carnet de vaccination est un carnet dans lequel sont notées toutes les vaccinations d’une personne.</p><p>Le professionnel de santé qui vous vaccine (médecin ou infirmier) écrit dans ce carnet :</p>
 
-    le nom du vaccin ;
-    la date de l’injection ;
-    le numéro du lot (étiquette) ;
-    la date du prochain vaccin à faire.
-    Ce carnet est très pratique : il vous permet de savoir quelles vaccinations vous avez reçues et si vous êtes à jour de vos vaccinations. Il faut donc le ranger précieusement pour ne pas le perdre et ne pas oublier de le présenter au professionnel de santé à chaque fois que vous vous faites vacciner. Il est valable toute la vie !
+    <p>le nom du vaccin ;</p>
+    <p>la date de l’injection ;</p>
+    <p>le numéro du lot (étiquette) ;</p>
+    <p>la date du prochain vaccin à faire.</p>
+    Ce carnet est très pratique : il vous permet de savoir quelles vaccinations vous avez reçues et</p><p> si vous êtes à jour de vos vaccinations. Il faut donc le ranger précieusement pour ne pas le perdre et ne pas oublier de le présenter au professionnel de santé à chaque fois que vous vous faites vacciner. Il est valable toute la vie !
 
     Pour l’obtenir, il suffit de le demander aux professionnels de santé. Il est gratuit.
 
