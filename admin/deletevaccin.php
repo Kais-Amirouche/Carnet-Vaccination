@@ -2,28 +2,28 @@
 include('../inc/pdo.php');
 include('../inc/function.php');
 
-if(!empty($_GET['id']) && is_numeric($_GET['id']))
+if (!empty($_GET['id']) && is_numeric($_GET['id']))
 {
   $id = $_GET['id'];
-  $sql = "SELECT * FROM vac_users WHERE id = :id";
+  $sql = "SELECT * FROM vac_vaccins WHERE id = :id";
   $var = $pdo->prepare($sql);
   $var->bindValue(':id',$id,PDO::PARAM_INT);
   $var->execute();
-  $user = $var->fetch();
-  // debug($question);
+  $vaccin = $var->fetch();
+  // debug($vaccin);
 
-  if(!empty($user))
+  if (!empty($vaccin))
   {
-    $sql = "UPDATE vac_users SET role = 'abonne' WHERE id = :id";
+    $sql = "DELETE FROM vac_vaccins WHERE id = :id";
     $var = $pdo->prepare($sql);
     $var->bindValue(':id',$id,PDO::PARAM_INT);
     $var->execute();
-    header('Location: users.php');
-  } else {
+    header('Location: vaccins.php');
+  }else {
     header('Location: 404.php');
     die();
   }
-} else {
+}else {
   header('Location: 404.php');
   die();
 }
