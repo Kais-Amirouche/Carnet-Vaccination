@@ -54,7 +54,7 @@ if(!empty($_POST['submitmdp'])) {
 
 include('inc/header.php'); ?>
 <?php if ($switch==false) { ?>
-<form action="" method="post" novalidate>
+<form id="action" action="" method="post" novalidate>
   <!-- LOGIN -->
   <div class="loginn">
     <input type="text" id="login" name="login" value="<?php if(!empty($_POST['login'])) { echo $_POST['login']; } ?>" placeholder="Email">
@@ -62,10 +62,12 @@ include('inc/header.php'); ?>
 
   <input type="submit" name="submitmdp" value="recevoir un mail" />
 </form>
-<?php }elseif($switch=='lien') { echo '<h1>copié ceci:</h1><br><p><span>'.$token.'</span></p>';?>
+<?php }elseif($switch=='lien'){?>
   <div class="newmdp">
-      <a href="reset-password.php?email=<?php echo $email ?>&token=<?php echo $token ?>">changez de mot de passe</a>
+    <label id="action" for="tok" class="copier">copier ceci pour modifié votre mot de passe:</label>
+    <textarea id="tok" class="tokencopié" name="tokencopié" rows="8" cols="80"> <?php echo $user['token'] ?></textarea>
+    <a class="redirect" href="reset-password.php?email=<?php echo $email ?>&token=<?php echo $token ?>">changez de mot de passe</a><br /><br />
   </div>
 <?php  }elseif($switch=='paix') {
 
-} ?>
+}include('inc/footer.php'); ?>
