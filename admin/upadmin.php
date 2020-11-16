@@ -18,7 +18,7 @@ if(!empty($_GET['id']) && is_numeric($_GET['id']))
     $var = $pdo->prepare($sql);
     $var->bindValue(':id',$id,PDO::PARAM_INT);
     $var->execute();
-    header('Location: tables.php');
+    header('Location: users.php');
   } else {
     header('Location: 404.php');
     die();

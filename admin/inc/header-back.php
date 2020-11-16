@@ -121,9 +121,15 @@
 
               <!-- Nav Item - Tableaux -->
               <li class="nav-item">
-                  <a class="nav-link" href="tables.php">
+                  <a class="nav-link" href="users.php">
                       <i class="fas fa-fw fa-table"></i>
-                      <span>Tableaux</span></a>
+                      <span>Utilisateurs</span></a>
+              </li>
+
+              <li class="nav-item">
+                  <a class="nav-link" href="vaccins.php">
+                      <i class="fas fa-fw fa-table"></i>
+                      <span>Vaccins</span></a>
               </li>
 
               <!-- Nav Item - Questions -->
