@@ -112,12 +112,17 @@ header{
 	color: #fff;
 }
 .presentation {
-	padding-left: 450px;
+	text-align: left;
+
 }
-center b  {
-	text-align: center;
-	color: #fff;
-	padding-left: 30px;
+.presentation h3{
+
+}
+.presentation h4{
+
+}
+.presentation p{
+
 }
 .menu{
 	height: 5em;
