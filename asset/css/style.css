@@ -41,6 +41,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
 /* clear */
 .clear:before,.clear:after { content:' '; display:table; }
 .clear:after { clear:both; }
@@ -68,7 +69,7 @@ height: 7px;
 	background-color:silver;
 }
 ::-WebKit-scrollbar-thumb{
-	background-color: gold;
+	background-color: #DAC625;
 	height: 10px;
 }
 ::-WebKit-scrollbar-thumb:hover{
@@ -99,14 +100,24 @@ h1:hover{
 	text-shadow: 4px 4px 7px rgba(0, 0, 0, 1);
 }
 header{
-	background-color: black;
+	background-color: #048ABF;
 }
-.backgroundheader{
+.backgroundheader {
 	width: 100%;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 	border-radius: 30px;
+	text-align: center;
+	color: #fff;
+}
+.presentation {
+	padding-left: 450px;
+}
+center b  {
+	text-align: center;
+	color: #fff;
+	padding-left: 30px;
 }
 .menu{
 	height: 5em;
@@ -183,15 +194,44 @@ nav ul li a:hover{
 }
 .top{
 	position: fixed;
-	background-color: #000;
+	background-color:#048ABF;
 	width: 100%;
 }
 .hello{
 	padding-left: 20px;
 }
 
-
-
+/* menu deroulant */
+.boutonmenuprincipal {
+background-color:black;
+color: #ddc798;
+border: none;
+cursor: pointer;
+padding:5px;
+margin-top:5px;
+font-size: 1em;
+}
+.boutonmenuprincipal:hover {
+background-color: silver;
+}
+.dropdown {
+position: relative;
+display: inline-block;
+}
+.dropdown-child {
+display: none;
+background-color: black;
+min-width: 50px;
+}
+.dropdown-child a {
+color: white;
+padding: 20px;
+text-decoration: none;
+display: block;
+}
+.dropdown:hover .dropdown-child {
+display: block;
+}
 form{
   display: flex;
   flex-direction: column;
@@ -367,7 +407,7 @@ section {
 }
 
 .footer-world {
-  background-color: #292c2f;
+  background-color: #024873;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
   width: 100%;
@@ -423,7 +463,7 @@ section {
   display: inline-block;
   width: 35px;
   height: 35px;
-  background-color: #33383b;
+  background-color: #3338;
   border-radius: 2px;
   font-size: 20px;
   color: #ffffff;

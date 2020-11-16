@@ -1,19 +1,11 @@
 <?php
 session_start();
-
-
 include('inc/pdo.php');
 include('inc/function.php');
-debug($_SESSION);
-// debug($_SESSION);
 
-include('inc/header.php');?>
+$title = 'Ajouter un vaccin à votre carnet';
 
-
-
-<!-- <h1>Accueil</h1> -->
-
-
+include('inc/header.php'); ?>
 
 
 
