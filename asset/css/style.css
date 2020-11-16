@@ -101,12 +101,22 @@ h1:hover{
 header{
 	background-color: #048ABF;
 }
-.backgroundheader{
+.backgroundheader {
 	width: 100%;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 	border-radius: 30px;
+	text-align: center;
+	color: #fff;
+}
+.presentation {
+	padding-left: 450px;
+}
+center b  {
+	text-align: center;
+	color: #fff;
+	padding-left: 30px;
 }
 .menu{
 	height: 5em;
@@ -190,8 +200,37 @@ nav ul li a:hover{
 	padding-left: 20px;
 }
 
-
-
+/* menu deroulant */
+.boutonmenuprincipal {
+background-color:black;
+color: #ddc798;
+border: none;
+cursor: pointer;
+padding:5px;
+margin-top:5px;
+font-size: 1em;
+}
+.boutonmenuprincipal:hover {
+background-color: silver;
+}
+.dropdown {
+position: relative;
+display: inline-block;
+}
+.dropdown-child {
+display: none;
+background-color: black;
+min-width: 50px;
+}
+.dropdown-child a {
+color: white;
+padding: 20px;
+text-decoration: none;
+display: block;
+}
+.dropdown:hover .dropdown-child {
+display: block;
+}
 form{
   display: flex;
   flex-direction: column;
