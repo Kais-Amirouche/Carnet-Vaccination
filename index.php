@@ -19,7 +19,14 @@ include('inc/header.php');?>
     <p>|la date du prochain vaccin à faire|</p>
   </div>
 </div>
-
+<div class="connexion">
+  <ul>
+    <h2>Vous n'êtes toujours pas connecté?</h2>
+    <?php if(isLogged()) { ?>
+    <li><a href="connexion.php#action">Cliquez ici.</a></li>
+    <?php } ?>
+  </ul>
+</div>
 <!-- <h1>Accueil</h1> -->
 
 
