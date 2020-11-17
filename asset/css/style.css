@@ -335,35 +335,56 @@ form input[type="submit"]:hover{
   border: 5px solid #000;
 }
 /* question */
-.container a{
+ .ask1 {
+	text-align: center;
 	text-decoration: none;
-	cursor:pointer;
   background-color: #333;
   color: #fff;
 	text-transform: uppercase;
-	padding: 5px;
+	padding: 10px;
 	border-radius: 5px;
 }
+.ask1:hover{
+	background-color: #FFF;
+  border: 4px solid #000;
+	border-radius: 8px;
+	text-shadow: 10px 2px 4px rgba(0, 0, 0, 1);
+	color: #333;
+}
 .ask-attente h2{
-	width: 95px;
-	background-color:#F0CA75;
+	width: 110px;
+	background-color:#AEF1FC;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
   margin-bottom: 10px;
 	text-decoration: underline;
   text-transform: uppercase;
+	border: 2px solid #040E2E;
+	border-radius: 8px;
+}
+.ask-attente h2:hover{
+	background-color: #FFF;
+	border: 4px solid #000;
+	border-radius: 8px;
+	text-shadow: 10px 2px 4px rgba(0, 0, 0, 1);
+	color: #333;
+	border-radius: 8px;
 }
 .ask-update h2{
-	width: 60px;
-	background-color:#F0CA75;
+	width: 70px;
+	background-color:#AEF1FC;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
   text-decoration: underline;
   text-transform: uppercase;
+	border: 2px solid #040E2E;
+	border-radius: 8px;
 }
-
-
-
-
-
+.ask-update h2:hover{
+	background-color: #FFF;
+	border: 4px solid #000;
+	border-radius: 8px;
+	text-shadow: 10px 2px 4px rgba(0, 0, 0, 1);
+	color: #333;
+}
 
 .redirect{
 	text-align: center;
@@ -376,9 +397,7 @@ form input[type="submit"]:hover{
 	text-decoration: none;
 	transition: .7s;
 }
-.redirect a{
 
-}
 .redirect a:hover{
 	background-color: #FFF;
 	text-shadow: 10px 2px 4px rgba(0, 0, 0, 1);
@@ -477,7 +496,6 @@ section {
   text-align: center;
   font-size: 22px;
   font-weight: 700;
-  text-decoration: underline;
 }
 
 .footer-world {
