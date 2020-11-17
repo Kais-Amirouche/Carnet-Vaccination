@@ -334,6 +334,37 @@ form input[type="submit"]:hover{
   color: #000;
   border: 5px solid #000;
 }
+/* question */
+.container a{
+	text-decoration: none;
+	cursor:pointer;
+  background-color: #333;
+  color: #fff;
+	text-transform: uppercase;
+	padding: 5px;
+	border-radius: 5px;
+}
+.ask-attente h2{
+	width: 95px;
+	background-color:#F0CA75;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+  margin-bottom: 10px;
+	text-decoration: underline;
+  text-transform: uppercase;
+}
+.ask-update h2{
+	width: 60px;
+	background-color:#F0CA75;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+
+
+
+
+
 .redirect{
 	text-align: center;
 	border-radius: 10px;
