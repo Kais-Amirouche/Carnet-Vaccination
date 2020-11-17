@@ -333,6 +333,16 @@ form input[type="submit"]:hover{
   border: 5px solid #000;
 }
 /* question */
+section {
+  width: 100%;
+  display: inline-block;
+  background: #ccc;
+  height: 60vh;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+	padding-top: 100px;
+}
  .ask1 {
 	text-align: center;
 	text-decoration: none;
@@ -486,15 +496,7 @@ label:hover{
 	text-shadow: 4px 4px 7px rgba(0, 0, 0, 1);
 }
 
-section {
-  width: 100%;
-  display: inline-block;
-  background: #ccc;
-  height: 60vh;
-  text-align: center;
-  font-size: 22px;
-  font-weight: 700;
-}
+
 
 .footer-world {
   background-color: #024873;
