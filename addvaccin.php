@@ -21,9 +21,14 @@ if(!empty($_POST['submitvac'])) {
   // $statut = cleanXss($_POST['rappel']);
 
   $errors = validationText($errors,$numero_lot,'numero_lot',4,20);
-  if (!empty($date))
+  if (empty($date))
   {
-    if (!empty($vaccin_id)){
+    $errors['date_vaccin'] = 'Veuillez renseigner une date';
+  }
+  if (empty($vaccin_id))
+  {
+      $errors['vaccins'] = 'Veuillez séléctionner un vaccin';
+  }
       if (count($errors)==0) {
         $sql = "INSERT INTO user_vaccin (user_id, vaccin_id, fait_at, numero_lot)
                 VALUES (:user_id, :vaccin_id, $date, :dose)";
@@ -35,12 +40,8 @@ if(!empty($_POST['submitvac'])) {
         // $query->bindValue(':statut',$statut,PDO::PARAM_STR);
         $query->execute();
       }
-    } else {
-      $errors['vaccins'] = 'Veuillez séléctionner un vaccin';
-    }
-  } else {
-    $errors['date_vaccin'] = 'Veuillez renseigner une date';
-  }
+
+
 }
 include('inc/header.php'); ?>
 
