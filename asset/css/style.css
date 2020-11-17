@@ -121,6 +121,7 @@ header{
 
 }
 .presentation h3{
+	text-decoration: underline;
 	margin-left: 30px;
 	font-size: 200%;
 	margin-top: 40px;
@@ -128,20 +129,21 @@ header{
 	font-size: 26px;
 	letter-spacing: 4px;
 	word-spacing: 0.2px;
-	color: #591419;
+	color: #E6677C;
 	font-weight: 700;
 	font-variant: small-caps;
 	transition: .7s;
 }
 .presentation h4{
+	text-decoration: underline;
 	margin-left: 30px;
 	font-size: 200%;
-	margin-top: 40px;
+	margin-top: 20px;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	font-size: 26px;
 	letter-spacing: 4px;
 	word-spacing: 0.2px;
-	color: #591419;
+	color: #E6677C;
 	font-weight: 700;
 	font-variant: small-caps;
 	transition: .7s;
@@ -152,7 +154,7 @@ header{
 	font-size: 15px;
 	letter-spacing: 2px;
 	word-spacing: 0.2px;
-	background-color: #A6874E;
+	background-color: #8DB6D9;
 	border: 2px solid #A6874E;
 	text-align: center;
 	margin-left: 30px;
@@ -204,8 +206,9 @@ nav ul li a:hover{
 }
 
 .dropdown-content a {
+	margin-top: 20px;
 	text-align: center;
-	padding: 5px 10px;
+	padding: 5px 5px;
 	height: auto;
 	display: block;
   color: #ddc798;
@@ -519,7 +522,7 @@ section {
 	margin-top: 2px;
 }
 .footer-world .footer-right a img:hover{
-	opacity: .3;
+	filter: brightness(.3);
 }
 .footer-world .footer-right a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);}
 
