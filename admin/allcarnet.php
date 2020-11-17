@@ -13,12 +13,10 @@ if(isLogged()){
 }
 
 $title = 'Carnets';
-$id = $_GET['id'];
-// debug($_GET);
-// affiche le carnet du user selectionné
-$sql = "SELECT * FROM user_vaccin WHERE user_id = :id";
+
+// affiche tous les carnets, de tous les users
+$sql = "SELECT * FROM user_vaccin ORDER BY id ASC";
 $var = $pdo->prepare($sql);
-$var->bindValue(':id',$id,PDO::PARAM_INT);
 $var->execute();
 $carnets = $var->fetchAll();
 // debug($carnets);
@@ -28,7 +26,7 @@ include('inc/header-back.php'); ?>
   <!-- DataTales Example -->
   <div class="card shadow mb-4">
       <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">Carnet de l'utilisateur</h6>
+          <h6 class="m-0 font-weight-bold text-primary">Carnets</h6>
       </div>
       <div class="card-body">
           <div class="table-responsive">
@@ -70,8 +68,6 @@ include('inc/header-back.php'); ?>
           </div>
       </div>
   </div>
-
-
 
 
 <?php include('inc/footer-back.php');
