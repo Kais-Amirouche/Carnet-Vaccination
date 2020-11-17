@@ -25,6 +25,7 @@
                  <?php if ($_SESSION['user']['role']=='admin'){ ?>
                    <li><a href="admin/index.php">admin</a></li>
                  <?php } ?>
+                 <li><a href="carnet.php">Mon Carnet</a></li>
                 <li><a href="logout.php">Deconnexion</a></li>
                <?php } else { ?>
                 <li><a href="inscription.php#action">Inscription</a></li>
