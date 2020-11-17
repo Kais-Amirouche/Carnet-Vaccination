@@ -32,7 +32,7 @@ include('inc/header.php'); ?>
     <?php foreach ($asksAttente as $askAttente) { ?>
       <p>Votre question:</p>
       <p><?php echo $askAttente['message']; ?></p>
-      <p><?php echo $askAttente['created_at']; ?></p>
+      <p><?php echo formatageDate($askAttente['created_at']); ?></p>
     <?php } ?>
     </div>
 </div>
@@ -45,10 +45,10 @@ include('inc/header.php'); ?>
     <?php foreach ($asksOk as $askOk) { ?>
       <p>Votre question:</p>
       <p><?php echo $askOk['message']; ?></p>
-      <p><?php echo $askOk['created_at']; ?></p>
+      <p><?php echo formatageDate($askOk['created_at']); ?></p>
       <p>La réponse:</p>
       <p><?php echo $askOk['answer']; ?></p>
-      <p><?php echo $askOk['updated_at']; ?></p>
+      <p><?php echo formatageDate($askOk['updated_at']); ?></p>
     <?php } ?>
     </div>
 </div>

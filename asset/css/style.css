@@ -196,7 +196,12 @@ header{
 	height: 50px;
 	margin-left: 20px;
 	margin-top: 20px;
+	transition: .7s;
 }
+.logohome:hover{
+	filter: invert(100%) drop-shadow(0px 15px 6px #000000);
+	-webkit-filter: invert(100%) drop-shadow(0px 15px 6px #000000);
+	-moz-filter: invert(100%) drop-shadow(0px 15px 6px #000000);}
 nav{
 	display: flex;
 	justify-content: space-between;
@@ -222,6 +227,7 @@ nav ul li a:hover{
 }
 
 .dropdown-content {
+	width: 100px;
 	text-align: center;
   display: none;
   background-color: #048ABF;
@@ -231,6 +237,9 @@ nav ul li a:hover{
 }
 
 .dropdown-content a {
+	font-size: 0.7em;
+	line-height: 0.9em;
+	width: 100px;
 	margin-top: 20px;
 	text-align: center;
 	padding: 5px 5px;
@@ -329,6 +338,7 @@ form input:focus:hover{
 text-shadow: none;
 
 }
+
 form textarea{
 	border-radius: 10px;
 	border: 3px solid black;
@@ -523,8 +533,41 @@ label:hover{
 	text-shadow: 4px 4px 7px rgba(0, 0, 0, 1);
 }
 
+<<<<<<< HEAD
+section {
+  width: 100%;
+  display: inline-block;
+  background: #ccc;
+  height: 60vh;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
 
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+=======
 
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+/* footer */
 .footer-world {
   background-color: #024873;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
