@@ -110,15 +110,15 @@ header{
 	text-align: center;
 	color: #fff;
 }
-.presentation {
-	text-align: left;
-	text-align: center;
-	margin-top: 30px;
-	position:absolute;
-	top:180px;
-	width:600px;
-	height:400px;
-  margin-left: 30px;
+.présentation {
+	text-align : left;
+	text-align : center;
+	margin-top : 30px ;
+	position : absolute;
+	top : 180px ;
+	height : 600px ;
+	width : 400px ;
+
 }
 .presentation h3{
 =======
@@ -165,7 +165,6 @@ header{
 }
 .connexion h5 {
 	background-color: #024873;
-	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
 	width: 100%;
 	text-align: left;
