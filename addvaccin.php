@@ -8,7 +8,7 @@ $query->execute();
 $namevacs = $query->fetchall();
 // debug($namevacs);
 // debug($_SESSION);
-debug($_POST);
+// debug($_POST);
 
 $errors = array();
 
@@ -23,17 +23,23 @@ if(!empty($_POST['submitvac'])) {
   $errors = validationText($errors,$numero_lot,'numero_lot',4,20);
   if (!empty($date))
   {
-    if (count($errors)==0) {
-      $sql = "INSERT INTO user_vaccin (user_id, vaccin_id, fait_at, numero_lot)
-              VALUES (:user_id, :vaccin_id, $date, :dose)";
-      $query = $pdo->prepare($sql);
-      $query->bindValue(':user_id',$user_id,PDO::PARAM_INT);
-      $query->bindValue(':vaccin_id',$vaccin_id,PDO::PARAM_INT);
-      // $query->bindValue(':fait_at',$date,PDO::PARAM_INT);
-      $query->bindValue(':dose',$numero_lot,PDO::PARAM_STR);
-      // $query->bindValue(':statut',$statut,PDO::PARAM_STR);
-      $query->execute();
+    if (!empty($vaccin_id)){
+      if (count($errors)==0) {
+        $sql = "INSERT INTO user_vaccin (user_id, vaccin_id, fait_at, numero_lot)
+                VALUES (:user_id, :vaccin_id, $date, :dose)";
+        $query = $pdo->prepare($sql);
+        $query->bindValue(':user_id',$user_id,PDO::PARAM_INT);
+        $query->bindValue(':vaccin_id',$vaccin_id,PDO::PARAM_INT);
+        // $query->bindValue(':fait_at',$date,PDO::PARAM_INT);
+        $query->bindValue(':dose',$numero_lot,PDO::PARAM_STR);
+        // $query->bindValue(':statut',$statut,PDO::PARAM_STR);
+        $query->execute();
+      }
+    } else {
+      $errors['vaccins'] = 'Veuillez séléctionner un vaccin';
     }
+  } else {
+    $errors['date_vaccin'] = 'Veuillez renseigner une date';
   }
 }
 include('inc/header.php'); ?>
@@ -46,15 +52,24 @@ include('inc/header.php'); ?>
   <input id="date" type="date" name="date_vaccin" value="<?php if(!empty($_POST['date_vaccin'])) {echo $_POST['date_vaccin'];} ?>">
   <span class="error"><?php if(!empty($errors['date_vaccin'])){echo $errors['date_vaccin'];} ?></span>
 
+
+
+
+
   <!-- Nom du vaccin -->
-  <label for="vaccins">les vaccins:</label>
-   <select name="vaccins" id="vaccins">
-     <option value="">-choisir votre vaccin-</option>
-   <?php foreach ($namevacs as $namevac) {
-     echo '<option value="'.$namevac['id'].'">'.$namevac['name'].'</option>';
-   } ?>
-   </select>
-   <span class="error"><?php if(!empty($errors['vaccins'])){echo $errors['vaccins'];} ?></span>
+  <label for="vaccins">Couleur</label>
+  <select id="vaccins" name="vaccins">
+    <option value="">--Séléctionne un vaccin bb--</option>
+        <?php foreach ($namevacs as $namevac) { ?>
+          <option value="<?php echo $namevac['id']; ?>"<?php if(!empty($_POST['vaccins'])) {if($_POST['vaccins']== $namevac['id']) {echo 'selected="selected"';}} ?>><?php echo $namevac['name']; ?></option>
+        <?php } ?>
+      </select>
+      <span class="error"><?php if(!empty($errors['vaccins'])) {echo $errors['vaccins'];} ?></span>
+
+    <?php
+     //debug($errors);
+    ?>
+
   <!-- numéro de lot -->
   <label for="numero_lot">Numéro du lot:</label>
   <input id="numero_lot" type="text" name="numero_lot" value="<?php if(!empty($_POST['numero_lot'])) {echo $_POST['numero_lot'];} ?>" placeholder="Numéro de lot:">
