@@ -1,6 +1,16 @@
 <?php
+session_start();
 include('../inc/pdo.php');
 include('../inc/function.php');
+if(isLogged()){
+  if ($_SESSION['user']['role']!='admin'){
+    header('Location: ../connexion.php#action');
+    die();
+  }
+}else {
+  header('Location: ../connexion.php#action');
+  die();
+}
 
 $title = 'Répondre aux questions';
 
@@ -14,7 +24,7 @@ if(!empty($_GET['id']) && is_numeric($_GET['id']))
   $var->bindValue(':id',$id,PDO::PARAM_INT);
   $var->execute();
   $question = $var->fetch();
-  debug($question);
+  // debug($question);
 
   if(!empty($question))
   {
