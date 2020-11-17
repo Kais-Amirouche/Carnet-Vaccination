@@ -130,7 +130,7 @@ header{
 	font-size: 26px;
 	letter-spacing: 4px;
 	word-spacing: 0.2px;
-	color: #591419;
+	color: #E6677C;
 	font-weight: 700;
 	font-variant: small-caps;
 	transition: .7s;
@@ -145,7 +145,7 @@ header{
 	font-size: 26px;
 	letter-spacing: 4px;
 	word-spacing: 0.2px;
-	color: #591419;
+	color: #E6677C;
 	font-weight: 700;
 	font-variant: small-caps;
 	transition: .7s;
@@ -209,8 +209,9 @@ nav ul li a:hover{
 }
 
 .dropdown-content a {
+	margin-top: 20px;
 	text-align: center;
-	padding: 5px 10px;
+	padding: 5px 5px;
 	height: auto;
 	display: block;
   color: #ddc798;
