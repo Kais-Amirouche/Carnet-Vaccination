@@ -155,8 +155,6 @@ font-weight: 700;
 	font-variant: small-caps;
 	transition: .7s;
 }
-<<<<<<< HEAD
-=======
 
 .texteheader p{
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -170,7 +168,7 @@ font-weight: 700;
 	margin-top: 20px;
 	padding: 10px;
 }
->>>>>>> b0b88106f442d89368156bb18b50037ff830f9ed
+
 .menu{
 	height: 5em;
   line-height: 5em;
