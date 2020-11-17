@@ -2,11 +2,8 @@
 session_start();
 include('../inc/pdo.php');
 include('../inc/function.php');
-
 if(isLogged()){
-  if ($_SESSION['user']['role']=='admin'){
-
-  }else {
+  if ($_SESSION['user']['role']!='admin'){
     header('Location: ../connexion.php#action');
     die();
   }
@@ -14,6 +11,7 @@ if(isLogged()){
   header('Location: ../connexion.php#action');
   die();
 }
+
 $title = 'Dashboard';
 
 include('inc/header-back.php'); ?>
