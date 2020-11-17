@@ -5,33 +5,29 @@ include('inc/function.php');
 
 $title = 'Mon Carnet';
 
-
+// debug($_SESSION);
 
 include('inc/header.php'); ?>
   <div class="carnet">
 
     <h2>Mon Carnet de Vaccination</h2>
 
-    <table>
-      <thead>
+    <table id="customers">
         <tr>
-          <th>Vaccin</th>
-          <th>Couleur(à changer)</th>
+          <th>Mes Vaccin</th>
+          <th>status</th>
+          <th>Doses</th>
           <th>Rappel</th>
         </tr>
-      </thead>
-      <tbody>
         <tr>
-          <td><?php //echo $user['id']; ?></td>
-          <td><?php //echo $user['id']; ?></td>
-          <td><?php //echo $user['id']; ?></td>
+          <td><?php echo $_SESSION['user']['id']; ?></td>
+          <td><?php echo $_SESSION['user']['id']; ?></td>
+          <td><?php echo $_SESSION['user']['id']; ?></td>
+          <td><?php echo $_SESSION['user']['id']; ?></td>
         </tr>
-      </tbody>
-      <tfoot>
         <tr>
           <th><a href="addvaccin.php">Ajouter un vaccin</a></th>
         </tr>
-      </tfoot>
     </table>
 
   </div>

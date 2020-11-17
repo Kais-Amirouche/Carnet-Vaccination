@@ -69,7 +69,6 @@ include('inc/header.php'); ?>
 
   <?php } ?>
 
-</section>
 
 
 
