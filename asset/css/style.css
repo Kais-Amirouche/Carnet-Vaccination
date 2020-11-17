@@ -108,7 +108,7 @@ header{
 	text-align: center;
 	color: #fff;
 }
-.présentation {
+.presentation {
 	text-align : left;
 	text-align : center;
 	margin-top : 30px ;
@@ -116,10 +116,8 @@ header{
 	top : 180px ;
 	height : 600px ;
 	width : 400px ;
-
 }
 .presentation h3{
-=======
 	text-decoration: underline;
 	margin-left: 30px;
 	font-size: 200%;
@@ -132,7 +130,6 @@ header{
 	font-weight: 700;
 	font-variant: small-caps;
 	transition: .7s;
->>>>>>> b0b88106f442d89368156bb18b50037ff830f9ed
 }
 .presentation h4{
 	text-decoration: underline;
