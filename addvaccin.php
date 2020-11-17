@@ -8,7 +8,7 @@ $query->execute();
 $namevacs = $query->fetchall();
 // debug($namevacs);
 // debug($_SESSION);
-debug($_POST);
+// debug($_POST);
 
 $errors = array();
 
