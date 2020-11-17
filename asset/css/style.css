@@ -121,14 +121,8 @@ header{
   margin-left: 30px;
 }
 .presentation h3{
-<<<<<<< HEAD
-color: #a6874e;
-font-family: "Trebuchet MS", Helvetica, sans-serif;
-font-size: 26px;
-letter-spacing: 4px;
-word-spacing: 0.2px;
-font-weight: 700;
 =======
+	text-decoration: underline;
 	margin-left: 30px;
 	font-size: 200%;
 	margin-top: 40px;
@@ -143,9 +137,10 @@ font-weight: 700;
 >>>>>>> b0b88106f442d89368156bb18b50037ff830f9ed
 }
 .presentation h4{
+	text-decoration: underline;
 	margin-left: 30px;
 	font-size: 200%;
-	margin-top: 40px;
+	margin-top: 20px;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	font-size: 26px;
 	letter-spacing: 4px;
@@ -161,7 +156,7 @@ font-weight: 700;
 	font-size: 15px;
 	letter-spacing: 2px;
 	word-spacing: 0.2px;
-	background-color: #A6874E;
+	background-color: #8DB6D9;
 	border: 2px solid #A6874E;
 	text-align: center;
 	margin-left: 30px;
