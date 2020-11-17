@@ -39,9 +39,7 @@ if(!empty($_POST['submitted']))
 
 include('inc/header.php'); ?>
 
-<section>
-
-
+  <a class="quest" href="mesquestions.php?id=<?php echo $_SESSION['user']['email']; ?>">Mes questions</a>
   <?php if($succes == true) {?>
 
     <p class="succes">Votre message a bien été envoyé !</p>
@@ -68,7 +66,6 @@ include('inc/header.php'); ?>
 
   <?php } ?>
 
-</section>
 
 
 

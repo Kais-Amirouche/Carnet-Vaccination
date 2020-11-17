@@ -5,7 +5,7 @@ include('inc/function.php');
 
 $title = 'Mon Carnet';
 
-debug($_SESSION);
+// debug($_SESSION);
 
 include('inc/header.php'); ?>
   <div class="carnet">

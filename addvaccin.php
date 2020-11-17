@@ -14,7 +14,10 @@ if(!empty($_POST['submitvac'])) {
   $numero_lot=cleanXss($_POST['numero_lot']);
   $errors = validationText($errors,$numero_lot,'numero_lot',4,20);
   if ($errors==0) {
-    
+    $sql = "INSERT INTO ";
+    $query = $pdo->prepare($sql);
+    $query->execute();
+    $monvaccin = $query->fetchall();
   }
 }
 include('inc/header.php'); ?>
