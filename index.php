@@ -19,7 +19,10 @@ include('inc/header.php');?>
     <p>|la date du prochain vaccin à faire|</p>
   </div>
 </div>
-
+<div class="connexion">
+  <h2>Vous n'êtes toujours pas connecté?</h2>
+  <h5>Cliquez ici.</h5>
+</div>
 <!-- <h1>Accueil</h1> -->
 
 
