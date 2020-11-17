@@ -34,11 +34,11 @@
                 <li class="dropdown">
                   <a href="javascript:void(0)" class="dropbtn">Information</a>
                   <div class="dropdown-content">
-                    <a href="#">Generalisation sur les vaccins</a>
-                    <a href="#">Les maladies et leur vaccins</a>
-                    <a href="#">La vaccination au cours de la vie</a>
-                    <a href="#">Vaccination et maladie chronique</a>
-                    <a href="#">les vaccins existant en France</a>
+                    <a href="#">Generalisation <br>sur les vaccins</a>
+                    <a href="#">Les maladies <br>et leur vaccins</a>
+                    <a href="#">La vaccination  <br>au cours de la vie</a>
+                    <a href="#">Vaccination et <br>maladie chronique</a>
+                    <a href="#">les vaccins <br>existant en France</a>
                   </div>
                 </li>
               </div>

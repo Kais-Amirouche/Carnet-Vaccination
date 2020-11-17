@@ -195,6 +195,7 @@ nav ul li a:hover{
 }
 
 .dropdown-content {
+	width: 100px;
 	text-align: center;
   display: none;
   background-color: #048ABF;
@@ -204,6 +205,9 @@ nav ul li a:hover{
 }
 
 .dropdown-content a {
+	font-size: 0.7em;
+	line-height: 0.9em;
+	width: 100px;
 	margin-top: 20px;
 	text-align: center;
 	padding: 5px 5px;
