@@ -20,9 +20,10 @@ $vaccins_user = $var->fetchall();
 
 
 include('inc/header.php'); ?>
+  <h1>Mon Carnet de Vaccination</h1>
   <div class="carnet">
 
-    <h1>Mon Carnet de Vaccination</h1>
+
 
     <table id="customers">
         <tr>
