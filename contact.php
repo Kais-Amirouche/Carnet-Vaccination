@@ -3,6 +3,7 @@ session_start();
 include('inc/pdo.php');
 include('inc/function.php');
 
+
 $errors = array();
 $succes = false;
 if(!empty($_POST['submitted']))

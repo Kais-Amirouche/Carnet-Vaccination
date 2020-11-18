@@ -31,7 +31,7 @@ if(!empty($_POST['submitvac'])) {
   }
       if (count($errors)==0) {
         $sql = "INSERT INTO user_vaccin (user_id, vaccin_id, fait_at, numero_lot)
-                VALUES (:user_id, :vaccin_id, $date, :dose)";
+                VALUES (:user_id, :vaccin_id, $date->format('Y-m-d'), :dose)";
         $query = $pdo->prepare($sql);
         $query->bindValue(':user_id',$user_id,PDO::PARAM_INT);
         $query->bindValue(':vaccin_id',$vaccin_id,PDO::PARAM_INT);
@@ -58,9 +58,9 @@ include('inc/header.php'); ?>
 
 
   <!-- Nom du vaccin -->
-  <label for="vaccins">Couleur</label>
+  <label for="vaccins">sélectionner un vaccin:</label>
   <select id="vaccins" name="vaccins">
-    <option value="">--Séléctionne un vaccin bb--</option>
+    <option value="">--séléctionner un vaccin--</option>
         <?php foreach ($namevacs as $namevac) { ?>
           <option value="<?php echo $namevac['id']; ?>"<?php if(!empty($_POST['vaccins'])) {if($_POST['vaccins']== $namevac['id']) {echo 'selected="selected"';}} ?>><?php echo $namevac['name']; ?></option>
         <?php } ?>

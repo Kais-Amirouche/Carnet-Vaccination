@@ -17,8 +17,8 @@ if(!empty($_SESSION['user']['id'])) {
     $email= $user['email'];
     if(isset($_POST['prenom']) AND !empty($_POST['prenom']) AND $_POST['prenom'] != $user['prenom']) {
        $newprenom = cleanXss($_POST['prenom']);
-       $insertmail = $pdo->prepare("UPDATE vac_users SET email = ? WHERE id = ?");
-       $insertmail->execute(array($newprenom, $user['id']));
+       $insertprenom = $pdo->prepare("UPDATE vac_users SET prenom = ? WHERE id = ?");
+       $insertprenom->execute(array($newprenom, $user['id']));
        $valid= '<p style="color:green;">ce champ a bien été modifié</p>';
     }
    if(isset($_POST['newmail']) AND !empty($_POST['newmail']) AND $_POST['newmail'] != $user['email']) {
