@@ -3,10 +3,25 @@ session_start();
 include('inc/pdo.php');
 include('inc/function.php');
 
-$title = 'Mon Carnet';
- 
-// debug($_SESSION);
 
+
+$id = $_SESSION['user']['id'];
+
+$sql = "SELECT * FROM user_vaccin";
+$query = $pdo->prepare($sql);
+$query->execute();
+$vaccin_user = $query->fetchall();
+debug($vaccin_user);
+foreach ($vaccin_user as $idvac) {
+  debug($idvac['vaccin_id']);
+}
+
+$sql = "SELECT * FROM vac_vaccins WHERE id = :vaccin_id";
+$query = $pdo->prepare($sql);
+$query->bindValue(':vaccin_id',$idvac['vaccin_id'],PDO::PARAM_INT);
+$query->execute();
+$vaccins = $query->fetchall();
+debug($vaccins);
 include('inc/header.php'); ?>
   <div class="carnet">
 
@@ -20,10 +35,10 @@ include('inc/header.php'); ?>
           <th>Rappel</th>
         </tr>
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <?php echo '<td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>'; ?>
         </tr>
         <tr>
           <th><a href="addvaccin.php">Ajouter un vaccin</a></th>
