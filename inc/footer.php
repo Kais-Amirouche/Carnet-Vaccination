@@ -10,7 +10,7 @@
   			</div>
   			<div class="footer-left">
   				<p class="footer-links">
-  					<a class="lien1" href="#">Accueil</a>
+  					<a class="lien1" href="index.php">Accueil</a>
   					<a href="mentions.php">Mentions légales</a>
   					<a href="contact.php">Contact</a>
   				</p>
