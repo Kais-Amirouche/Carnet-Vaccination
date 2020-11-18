@@ -79,26 +79,11 @@ height: 7px;
 ::-WebKit-scrollbar-track-piece{
 	height: 10px;
 }
+
 a{
 	text-decoration: none;
 }
-h1{
-	text-align: center;
-	font-size: 200%;
-	margin-top: 40px;
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
-	font-size: 26px;
-	letter-spacing: 4px;
-	word-spacing: 0.2px;
-	color: #666;
-	font-weight: 700;
-	font-variant: small-caps;
-	transition: .7s;
-}
-h1:hover{
-	color: #000;
-	text-shadow: 4px 4px 7px rgba(0, 0, 0, 1);
-}
+
 header{
 	background-color: #048ABF;
 }
@@ -149,7 +134,11 @@ header{
 }
 
 .texteheader p{
+<<<<<<< HEAD
 	font-family: "Roboto", Helvetica, sans-serif;
+=======
+font-family: 'Roboto', sans-serif;
+>>>>>>> 0e17275d1c4839680f5d8fd70f87032c6792e569
 	font-size: 15px;
 	letter-spacing: 2px;
 	word-spacing: 0.2px;
@@ -160,33 +149,9 @@ header{
 	margin-top: 20px;
 	padding: 10px;
 }
-.connexion {
-	text-align : center;
-	position : absolute;
-	top : 740px ;
-	height : 300px ;
-	width : 250px ;
-	margin-left: 1100px;
-	margin-top : 30px ;
-}
-.connexion h2 {
+.texteheader p a{
+	color: black;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
-	font-size: 26px;
-	letter-spacing: 4px;
-	word-spacing: 0.2px;
-	color: #E6677C;
-	font-weight: 700;
-	font-variant: small-caps;
-	transition: .7s;
-	margin-bottom: 30px;
-}
-.connexion li a {
-	background-color:#8DB6D9 ;
-	border: 2.5px solid #A6874E;
-	box-sizing: border-box;
-	width: 31%;
-	margin-top: 40px;
-	font-size: 26px;
 }
 .menu{
 	height: 5em;
@@ -229,7 +194,6 @@ nav ul li a:hover{
 }
 
 .dropdown-content {
-	width: 100px;
 	text-align: center;
   display: none;
   background-color: #048ABF;
@@ -242,9 +206,8 @@ nav ul li a:hover{
 	font-size: 0.7em;
 	line-height: 0.9em;
 	width: 100px;
-	margin-top: 20px;
 	text-align: center;
-	padding: 5px 5px;
+	padding: 10px 5px;
 	height: auto;
 	display: block;
   color: #ddc798;
@@ -568,6 +531,36 @@ section {
   text-align: left;
   background-color: #4CAF50;
   color: white;
+}
+/* mention legale  */
+.legale h1{
+	font-size: 2em;
+	text-align: center;
+	margin-top: 40px;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 26px;
+	letter-spacing: 4px;
+	word-spacing: 0.2px;
+	color: #black;
+	font-weight: 700;
+	font-variant: small-caps;
+	transition: .7s;
+	text-decoration: underline;
+}
+.legale h1:hover{
+	color: #000;
+	text-shadow: 4px 4px 7px rgba(0, 0, 0, 1);
+}
+.legale h3{
+	font-size: 1.3em;
+		font-family: "Trebuchet MS", Helvetica, sans-serif;
+	text-decoration: underline;
+	padding: 10px 0px;
+}
+.legale p{
+padding: 5px 0px;
+font-size: 1.2em;
+margin-top: 5px;
 }
 /* footer */
 .footer-world {

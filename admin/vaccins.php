@@ -33,6 +33,7 @@ include('inc/header-back.php'); ?>
               <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                       <tr>
+                          <th>ID</th>
                           <th>Nom</th>
                           <th>A quel âge</th>
                           <th>Description</th>
@@ -43,6 +44,7 @@ include('inc/header-back.php'); ?>
                   </thead>
                   <tfoot>
                       <tr>
+                        <th>ID</th>
                         <th>Nom</th>
                         <th>A quel âge</th>
                         <th>Description</th>
@@ -53,6 +55,7 @@ include('inc/header-back.php'); ?>
                   <tbody>
                 <?php foreach ($vaccins as $vaccin) { ?>
                       <tr>
+                          <td><?php echo $vaccin['id']; ?></td>
                           <td><?php echo $vaccin['name']; ?><br>[<a href="editvaccin.php?id=<?php echo $vaccin['id']; ?>">edit</a>][<a href="deletevaccin.php?id=<?php echo $vaccin['id']; ?>">delete</a>]</td>
                           <td><?php echo $vaccin['age']; ?></td>
                           <td><?php echo $vaccin['description']; ?></td>

@@ -18,7 +18,7 @@ include('inc/header.php');?>
     <p>|la date du prochain vaccin à faire|</p>
     <?php if(!isLogged()) { ?>
     <h3>Vous n'êtes toujours pas inscrit?</h3>
-    <p><a href="inscription.php#action">Cliquez ici.</a></p>
+    <p><a href="inscription.php#action">inscription</a></p>
     <?php } ?>
   </div>
 </div>
