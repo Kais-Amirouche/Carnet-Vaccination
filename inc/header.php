@@ -36,10 +36,10 @@
                   <a href="javascript:void(0)" class="dropbtn">Information</a>
                   <div class="dropdown-content">
                     <a href="#">Generalisation <br>sur les vaccins</a>
-                    <a href="#">Les maladies <br>et leur vaccins</a>
+                    <a href="allvaccin.php">Les maladies <br>et leur vaccins</a>
                     <a href="#">La vaccination  <br>au cours de la vie</a>
                     <a href="#">Vaccination et <br>maladie chronique</a>
-                    <a href="#">les vaccins <br>existant en France</a>
+                    <a href="#">Les vaccins <br>existant en France</a>
                   </div>
                 </li>
               </div>
