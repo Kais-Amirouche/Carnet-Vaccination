@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="asset/css/style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-  <title>vacciTEK</title>
+  <title>vaccitek</title>
 </head>
 <body>
   <header>
