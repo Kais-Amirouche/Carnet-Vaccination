@@ -158,34 +158,6 @@ header{
 	margin-top: 20px;
 	padding: 10px;
 }
-.connexion {
-	text-align : center;
-	position : absolute;
-	top : 740px ;
-	height : 300px ;
-	width : 250px ;
-	margin-left: 1100px;
-	margin-top : 30px ;
-}
-.connexion h2 {
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
-	font-size: 26px;
-	letter-spacing: 4px;
-	word-spacing: 0.2px;
-	color: #E6677C;
-	font-weight: 700;
-	font-variant: small-caps;
-	transition: .7s;
-	margin-bottom: 30px;
-}
-.connexion li a {
-	background-color:#8DB6D9 ;
-	border: 2.5px solid #A6874E;
-	box-sizing: border-box;
-	width: 31%;
-	margin-top: 40px;
-	font-size: 26px;
-}
 .menu{
 	height: 5em;
   line-height: 5em;
