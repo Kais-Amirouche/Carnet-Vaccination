@@ -8,32 +8,34 @@
     <h3>Editeur du Site :</h3>
 
 
-      <p>SARL ALLAN Numéro de SIRET : 75221735600019
-
+      SARL ALLAN Numéro de SIRET : 75221735600019
+<br>
       Responsable éditorial : ALLAN LEBLOND
-
+<br>
       2 Place du Général de Gaulle, 76000 Rouen
-
+<br>
       Téléphone : 0360455713
-
+<br>
       Fax : 0972249854
-
+<br>
       Email : contact@allan.fr
-
+<br>
       Site Web : www.Carnet-Vaccination.fr
-
+<br>
       <h3>Hébergement :</h3>
 
       Hébergeur : SARL ALLAN
+<br>
       2 Place du Général de Gaulle, 76000 Rouen
+<br>
       Site Web : www.Carnet-Vaccination.fr
 
     <h3>Développement :</h3>
 
       SARL ALLAN
-
+<br>
       Adresse : 2 Place du Général de Gaulle, 76000 Rouen
-
+<br>
       Site Web : www.Carnet-Vaccination.fr
 
       <h3>Conditions d’utilisation :</h3>
@@ -88,7 +90,7 @@
 
       Enfin, nous pouvons collecter de manière automatique certaines informations vous concernant lors d’une simple navigation sur notre site Internet, notamment : des informations concernant l’utilisation de notre site, comme les zones que vous visitez et les services auxquels vous accédez, votre adresse IP, le type de votre navigateur, vos temps d’accès.
 
-      De telles informations sont utilisées exclusivement à des fins de statistiques internes, de manière à améliorer la qualité des services qui vous sont proposés. Les bases de données sont protégées par les dispositions de la loi du 1er juillet 1998 transposant la directive 96/9 du 11 mars 1996 relative à la protection juridique des bases de données.</p>
+      De telles informations sont utilisées exclusivement à des fins de statistiques internes, de manière à améliorer la qualité des services qui vous sont proposés. Les bases de données sont protégées par les dispositions de la loi du 1er juillet 1998 transposant la directive 96/9 du 11 mars 1996 relative à la protection juridique des bases de données.
 
 
   </body>

@@ -39,7 +39,7 @@
                   <div class="dropdown-content">
                     <a href="#">Generalisation <br>sur les vaccins</a>
                     <a href="allvaccin.php">Les maladies <br>et leur vaccins</a>
-                    <a href="mentions.php">Les mentions<br>legal</a>
+                    <a href="mentions.php">Les mentions<br>légales</a>
                   </div>
                 </li>
               </div>
