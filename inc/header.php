@@ -35,7 +35,7 @@
               <?php } ?>
               <div class="dropdown">
                 <li class="dropdown">
-                  <a href="javascript:void(0)" class="dropbtn">Information</a>
+                  <a href="javascript:void(0)" class="dropbtn">Informations</a>
                   <div class="dropdown-content">
                     <a href="#">Generalisation <br>sur les vaccins</a>
                     <a href="allvaccin.php">Les maladies <br>et leur vaccins</a>

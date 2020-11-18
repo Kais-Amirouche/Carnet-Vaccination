@@ -11,7 +11,7 @@
   			<div class="footer-left">
   				<p class="footer-links">
   					<a class="lien1" href="#">Accueil</a>
-  					<a href="#">Mention legal</a>
+  					<a href="mentions.php">Mentions légales</a>
   					<a href="contact.php">Contact</a>
   				</p>
   				<p>mon carnet vaccins &copy; 2020</p>
