@@ -20,9 +20,10 @@ $vaccins_user = $var->fetchall();
 
 
 include('inc/header.php'); ?>
+  <h1>Mon Carnet de Vaccination</h1>
   <div class="carnet">
 
-    <h1>Mon Carnet de Vaccination</h1>
+
 
     <table id="customers">
         <tr>
@@ -45,7 +46,7 @@ include('inc/header.php'); ?>
                   <td><?php echo $vaccin['name']; ?></td>
                   <td><?php echo formatageDate($vaccin_user['fait_at']); ?></td>
                   <td><?php echo $vaccin_user['numero_lot']; ?></td>
-                  <td><?php echo $vaccin_user['statut']; ?></td>
+                  <td><?php echo $vaccin_user['rappel']; ?></td>
                 <?php } ?>
             </tr>
           <?php  }?>
