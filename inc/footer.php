@@ -1,5 +1,4 @@
 
-
   </div>  <!-- container -->
   <footer class="footer-world">
   			<div class="footer-right">
