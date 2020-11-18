@@ -2,6 +2,9 @@
 session_start();
 include('inc/function.php');
 include('inc/pdo.php');
+
+$title = 'Mentions légales';
+
 include('inc/header.php'); ?>
 <div class="legale">
   <h1>Mentions Légales</h1>

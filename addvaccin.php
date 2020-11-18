@@ -2,6 +2,9 @@
 session_start();
 include('inc/pdo.php');
 include('inc/function.php');
+
+$title = 'Ajout de vaccin';
+
 $sql = "SELECT * FROM vac_vaccins";
 $query = $pdo->prepare($sql);
 $query->execute();

@@ -5,7 +5,7 @@ session_start();
 include('inc/pdo.php');
 include('inc/function.php');
 
-
+$title = 'Mon Profil';
 
 if(!empty($_SESSION['user']['id'])) {
     $sql = "SELECT * FROM vac_users WHERE id = ?";
