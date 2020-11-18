@@ -142,14 +142,14 @@ header{
 	font-size: 26px;
 	letter-spacing: 4px;
 	word-spacing: 0.2px;
-	color: #E6677C;
+	color: #8095ff;
 	font-weight: 700;
 	font-variant: small-caps;
 	transition: .7s;
 }
 
 .texteheader p{
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-family: "Roboto", Helvetica, sans-serif;
 	font-size: 15px;
 	letter-spacing: 2px;
 	word-spacing: 0.2px;

@@ -31,7 +31,7 @@ if(!empty($_POST['submitvac'])) {
   }
       if (count($errors)==0) {
         $sql = "INSERT INTO user_vaccin (user_id, vaccin_id, fait_at, numero_lot)
-                VALUES (:user_id, :vaccin_id, $date->format('Y-m-d'), :dose)";
+                VALUES (:user_id, :vaccin_id, $date, :dose)";
         $query = $pdo->prepare($sql);
         $query->bindValue(':user_id',$user_id,PDO::PARAM_INT);
         $query->bindValue(':vaccin_id',$vaccin_id,PDO::PARAM_INT);
