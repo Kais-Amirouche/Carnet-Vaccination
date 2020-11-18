@@ -45,7 +45,7 @@ include('inc/header.php'); ?>
                   <td><?php echo $vaccin['name']; ?></td>
                   <td><?php echo formatageDate($vaccin_user['fait_at']); ?></td>
                   <td><?php echo $vaccin_user['numero_lot']; ?></td>
-                  <td><?php echo $vaccin_user['statut']; ?></td>
+                  <td><?php echo $vaccin_user['rappel']; ?></td>
                 <?php } ?>
             </tr>
           <?php  }?>

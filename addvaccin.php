@@ -19,7 +19,7 @@ if(!empty($_POST['submitvac'])) {
   $vaccin_id  = cleanXss($_POST['vaccins']);
   $numero_lot = cleanXss($_POST['numero_lot']);
   // $statut = cleanXss($_POST['rappel']);
-  
+
 
   $errors = validationText($errors,$numero_lot,'numero_lot',4,20);
   if (empty($date))
@@ -32,11 +32,7 @@ if(!empty($_POST['submitvac'])) {
   }
       if (count($errors)==0) {
         $sql = "INSERT INTO user_vaccin (user_id, vaccin_id, fait_at, numero_lot)
-<<<<<<< HEAD
-                VALUES (:user_id, :vaccin_id, $date, :dose)";
-=======
                 VALUES (:user_id, :vaccin_id, '$date', :dose)";
->>>>>>> 0e17275d1c4839680f5d8fd70f87032c6792e569
         $query = $pdo->prepare($sql);
         $query->bindValue(':user_id',$user_id,PDO::PARAM_INT);
         $query->bindValue(':vaccin_id',$vaccin_id,PDO::PARAM_INT);
