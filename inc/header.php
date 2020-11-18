@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="asset/css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
   <title>mon carnet santé</title>
 </head>
 <body>
@@ -23,23 +25,21 @@
                 <li><a href="index.php">Accueil</a></li>
                <?php if(isLogged()) { ?>
                  <?php if ($_SESSION['user']['role']=='admin'){ ?>
-                   <li><a href="admin/index.php">admin</a></li>
+                   <li><a href="admin/index.php">Admin</a></li>
                  <?php } ?>
                  <li><a href="carnet.php">Mon Carnet</a></li>
-                <li><a href="logout.php">Deconnexion</a></li>
+                <li><a href="logout.php">Déconnexion</a></li>
                <?php } else { ?>
                 <li><a href="inscription.php#action">Inscription</a></li>
                 <li><a href="connexion.php#action">Connexion</a></li>
               <?php } ?>
               <div class="dropdown">
                 <li class="dropdown">
-                  <a href="javascript:void(0)" class="dropbtn">Information</a>
+                  <a href="javascript:void(0)" class="dropbtn">Informations</a>
                   <div class="dropdown-content">
-                    <a href="#">Generalisation <br>sur les vaccins</a>
-                    <a href="allvaccin.php">Les maladies <br>et leur vaccins</a>
-                    <a href="#">La vaccination  <br>au cours de la vie</a>
-                    <a href="#">Vaccination et <br>maladie chronique</a>
-                    <a href="#">Les vaccins <br>existant en France</a>
+                    <a href="#">Généralisation <br>sur les vaccins</a>
+                    <a href="allvaccin.php">Les maladies <br>et leurs vaccins</a>
+                    <a href="mentions.php">Les mentions<br>légales</a>
                   </div>
                 </li>
               </div>
