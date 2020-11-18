@@ -132,6 +132,12 @@
                       <span>Vaccins</span></a>
               </li>
 
+              <li class="nav-item">
+                  <a class="nav-link" href="allcarnet.php">
+                      <i class="fas fa-fw fa-table"></i>
+                      <span>Carnets</span></a>
+              </li>
+
               <!-- Nav Item - Questions -->
               <li class="nav-item">
                   <a class="nav-link" href="contactadmin.php">
