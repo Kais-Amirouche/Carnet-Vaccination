@@ -19,7 +19,7 @@ if(!empty($_POST['submitvac'])) {
   $vaccin_id  = cleanXss($_POST['vaccins']);
   $numero_lot = cleanXss($_POST['numero_lot']);
   // $statut = cleanXss($_POST['rappel']);
-  echo $date;
+  
 
   $errors = validationText($errors,$numero_lot,'numero_lot',4,20);
   if (empty($date))
