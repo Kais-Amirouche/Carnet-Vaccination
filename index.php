@@ -4,6 +4,8 @@ session_start();
 include('inc/pdo.php');
 include('inc/function.php');
 
+$title = 'Accueil';
+
 include('inc/header.php');?>
 <img class="backgroundheader" src="asset/img/vac-vac.jpeg" alt="image de fond">
 <div class="presentation">

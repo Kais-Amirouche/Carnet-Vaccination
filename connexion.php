@@ -3,6 +3,9 @@
 session_start();
 include('inc/pdo.php');
 include('inc/function.php');
+
+$title = 'Connexion';
+
 $errors = array();
 // if form soumis
 if(!empty($_POST['submitconnexion'])) {
@@ -46,7 +49,7 @@ if(!empty($_POST['submitconnexion'])) {
     $errors['login'] = 'Veuillez renseigner les champs.';
   }
 }
- 
+
 include('inc/header.php'); ?>
 <h1 id="action">Connexion</h1>
   <form action="" method="post">

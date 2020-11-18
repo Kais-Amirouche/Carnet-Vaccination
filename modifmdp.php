@@ -4,6 +4,9 @@
 session_start();
 include('inc/pdo.php');
 include('inc/function.php');
+
+$title = 'Changer de mot de passe';
+
 $errors = array();
 $switch = false;
 $switch2= false;

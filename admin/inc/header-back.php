@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>VAC ADMIN | <?php echo $title; ?></title>
+    <title>Vaccitek ADMIN | <?php echo $title; ?></title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -35,7 +35,7 @@
                   <div class="sidebar-brand-icon rotate-n-15">
                       <i class="fas fa-laugh-wink"></i>
                   </div>
-                  <div class="sidebar-brand-text mx-3">Vac Admin</div>
+                  <div class="sidebar-brand-text mx-3">Vaccitek Admin</div>
               </a>
 
               <!-- Divider -->
@@ -54,34 +54,6 @@
                       <!-- <i class="fas fa-fw fa-tachometer-alt"></i> -->
                       <span>Retour au site</span></a>
               </li>
-
-              <!-- Divider -->
-              <!-- <hr class="sidebar-divider">
-
-              Heading
-              <div class="sidebar-heading">
-                  Interface
-              </div>
-
-              Nav Item - Pages Collapse Menu
-              <li class="nav-item">
-                  <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                      aria-expanded="true" aria-controls="collapseTwo">
-                      <i class="fas fa-fw fa-cog"></i>
-                      <span>Déco</span>
-                  </a>
-                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                      <div class="bg-white py-2 collapse-inner rounded">
-                          <h6 class="collapse-header">Composant de décoration:</h6>
-                          <a class="collapse-item" href="buttons.php">Bouttons</a>
-                          <a class="collapse-item" href="cards.php">Cartes</a>
-                          <a class="collapse-item" href="utilities-color.php">Couleurs</a>
-                          <a class="collapse-item" href="utilities-border.php">Bordures</a>
-                          <a class="collapse-item" href="utilities-animation.php">Animations</a>
-                          <a class="collapse-item active" href="utilities-other.php">Autres</a>
-                      </div>
-                  </div>
-              </li> -->
 
               <!-- Divider -->
               <hr class="sidebar-divider">

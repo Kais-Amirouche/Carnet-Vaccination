@@ -4,6 +4,9 @@ session_start();
 // inscription.php
 include('inc/pdo.php');
 include('inc/function.php');
+
+$title = 'Inscription';
+
 // TABLE users
 // id,nom (60),email(120),password(255),created_at(datetime), token(255), role (admin, abonne)  varchar (10)
 $errors = array();

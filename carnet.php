@@ -3,7 +3,7 @@ session_start();
 include('inc/pdo.php');
 include('inc/function.php');
 
-
+$title = 'Mon Carnet';
 
 $id = $_SESSION['user']['id'];
 

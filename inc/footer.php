@@ -13,7 +13,7 @@
   					<a href="mentions.php">Mentions légales</a>
   					<a href="contact.php">Contact</a>
   				</p>
-  				<p> vacciTek &copy; 2020</p>
+  				<p> Vaccitek &copy; 2020</p>
   			</div>
   </footer>
   </body>

@@ -3,6 +3,8 @@ session_start();
 include('inc/pdo.php');
 include('inc/function.php');
 
+$title = 'Contact';
+
 
 $errors = array();
 $succes = false;
