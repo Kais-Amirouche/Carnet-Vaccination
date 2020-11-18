@@ -21,12 +21,17 @@ if(!empty($_POST['submitvac'])) {
   // $statut = cleanXss($_POST['rappel']);
 
   $errors = validationText($errors,$numero_lot,'numero_lot',4,20);
-  if (!empty($date))
+  if (empty($date))
   {
-    if (!empty($vaccin_id)){
+    $errors['date_vaccin'] = 'Veuillez renseigner une date';
+  }
+  if (empty($vaccin_id))
+  {
+      $errors['vaccins'] = 'Veuillez séléctionner un vaccin';
+  }
       if (count($errors)==0) {
         $sql = "INSERT INTO user_vaccin (user_id, vaccin_id, fait_at, numero_lot)
-                VALUES (:user_id, :vaccin_id, $date, :dose)";
+                VALUES (:user_id, :vaccin_id, $date->format('Y-m-d'), :dose)";
         $query = $pdo->prepare($sql);
         $query->bindValue(':user_id',$user_id,PDO::PARAM_INT);
         $query->bindValue(':vaccin_id',$vaccin_id,PDO::PARAM_INT);
@@ -35,12 +40,8 @@ if(!empty($_POST['submitvac'])) {
         // $query->bindValue(':statut',$statut,PDO::PARAM_STR);
         $query->execute();
       }
-    } else {
-      $errors['vaccins'] = 'Veuillez séléctionner un vaccin';
-    }
-  } else {
-    $errors['date_vaccin'] = 'Veuillez renseigner une date';
-  }
+
+
 }
 include('inc/header.php'); ?>
 
@@ -57,9 +58,9 @@ include('inc/header.php'); ?>
 
 
   <!-- Nom du vaccin -->
-  <label for="vaccins">Couleur</label>
+  <label for="vaccins">sélectionner un vaccin:</label>
   <select id="vaccins" name="vaccins">
-    <option value="">--Séléctionne un vaccin bb--</option>
+    <option value="">--séléctionner un vaccin--</option>
         <?php foreach ($namevacs as $namevac) { ?>
           <option value="<?php echo $namevac['id']; ?>"<?php if(!empty($_POST['vaccins'])) {if($_POST['vaccins']== $namevac['id']) {echo 'selected="selected"';}} ?>><?php echo $namevac['name']; ?></option>
         <?php } ?>

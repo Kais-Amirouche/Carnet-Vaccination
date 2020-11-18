@@ -46,7 +46,7 @@ if(!empty($_POST['submitconnexion'])) {
     $errors['login'] = 'Veuillez renseigner les champs';
   }
 }
-
+ 
 include('inc/header.php'); ?>
 <h1 id="action">Connexion</h1>
   <form action="" method="post">
