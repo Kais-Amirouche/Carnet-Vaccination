@@ -16,13 +16,8 @@ include('inc/header.php');?>
     <p>|la date de l’injection|</p>
     <p>|le numéro du lot|</p>
     <p>|la date du prochain vaccin à faire|</p>
-<<<<<<< HEAD
+
     <?php if(!isLogged()) { ?>
-    <h3>Vous n'êtes toujours pas inscrit?</h3>
-    <p><a href="inscription.php#action">Cliquez ici.</a></p>
-    <?php } ?>
-  </div>
-=======
   </div>
 </div>
 <div class="connexion">
@@ -32,7 +27,7 @@ include('inc/header.php');?>
     <li><a href="connexion.php#action">Cliquez ici.</a></li>
 
   </ul>
->>>>>>> dafb7e1a0d72c6708ea183616581b3ec12b889b7
+
 </div>
 <!-- <h1>Accueil</h1> -->
 
