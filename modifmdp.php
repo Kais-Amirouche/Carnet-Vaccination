@@ -1,4 +1,5 @@
 <?php
+
 // connexion
 session_start();
 include('inc/pdo.php');

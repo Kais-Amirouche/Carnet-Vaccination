@@ -4,7 +4,7 @@ include('inc/pdo.php');
 include('inc/function.php');
 
 $title = 'Mon Carnet';
-
+ 
 // debug($_SESSION);
 
 include('inc/header.php'); ?>

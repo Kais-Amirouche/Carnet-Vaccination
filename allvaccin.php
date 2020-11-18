@@ -3,7 +3,7 @@ session_start();
 include('inc/pdo.php');
 include('inc/function.php');
 $title = 'Tous les vaccins';
-
+ 
 $sql = "SELECT * FROM vac_vaccins";
 $var = $pdo->prepare($sql);
 $var->execute();
