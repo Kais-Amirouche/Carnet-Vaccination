@@ -17,14 +17,14 @@ function debug($tableau)
 function ValidationText($errors,$data,$key,$min,$max){
   if(!empty($data)) {
     if(mb_strlen($data) < $min) {
-      $errors[$key] = 'Min '.$min.' caractères';
+      $errors[$key] = 'Minimum '.$min.' caractères.';
     } elseif(mb_strlen($data) > $max) {
-      $errors[$key] = 'Max '.$max.' caractères';
+      $errors[$key] = 'Maximum '.$max.' caractères.';
     } else {
       // no error sur ce champ
     }
   } else {
-    $errors[$key] = 'Veuillez renseigner ce champ';
+    $errors[$key] = 'Veuillez renseigner ce champ.';
   }
 
   return $errors;

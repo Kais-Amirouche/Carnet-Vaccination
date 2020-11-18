@@ -15,12 +15,12 @@ if(!empty($_POST['submitmdp'])) {
   // validation
   if(!empty($login)) {
     if (!filter_var($login, FILTER_VALIDATE_EMAIL)) {
-      $errors['login'] =  'Veuillez renseigner un email valide';
+      $errors['login'] =  'Veuillez renseigner un e-mail valide.';
     } else {
       // tout va bien
     }
   } else {
-    $errors['login'] = 'Veuillez renseigner un email';
+    $errors['login'] = 'Veuillez renseigner un e-mail.';
   }
   // si no error
   if(count($errors) == 0) {
@@ -58,10 +58,10 @@ include('inc/header.php'); ?>
 <form id="action" action="" method="post" novalidate>
   <!-- LOGIN -->
   <div class="loginn">
-    <input type="text" id="login" name="login" value="<?php if(!empty($_POST['login'])) { echo $_POST['login']; } ?>" placeholder="Email">
+    <input type="text" id="login" name="login" value="<?php if(!empty($_POST['login'])) { echo $_POST['login']; } ?>" placeholder="E-mail">
     <span class="error"><?php if(!empty($errors['login'])) { echo $errors['login']; } ?></span>
 
-  <input type="submit" name="submitmdp" value="recevoir un mail" />
+  <input type="submit" name="submitmdp" value="Recevoir un mail" />
 </form>
 <?php }elseif($switch=='lien'){?>
   <div class="newmdp">

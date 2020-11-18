@@ -12,6 +12,7 @@ if(isLogged()){
   die();
 }
 
+
 if(!empty($_GET['id']) && is_numeric($_GET['id']))
 {
   $id = $_GET['id'];
@@ -20,7 +21,7 @@ if(!empty($_GET['id']) && is_numeric($_GET['id']))
   $var->bindValue(':id',$id,PDO::PARAM_INT);
   $var->execute();
   $user = $var->fetch();
-  // debug($question);
+  // debug($user);
 
   if(!empty($user))
   {
