@@ -14,7 +14,7 @@
   					<a href="mentions.php">Mentions légales</a>
   					<a href="contact.php">Contact</a>
   				</p>
-  				<p>mon carnet vaccins &copy; 2020</p>
+  				<p>mon carnet de vaccins &copy; 2020</p>
   			</div>
   </footer>
   </body>

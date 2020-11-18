@@ -19,6 +19,7 @@ if(!empty($_POST['submitvac'])) {
   $vaccin_id  = cleanXss($_POST['vaccins']);
   $numero_lot = cleanXss($_POST['numero_lot']);
   // $statut = cleanXss($_POST['rappel']);
+  
 
   $errors = validationText($errors,$numero_lot,'numero_lot',4,20);
   if (empty($date))
@@ -31,7 +32,7 @@ if(!empty($_POST['submitvac'])) {
   }
       if (count($errors)==0) {
         $sql = "INSERT INTO user_vaccin (user_id, vaccin_id, fait_at, numero_lot)
-                VALUES (:user_id, :vaccin_id, $date->format('Y-m-d'), :dose)";
+                VALUES (:user_id, :vaccin_id, '$date', :dose)";
         $query = $pdo->prepare($sql);
         $query->bindValue(':user_id',$user_id,PDO::PARAM_INT);
         $query->bindValue(':vaccin_id',$vaccin_id,PDO::PARAM_INT);
@@ -49,8 +50,8 @@ include('inc/header.php'); ?>
 
 <form  action="addvaccin.php" method="post">
   <!-- date de la vaccination -->
-  <label for="date">date de la vaccination:</label>
-  <input id="date" type="date" name="date_vaccin" value="<?php if(!empty($_POST['date_vaccin'])) {echo $_POST['date_vaccin'];} ?>">
+  <label for="date_vaccin">Date de la vaccination:</label>
+  <input id="date_vaccin" type="date" name="date_vaccin" value="<?php if(!empty($_POST['date_vaccin'])) {echo $_POST['date_vaccin'];} ?>">
   <span class="error"><?php if(!empty($errors['date_vaccin'])){echo $errors['date_vaccin'];} ?></span>
 
 
@@ -58,9 +59,9 @@ include('inc/header.php'); ?>
 
 
   <!-- Nom du vaccin -->
-  <label for="vaccins">sélectionner un vaccin:</label>
+  <label for="vaccins">Sélectionner un vaccin:</label>
   <select id="vaccins" name="vaccins">
-    <option value="">--séléctionner un vaccin--</option>
+    <option value="">--Séléctionner un vaccin--</option>
         <?php foreach ($namevacs as $namevac) { ?>
           <option value="<?php echo $namevac['id']; ?>"<?php if(!empty($_POST['vaccins'])) {if($_POST['vaccins']== $namevac['id']) {echo 'selected="selected"';}} ?>><?php echo $namevac['name']; ?></option>
         <?php } ?>
@@ -79,7 +80,7 @@ include('inc/header.php'); ?>
   <!-- <label for="rappel">s'agit il d'un rappel:</label>
   <input id="rappel" type="checkbox" name="rappel" value="rappel"> -->
   <!-- submit -->
-  <input type="submit" name="submitvac" value="inserer mon vaccin">
+  <input type="submit" name="submitvac" value="Insérer mon vaccin">
 </form>
 
 <?php include('inc/footer.php');

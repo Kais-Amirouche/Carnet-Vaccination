@@ -25,10 +25,10 @@
                 <li><a href="index.php">Accueil</a></li>
                <?php if(isLogged()) { ?>
                  <?php if ($_SESSION['user']['role']=='admin'){ ?>
-                   <li><a href="admin/index.php">admin</a></li>
+                   <li><a href="admin/index.php">Admin</a></li>
                  <?php } ?>
                  <li><a href="carnet.php">Mon Carnet</a></li>
-                <li><a href="logout.php">Deconnexion</a></li>
+                <li><a href="logout.php">Déconnexion</a></li>
                <?php } else { ?>
                 <li><a href="inscription.php#action">Inscription</a></li>
                 <li><a href="connexion.php#action">Connexion</a></li>
@@ -37,8 +37,8 @@
                 <li class="dropdown">
                   <a href="javascript:void(0)" class="dropbtn">Informations</a>
                   <div class="dropdown-content">
-                    <a href="#">Generalisation <br>sur les vaccins</a>
-                    <a href="allvaccin.php">Les maladies <br>et leur vaccins</a>
+                    <a href="#">Généralisation <br>sur les vaccins</a>
+                    <a href="allvaccin.php">Les maladies <br>et leurs vaccins</a>
                     <a href="mentions.php">Les mentions<br>légales</a>
                   </div>
                 </li>
