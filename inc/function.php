@@ -60,6 +60,11 @@ function formatageDate($valueDate)
   return date('d/m/Y à H:i',strtotime($valueDate));
 }
 
+function formatageDate2($valueDate)
+{
+  return date('d/m/Y',strtotime($valueDate));
+}
+
 function generateRandomString($length = 10) {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $charactersLength = strlen($characters);
