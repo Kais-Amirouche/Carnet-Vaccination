@@ -79,6 +79,7 @@ height: 7px;
 ::-WebKit-scrollbar-track-piece{
 	height: 10px;
 }
+
 a{
 	text-decoration: none;
 }
@@ -149,7 +150,7 @@ header{
 }
 
 .texteheader p{
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
+font-family: 'Roboto', sans-serif;
 	font-size: 15px;
 	letter-spacing: 2px;
 	word-spacing: 0.2px;
@@ -159,6 +160,10 @@ header{
 	margin-left: 30px;
 	margin-top: 20px;
 	padding: 10px;
+}
+.texteheader p a{
+	color: black;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 .menu{
 	height: 5em;
@@ -201,7 +206,6 @@ nav ul li a:hover{
 }
 
 .dropdown-content {
-	width: 100px;
 	text-align: center;
   display: none;
   background-color: #048ABF;
@@ -214,9 +218,8 @@ nav ul li a:hover{
 	font-size: 0.7em;
 	line-height: 0.9em;
 	width: 100px;
-	margin-top: 20px;
 	text-align: center;
-	padding: 5px 5px;
+	padding: 10px 5px;
 	height: auto;
 	display: block;
   color: #ddc798;
