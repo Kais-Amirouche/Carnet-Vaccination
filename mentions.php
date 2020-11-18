@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>Mentions légales</title>
+    <h1>Mentions Légales</h1>
   </head>
   <body>
     <h3>Editeur du Site :</h3>
-
 
       SARL ALLAN Numéro de SIRET : 75221735600019
 <br>
