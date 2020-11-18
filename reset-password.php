@@ -41,7 +41,7 @@ if(!empty($_GET['email']) && !empty($_GET['token'])) {
       }
   }
 }
-
+ 
 
 include('inc/header.php');?>
 

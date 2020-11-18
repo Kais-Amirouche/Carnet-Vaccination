@@ -46,7 +46,7 @@ if(!empty($_POST['submitvac'])) {
 include('inc/header.php'); ?>
 
 <h1>Ajouter un vaccin à votre carnet</h1>
-
+ 
 <form  action="addvaccin.php" method="post">
   <!-- date de la vaccination -->
   <label for="date">date de la vaccination:</label>
