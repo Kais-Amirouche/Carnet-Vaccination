@@ -21,9 +21,9 @@ include('inc/header.php');?>
 </div>
 <div class="connexion">
   <ul>
-    <h2>Vous n'êtes toujours pas connecté?</h2>
+    <h2>Vous n'êtes toujours pas inscris?</h2>
     <?php if(isLogged()) { ?>
-    <li><a href="connexion.php#action">Cliquez ici.</a></li>
+    <li><a href="inscription.php#action">Cliquez ici.</a></li>
     <?php } ?>
   </ul>
 </div>
