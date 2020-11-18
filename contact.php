@@ -15,10 +15,10 @@ if(!empty($_POST['submitted']))
   {
     if(!filter_var($email, FILTER_VALIDATE_EMAIL))
     {
-      $errors['email'] = 'Veuillez renseigner un e-mail valide';
+      $errors['email'] = 'Veuillez renseigner un e-mail valide.';
     }
   } else {
-    $errors['email'] = 'Veuillez renseigner un e-mail';
+    $errors['email'] = 'Veuillez renseigner un e-mail.';
   }
 
   //message

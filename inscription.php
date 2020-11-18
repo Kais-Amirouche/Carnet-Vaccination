@@ -16,9 +16,9 @@ if(!empty($_POST['submitinscription'])) {
   // validation nom (3, 50, unique)
   if(!empty($nom)) {
     if(mb_strlen($nom) < 3) {
-      $errors['nom'] = 'Min 3 caratères';
+      $errors['nom'] = 'Minimum 3 caratères.';
     } elseif(mb_strlen($nom) > 50) {
-      $errors['nom'] = 'Max 50 caratères';
+      $errors['nom'] = 'Maximum 50 caratères.';
     } else {
       $sql = "SELECT id FROM vac_users WHERE nom = :nom";
       $query = $pdo->prepare($sql);
@@ -27,13 +27,13 @@ if(!empty($_POST['submitinscription'])) {
       $verifnom = $query->fetch();
     }
   } else {
-    $errors['nom'] = 'Veuillez renseigner ce champ';
+    $errors['nom'] = 'Veuillez renseigner ce champ.';
   }
   if(!empty($prenom)) {
     if(mb_strlen($prenom) < 3) {
-      $errors['prenom'] = 'Min 3 caratères';
+      $errors['prenom'] = 'Minimum 3 caratères.';
     } elseif(mb_strlen($prenom) > 50) {
-      $errors['prenom'] = 'Max 50 caratères';
+      $errors['prenom'] = 'Maximum 50 caratères.';
     } else {
       $sql = "SELECT id FROM vac_users WHERE prenom = :prenom";
       $query = $pdo->prepare($sql);
@@ -42,12 +42,12 @@ if(!empty($_POST['submitinscription'])) {
       $verifprenom = $query->fetch();
     }
   } else {
-    $errors['prenom'] = 'Veuillez renseigner ce champ';
+    $errors['prenom'] = 'Veuillez renseigner ce champ.';
   }
   // validation email (email valide, unique)
   if(!empty($email)) {
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      $errors['email'] =  'Veuillez renseigner un email valide';
+      $errors['email'] =  'Veuillez renseigner un e-mail valide.';
     } else {
       $sql = "SELECT id FROM vac_users WHERE email = :email";
       $query = $pdo->prepare($sql);
@@ -55,21 +55,21 @@ if(!empty($_POST['submitinscription'])) {
       $query->execute();
       $verifEmail = $query->fetch();
       if(!empty($verifEmail)) {
-        $errors['email'] = 'Cet email existe déjà';
+        $errors['email'] = 'Cet e-mail est déjà utilisé.';
       }
     }
   } else {
-    $errors['email'] = 'Veuillez renseigner un email';
+    $errors['email'] = 'Veuillez renseigner un e-mail;';
   }
   // password (min 6 , identiques)
   if(!empty($password1) && !empty($password2)) {
     if($password1 != $password2) {
-      $errors['password2'] = 'Veuillez renseigner des mot de passe identiques';
+      $errors['password2'] = 'Veuillez renseigner des mots de passe identiques.';
     } elseif(mb_strlen($password1) < 6) {
       $errors['password'] = 'Min 6 caractères';
     }
   } else {
-    $errors['password'] = 'Veuillez renseigner vos mots de passe';
+    $errors['password'] = 'Veuillez renseigner vos mots de passe.';
   }
 
   // if no error
@@ -99,19 +99,19 @@ include('inc/header.php'); ?>
 <h1 id="action">Inscription</h1>
 <form method="POST" action="inscription.php" id="forminscription" novalidate>
     <!-- nom -->
-      <input type="text" name="nom" id="nom" class="form-control" value="<?php if(!empty($_POST['nom'])) { echo $_POST['nom']; } ?>" placeholder="nom" />
+      <input type="text" name="nom" id="nom" class="form-control" value="<?php if(!empty($_POST['nom'])) { echo $_POST['nom']; } ?>" placeholder="Nom" />
       <span class="error"><?php if(!empty($errors['nom'])) { echo $errors['nom']; } ?></span>
       <!-- nom -->
-        <input type="text" name="prenom" id="prenom" class="form-control" value="<?php if(!empty($_POST['prenom'])) { echo $_POST['prenom']; } ?>" placeholder="prenom" />
+        <input type="text" name="prenom" id="prenom" class="form-control" value="<?php if(!empty($_POST['prenom'])) { echo $_POST['prenom']; } ?>" placeholder="Prénom" />
         <span class="error"><?php if(!empty($errors['prenom'])) { echo $errors['prenom']; } ?></span>
     <!-- EMAIL -->
-      <input type="email" name="email" id="email" class="form-control" value="<?php if(!empty($_POST['email'])) { echo $_POST['email']; } ?>" placeholder="Email" />
+      <input type="email" name="email" id="email" class="form-control" value="<?php if(!empty($_POST['email'])) { echo $_POST['email']; } ?>" placeholder="E-mail" />
       <span class="error"><?php if(!empty($errors['email'])) { echo $errors['email']; } ?></span>
     <!-- PASSWORD1 -->
-      <input type="password" name="password1" id="password1" class="form-control" value="" placeholder="Mot De Passe"/>
+      <input type="password" name="password1" id="password1" class="form-control" value="" placeholder="Mot de passe"/>
       <span class="error"><?php if(!empty($errors['password'])) { echo $errors['password']; } ?></span>
     <!-- PASSWORD2 -->
-      <input type="password" name="password2" id="password2" class="form-control" value="" placeholder="Confirmer Le Mot De Passe"/>
+      <input type="password" name="password2" id="password2" class="form-control" value="" placeholder="Confirmer votre mot de passe"/>
       <span class="error"><?php if(!empty($errors['password2'])) { echo $errors['password2']; } ?></span>
     <input type="submit" name="submitinscription" value="Je m'inscris" />
 </form>

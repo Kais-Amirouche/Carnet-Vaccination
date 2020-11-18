@@ -44,13 +44,13 @@ if(!empty($_SESSION['user']['id'])) {
                 ));
              header('Location: monprofil.php');
           } else {
-             $errors['avatar'] = "Erreur durant l'importation de votre photo de profil";
+             $errors['avatar'] = "Erreur durant l'importation de votre photo de profil.";
           }
        } else {
-          $errors['avatar'] = "Votre photo de profil doit être au format jpg, jpeg, gif ou png";
+          $errors['avatar'] = "Votre photo de profil doit être au format jpg, jpeg, gif ou png.";
        }
     } else {
-       $errors['avatar'] = "Votre photo de profil ne doit pas dépasser 2Mo";
+       $errors['avatar'] = "Votre photo de profil ne doit pas dépasser 2Mo.";
     }
    }
 }

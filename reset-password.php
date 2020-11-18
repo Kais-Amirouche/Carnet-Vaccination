@@ -17,12 +17,12 @@ if(!empty($_GET['email']) && !empty($_GET['token'])) {
     $errors = ValidationText($errors,$token_user,'token',120,121);
     if(!empty($Newpassword) && !empty($password2)) {
       if($Newpassword != $password2) {
-        $errors['password2'] = 'Veuillez renseigner des mot de passe identiques';
+        $errors['password2'] = 'Veuillez renseigner des mot de passe identiques.';
       } elseif(mb_strlen($Newpassword) < 6) {
         $errors['Newpassword'] = 'Min 6 caractères';
       }
     } else {
-      $errors['Newpassword'] = 'Veuillez renseigner vos mots de passe';
+      $errors['Newpassword'] = 'Veuillez renseigner vos mots de passe.';
     }
       if(count($errors) == 0) {
         if ($token_user==$token) {
@@ -50,13 +50,13 @@ include('inc/header.php');?>
 <?php if ($switch2==true) { ?>
 <form action="" method="post" novalidate>
   <!-- token -->
-    <input type="text" id="token" name="token" value="<?php if(!empty($_POST['token'])) { echo $_POST['token']; } ?>" placeholder="collé le ici">
+    <input type="text" id="token" name="token" value="<?php if(!empty($_POST['token'])) { echo $_POST['token']; } ?>" placeholder="Collez-le ici">
     <span class="error"><?php if(!empty($errors['token'])) { echo $errors['token']; } ?></span>
   <!-- Newpassword -->
-    <input type="password" name="Newpassword" id="Newpassword" class="form-control" value="" placeholder="Nouveau Mot De Passe"/>
+    <input type="password" name="Newpassword" id="Newpassword" class="form-control" value="" placeholder="Nouveau mot de passe"/>
     <span class="error"><?php if(!empty($errors['Newpassword'])) { echo $errors['Newpassword']; } ?></span>
   <!-- PASSWORD2 -->
-    <input type="password" name="password2" id="password2" class="form-control" value="" placeholder="Confirmer Le Mot De Passe"/>
+    <input type="password" name="password2" id="password2" class="form-control" value="" placeholder="Confirmer votre mot de passe"/>
     <span class="error"><?php if(!empty($errors['password2'])) { echo $errors['password2']; } ?></span>
 
   <input type="submit" name="submittoken" value="Nouveau mot de passe" />
