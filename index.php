@@ -16,15 +16,11 @@ include('inc/header.php');?>
     <p>|la date de l’injection|</p>
     <p>|le numéro du lot|</p>
     <p>|la date du prochain vaccin à faire|</p>
+    <?php if(!isLogged()) { ?>
+    <h3>Vous n'êtes toujours pas inscrit?</h3>
+    <p><a href="inscription.php#action">Cliquez ici.</a></p>
+    <?php } ?>
   </div>
-</div>
-<div class="connexion">
-  <ul>
-    <h2>Vous n'êtes toujours pas connecté?</h2>
-
-    <li><a href="connexion.php#action">Cliquez ici.</a></li>
-
-  </ul>
 </div>
 <!-- <h1>Accueil</h1> -->
 
