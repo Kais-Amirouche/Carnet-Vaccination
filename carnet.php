@@ -7,21 +7,18 @@ include('inc/function.php');
 
 $id = $_SESSION['user']['id'];
 
-$sql = "SELECT * FROM user_vaccin";
-$query = $pdo->prepare($sql);
-$query->execute();
-$vaccin_user = $query->fetchall();
-debug($vaccin_user);
-foreach ($vaccin_user as $idvac) {
-  debug($idvac['vaccin_id']);
-}
+// affcihe le carnet pour pouvoir séléctioner l'id du vaccin
+$sql = "SELECT * FROM user_vaccin WHERE user_id = :id";
+$var = $pdo->prepare($sql);
+$var->bindValue(':id',$id,PDO::PARAM_INT);
+$var->execute();
+$vaccins_user = $var->fetchall();
+// debug($vaccins_user);
 
-$sql = "SELECT * FROM vac_vaccins WHERE id = :vaccin_id";
-$query = $pdo->prepare($sql);
-$query->bindValue(':vaccin_id',$idvac['vaccin_id'],PDO::PARAM_INT);
-$query->execute();
-$vaccins = $query->fetchall();
-debug($vaccins);
+
+
+
+
 include('inc/header.php'); ?>
   <div class="carnet">
 
@@ -30,16 +27,29 @@ include('inc/header.php'); ?>
     <table id="customers">
         <tr>
           <th>Mes Vaccins</th>
-          <th>status</th>
+          <th>Fait le</th>
           <th>Doses</th>
           <th>Rappel</th>
         </tr>
-        <tr>
-          <?php echo '<td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>'; ?>
-        </tr>
+          <?php foreach ($vaccins_user as $vaccin_user) {
+            $idvac = $vaccin_user['vaccin_id'];
+            // choisis l'id du vaccin pour ensuite afficher son nom
+            $sql = "SELECT * FROM vac_vaccins WHERE id = :idvac";
+            $var = $pdo->prepare($sql);
+            $var->bindValue(':idvac',$idvac,PDO::PARAM_INT);
+            $var->execute();
+            $vaccins = $var->fetchAll();
+            // debug($vaccins); ?>
+            <tr>
+                <?php foreach ($vaccins as $vaccin) { ?>
+                  <td><?php echo $vaccin['name']; ?></td>
+                  <td><?php echo formatageDate($vaccin_user['fait_at']); ?></td>
+                  <td><?php echo $vaccin_user['numero_lot']; ?></td>
+                  <td><?php echo $vaccin_user['statut']; ?></td>
+                <?php } ?>
+            </tr>
+          <?php  }?>
+
         <tr>
           <th><a href="addvaccin.php">Ajouter un vaccin</a></th>
         </tr>

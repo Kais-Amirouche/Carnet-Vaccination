@@ -61,7 +61,7 @@ include('inc/header-back.php'); ?>
                           <td><?php echo $vaccin['description']; ?></td>
                           <td><?php echo $vaccin['rappel']; ?></td>
                           <td><?php echo $vaccin['statuts']; ?></td>
-                          </tr>
+                      </tr>
                 <?php } ?>
                   </tbody>
               </table>
