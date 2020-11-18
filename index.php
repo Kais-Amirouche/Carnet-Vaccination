@@ -8,7 +8,7 @@ include('inc/header.php');?>
 <img class="backgroundheader" src="asset/img/vac-vac.jpeg" alt="image de fond">
 <div class="presentation">
   <h3>Mon carnet de vaccination électronique</h3>
-  <h4>  Pour être mieux vacciné, sans défaut ni excès.</h4>
+  <h4>  être vacciné, c'est être en bonne santé.</h4>
   <div class="texteheader">
     <p>|Le carnet de vaccination est un carnet dans lequel sont notées toutes les vaccinations d’une personne|</p>
     <p>|Le professionnel de santé qui vous vaccine écrit dans ce carnet|</p>
