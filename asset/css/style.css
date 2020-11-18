@@ -134,11 +134,7 @@ header{
 }
 
 .texteheader p{
-<<<<<<< HEAD
-	font-family: "Roboto", Helvetica, sans-serif;
-=======
 font-family: 'Roboto', sans-serif;
->>>>>>> 0e17275d1c4839680f5d8fd70f87032c6792e569
 	font-size: 15px;
 	letter-spacing: 2px;
 	word-spacing: 0.2px;
