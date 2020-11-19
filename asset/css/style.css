@@ -282,6 +282,23 @@ display: block;
 .dropdown:hover .dropdown-child {
 display: block;
 }
+.part-vaccin{
+	text-decoration: underline;
+	margin-left: 100px;
+	font-size: 200%;
+	margin-top: 30px;
+
+}
+.part-vaccin a{
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 26px;
+	letter-spacing: 4px;
+	word-spacing: 0.2px;
+	color: #E6677C;
+	font-weight: 700;
+	font-variant: small-caps;
+	transition: .7s;
+}
 form{
   display: flex;
   flex-direction: column;
