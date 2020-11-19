@@ -24,8 +24,8 @@ if(!empty($_GET['id']) && is_numeric($_GET['id']))
   $var->bindValue(':id',$id,PDO::PARAM_INT);
   $var->execute();
   $vaccin = $var->fetch();
-  debug($vaccin);
-  debug($_POST);
+  // debug($vaccin);
+  // debug($_POST);
 
   if(!empty($vaccin))
   {
@@ -41,7 +41,7 @@ if(!empty($_GET['id']) && is_numeric($_GET['id']))
       $errors = validationText($errors,$description,'description',20,5000);
       $errors = validationText($errors,$age,'age',2,20);
       $errors = validationText($errors,$rappel,'rappel',2,5000);
-      echo 'bonjour';
+
       if(count($errors) == 0)
       {
         $sql = "UPDATE vac_vaccins SET name = :name, description = :description, age = :age, rappel = :rappel, statuts = :statuts WHERE id = :id";
@@ -55,7 +55,6 @@ if(!empty($_GET['id']) && is_numeric($_GET['id']))
         $var->execute();
 
         // header('Location: index.php');
-        echo 'cc';
       }
     }
   }
@@ -76,7 +75,7 @@ include('inc/header-back.php'); ?>
             <br>
 
             <label for="name">Description: </label>
-            <input type="text" id="description" name="description" value="<?php if(!empty($_POST['description'])) {echo $_POST['description'];} else{echo $vaccin['description'];} ?>">
+            <textarea name="description" id="description"><?php if(!empty($_POST['description'])) {echo $_POST['description'];} else{echo $vaccin['description'];} ?></textarea>
             <span class="errorform"><?php if(!empty($errors['description'])) {echo $errors['description'];} ?></span>
             <br>
 
@@ -88,13 +87,6 @@ include('inc/header-back.php'); ?>
             <label for="name">Rappel: </label>
             <input type="text" id="rappel" name="rappel" value="<?php if(!empty($_POST['rappel'])) {echo $_POST['rappel'];} else{echo $vaccin['rappel'];}?>">
             <span class="errorform"><?php if(!empty($errors['rappel'])) {echo $errors['rappel'];} ?></span>
-            <br>
-
-            <input type="radio" name="statuts" value="obligatoire">
-            <label for="statuts">Obligatoire</label>
-
-            <input type="radio" name="statuts" value="facultatif">
-            <label for="statuts">Facultatif</label>
             <br>
 
             <input type="submit" name="submitted" value="Modifier">
