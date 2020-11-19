@@ -3,6 +3,10 @@ session_start();
 include('inc/pdo.php');
 include('inc/function.php');
 
+if(!isLogged()){
+  header('Location: connexion.php');
+}
+
 $title = 'Mon Carnet';
 
 $id = $_SESSION['user']['id'];

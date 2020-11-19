@@ -4,6 +4,11 @@ session_start();
 include('inc/pdo.php');
 include('inc/function.php');
 
+if(!isLogged()){
+  header('Location: connexion.php');
+}
+
+
 $title = 'Mes Questions';
 
 $id = $_SESSION['user']['id'];

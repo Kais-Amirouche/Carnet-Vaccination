@@ -2,6 +2,14 @@
 session_start();
 include('inc/pdo.php');
 include('inc/function.php');
+
+if(!isLogged()){
+  header('Location: connexion.php');
+}
+
+
+$title = 'Nouveau mmot de passe';
+
 $errors = array();
 // debug($_SESSION);
 $id = $_SESSION['user']['id'];
@@ -41,7 +49,7 @@ if(!empty($_GET['email']) && !empty($_GET['token'])) {
       }
   }
 }
- 
+
 
 include('inc/header.php');?>
 
