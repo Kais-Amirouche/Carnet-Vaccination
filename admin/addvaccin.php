@@ -13,7 +13,7 @@ if(isLogged()){
 }
 
 $title = 'Ajouter un vaccin';
-
+// debug($_POST);
 $errors = array();
 if(!empty($_POST['submitted']))
 {
@@ -56,7 +56,7 @@ include('inc/header-back.php'); ?>
             <input type="text" id="name" name="name" value="<?php if(!empty($_POST['name'])) {echo $_POST['name'];} ?>" placeholder="Nom du virus">
             <span class="errorform"><?php if(!empty($errors['name'])) {echo $errors['name'];} ?></span>
 
-            <input type="text" id="description" name="description" value="<?php if(!empty($_POST['description'])) {echo $_POST['description'];} ?>" placeholder="Description du virus">
+            <textarea name="description" id="description" placeholder="Description"><?php if(!empty($_POST['description'])) {echo $_POST['description'];} ?></textarea>
             <span class="errorform"><?php if(!empty($errors['description'])) {echo $errors['description'];} ?></span>
 
             <input type="text" id="age" name="age" value="<?php if(!empty($_POST['age'])) {echo $_POST['age'];} ?>" placeholder="Age pour faire le vaccin">
@@ -65,10 +65,11 @@ include('inc/header-back.php'); ?>
             <input type="text" id="rappel" name="rappel" value="<?php if(!empty($_POST['rappel'])) {echo $_POST['rappel'];} ?>" placeholder="Les rappels">
             <span class="errorform"><?php if(!empty($errors['rappel'])) {echo $errors['rappel'];} ?></span>
 
-            <input type="radio" name="statuts" value="obligatoire">
+
+            <input type="radio" id="obligatoire" name="statuts" value="obligatoire">
             <label for="statuts">Obligatoire</label>
 
-            <input type="radio" name="statuts" value="facultatif">
+            <input type="radio" id="facultatif" name="statuts" value="facultatif">
             <label for="statuts">Facultatif</label>
 
             <input type="submit" name="submitted" value="Ajouter">
