@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="asset/css/style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-  <title>vaccitek</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <title>Vaccitek | <?php echo $title; ?></title>
 </head>
 <body>
   <header>
@@ -37,7 +37,7 @@
                 <li class="dropdown">
                   <a href="javascript:void(0)" class="dropbtn">Informations</a>
                   <div class="dropdown-content">
-                    <a href="#">Généralisation <br>sur les vaccins</a>
+                    <a href="general-vac.php">Généralisation <br>sur les vaccins</a>
                     <a href="allvaccin.php">Les maladies <br>et leurs vaccins</a>
                     <a href="mentions.php">Les mentions<br>légales</a>
                   </div>
