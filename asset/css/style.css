@@ -565,13 +565,17 @@ font-size: 1.2em;
 margin-top: 5px;
 }
 /* general-vac */
+.gen-vac{
+	background: #E7E5D4;
+}
 .gen-vac h4{
 	text-decoration: underline;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
   padding: 7px 0px;
 }
 .gen-vac p{
-	margin-top: 52x;
+padding-top:5px;
+font-size: 1em;
 }
 /* footer */
 .footer-world {
