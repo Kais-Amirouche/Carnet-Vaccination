@@ -44,8 +44,10 @@ include('inc/header.php'); ?>
 
 <section>
 
-
-  <a class="ask1" href="mesquestions.php?email=<?php echo $_SESSION['user']['email'];?>">Mes questions</a>
+  <?php if(isLogged()){ ?>
+  <a class="ask1" href="mesquestions.php?id=<?php echo $_SESSION['user']['id'];?>">Mes questions</a>
+  <?php } ?>
+  
   <?php if($succes == true) {?>
 
     <p class="succes">Votre message a bien été envoyé !</p>

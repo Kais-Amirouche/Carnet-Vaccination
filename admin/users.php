@@ -75,7 +75,7 @@ include('inc/header-back.php'); ?>
                                                 <a href="upadmin.php?id=<?php echo $user['id']; ?>">[passer admin]</a>
                                               <?php } ?>
                                             </td>
-                                            <td><?php echo $user['created_at']; ?></td>
+                                            <td><?php echo formatageDate($user['created_at']); ?></td>
                                             <td>[<a href="carnetadmin.php?id=<?php echo $user['id']; ?>">voir son carnet</a>]</td>
                                         </tr>
                                   <?php } ?>
