@@ -20,7 +20,7 @@
           <div class="menu">
             <ul>
                 <?php if(isLogged()) { ?>
-                <li><a href="monprofil.php#action"><img class="imgprofil" src="membres/avatars/<?php echo $_SESSION['user']['avatar']; ?>" alt="logo profil"></a></li>
+                <li class="profil"><a href="monprofil.php#action"><img class="imgprofil" src="membres/avatars/<?php echo $_SESSION['user']['avatar']; ?>" alt="logo profil"></a></li>
                 <?php } ?>
                 <li><a href="index.php">Accueil</a></li>
                <?php if(isLogged()) { ?>

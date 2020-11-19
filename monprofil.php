@@ -72,7 +72,7 @@ include('inc/header.php');?>
   <input type="text" id="email"name="newmail" placeholder="Email" value="<?php echo $user['email']; ?>" /><br /><br />
   <!-- Newpassword -->
   <label for="tok" class="copier">copier ceci pour modifié votre mot de passe:</label>
-  <textarea id="tok" class="tokencopié" name="tokencopié" rows="8" cols="80"> <?php echo $user['token'] ?></textarea>
+  <textarea id="tok" class="tokencopié" name="tokencopié" rows="8" cols="80"><?php echo $user['token'] ?></textarea>
   <a class="redirect" href="reset-password.php?email=<?php echo $email ?>&token=<?php echo $token ?>">changez de mot de passe</a><br /><br />
   <!-- photo de profil -->
   <label for="avatar" class="label-file"><p>changez votre avatar</p><img class="avatarimg" src="asset/img/avatar.png" alt=""></label>
