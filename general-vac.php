@@ -1,6 +1,7 @@
 <?php
 include('inc/pdo.php');
 include('inc/function.php');
+$title = 'info géneral';
 include('inc/header.php'); ?>
 <div class="gen-vac">
   <h4>1. La variole et la vaccine (1796)</h4>
@@ -28,4 +29,4 @@ include('inc/header.php'); ?>
 </div>
 
 
-<?php include('inc/footer.php');  
+<?php include('inc/footer.php');

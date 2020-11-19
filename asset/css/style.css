@@ -573,9 +573,18 @@ margin-top: 5px;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
   padding: 7px 0px;
 }
+.gen-vac h4{
+	margin-bottom: 30px;
+}
 .gen-vac p{
 padding-top:5px;
 font-size: 1em;
+margin-bottom: 30px;
+}
+.gen-vac p:last-child{
+padding-top:5px;
+font-size: 1em;
+margin-bottom: 0px;
 }
 /* footer */
 .footer-world {
