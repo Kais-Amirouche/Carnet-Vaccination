@@ -37,7 +37,7 @@
                 <li class="dropdown">
                   <a href="javascript:void(0)" class="dropbtn">Informations</a>
                   <div class="dropdown-content">
-                    <a href="#">Généralisation <br>sur les vaccins</a>
+                    <a href="general-vac.php">Généralisation <br>sur les vaccins</a>
                     <a href="allvaccin.php">Les maladies <br>et leurs vaccins</a>
                     <a href="mentions.php">Les mentions<br>légales</a>
                   </div>

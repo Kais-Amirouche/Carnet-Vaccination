@@ -53,6 +53,9 @@ include('inc/header.php'); ?>
 
         <tr>
           <th><a href="addvaccin.php">Ajouter un vaccin</a></th>
+          <th></th>
+          <th></th>
+          <th></th>
         </tr>
     </table>
 

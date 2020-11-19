@@ -170,6 +170,7 @@ nav{
 	justify-content: space-between;
 }
 nav ul{
+	margin-top: 20px;
 	display: flex;
 	text-align: center;
 }
@@ -181,12 +182,11 @@ nav ul li {
 nav ul li a {
 	padding: 15px;
 	text-decoration: none;
-	color: #ddc798;
+	color: #FFF;
 }
 
 nav ul li a:hover{
-	text-decoration: none;
-	color: #726f69;
+	color: #000;
 }
 
 .dropdown-content {
@@ -201,17 +201,17 @@ nav ul li a:hover{
 .dropdown-content a {
 	font-size: 0.7em;
 	line-height: 0.9em;
-	width: 100px;
+	width: 110px;
 	text-align: center;
 	padding: 10px 5px;
 	height: auto;
 	display: block;
-  color: #ddc798;
+  color: #FFF;
   text-decoration: none;
 }
 
 .dropdown-content a:hover {
-	color: #726f69;
+	color: #000;
 }
 
 .dropdown:hover .dropdown-content {
@@ -391,7 +391,12 @@ section {
 	text-shadow: 10px 2px 4px rgba(0, 0, 0, 1);
 	color: #333;
 }
-
+.ask-update h3{
+	font-size: 0.8	em;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
 .redirect{
 	text-align: center;
 	border-radius: 10px;
@@ -410,6 +415,7 @@ section {
 	color: #000;
   border: 5px solid #000;
 }
+/* mot de passe */
 .mdp{
 	text-align: center;
 	margin-top: 10px;
@@ -462,7 +468,7 @@ section {
 	width: 1000px;
 	text-align:center;
 }
-
+/* profil */
 .avatarimg{
 	border-radius: 50%;
 }
@@ -557,6 +563,15 @@ h3{
 padding: 5px 0px;
 font-size: 1.2em;
 margin-top: 5px;
+}
+/* general-vac */
+.gen-vac h4{
+	text-decoration: underline;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+  padding: 7px 0px;
+}
+.gen-vac p{
+	margin-top: 52x;
 }
 /* footer */
 .footer-world {
