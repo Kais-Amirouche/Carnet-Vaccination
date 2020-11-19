@@ -38,7 +38,7 @@ include('inc/header-back.php'); ?>
                           <th>ID</th>
                           <th>Utilisateur</th>
                           <th>Vaccin</th>
-                          <th>Fait à</th>
+                          <th>Fait le</th>
                           <th>Rappel</th>
                           <th>Dose</th>
                       </tr>
@@ -49,7 +49,7 @@ include('inc/header-back.php'); ?>
                         <th>ID</th>
                         <th>Utilisateur</th>
                         <th>Vaccin</th>
-                        <th>Fait à</th>
+                        <th>Fait le</th>
                         <th>Rappel</th>
                         <th>Dose</th>
                       </tr>
@@ -60,8 +60,8 @@ include('inc/header-back.php'); ?>
                           <td><?php echo $carnet['id']; ?></td>
                           <td><?php echo $carnet['user_id']; ?></td>
                           <td><?php echo $carnet['vaccin_id']; ?></td>
-                          <td><?php echo $carnet['fait_at']; ?></td>
-                          <td><?php echo $carnet['statut']; ?></td>
+                          <td><?php echo formatageDate2($carnet['fait_at']); ?></td>
+                          <td><?php echo $carnet['rappel']; ?></td>
                           <td><?php echo $carnet['numero_lot']; ?></td>
                       </tr>
                 <?php } ?>

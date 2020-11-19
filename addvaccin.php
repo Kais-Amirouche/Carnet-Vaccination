@@ -21,7 +21,7 @@ if(!empty($_POST['submitvac'])) {
   $date       = cleanXss($_POST['date_vaccin']);
   $vaccin_id  = cleanXss($_POST['vaccins']);
   $numero_lot = cleanXss($_POST['numero_lot']);
-  // $statut = cleanXss($_POST['rappel']);
+  $rappel = cleanXss($_POST['rappel']);
 
 
   $errors = validationText($errors,$numero_lot,'numero_lot',4,20);
@@ -34,15 +34,16 @@ if(!empty($_POST['submitvac'])) {
       $errors['vaccins'] = 'Veuillez séléctionner un vaccin';
   }
       if (count($errors)==0) {
-        $sql = "INSERT INTO user_vaccin (user_id, vaccin_id, fait_at, numero_lot)
-                VALUES (:user_id, :vaccin_id, '$date', :dose)";
+        $sql = "INSERT INTO user_vaccin (user_id, vaccin_id, fait_at, numero_lot, rappel)
+                VALUES (:user_id, :vaccin_id, '$date', :dose, :rappel)";
         $query = $pdo->prepare($sql);
         $query->bindValue(':user_id',$user_id,PDO::PARAM_INT);
         $query->bindValue(':vaccin_id',$vaccin_id,PDO::PARAM_INT);
-        // $query->bindValue(':fait_at',$date,PDO::PARAM_INT);
         $query->bindValue(':dose',$numero_lot,PDO::PARAM_STR);
-        // $query->bindValue(':statut',$statut,PDO::PARAM_STR);
+        $query->bindValue(':rappel',$rappel,PDO::PARAM_STR);
         $query->execute();
+
+        header('Location: carnet.php');
       }
 
 
@@ -80,8 +81,10 @@ include('inc/header.php'); ?>
   <input id="numero_lot" type="text" name="numero_lot" value="<?php if(!empty($_POST['numero_lot'])) {echo $_POST['numero_lot'];} ?>" placeholder="Numéro de lot:">
   <span class="error"><?php if(!empty($errors['numero_lot'])){echo $errors['numero_lot'];} ?></span>
   <!-- rappel ? -->
-  <!-- <label for="rappel">s'agit il d'un rappel:</label>
-  <input id="rappel" type="checkbox" name="rappel" value="rappel"> -->
+
+  <label for="rappel">s'agit il d'un rappel:</label>
+  <input id="rappel" type="checkbox" name="rappel" value="rappel">
+
   <!-- submit -->
   <input type="submit" name="submitvac" value="Insérer mon vaccin">
 </form>
