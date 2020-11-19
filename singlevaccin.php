@@ -18,11 +18,12 @@ if(!empty($_GET['id']) && is_numeric($_GET['id']))
   // debug($vaccin);
   if (empty($vaccin))
   {
-    echo '404';
+    header('Location: allvaccin.php');
   }
 } else {
-  echo '404';
+  header('Location: allvaccin.php');
 }
+
 include('inc/header.php'); ?>
 
 
@@ -36,4 +37,3 @@ include('inc/header.php'); ?>
 
 
 <?php include('inc/footer.php');
- 

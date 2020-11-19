@@ -60,6 +60,15 @@ table {
   margin: 0 auto;
 }
 /* perso */
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+	position: relative;
+}
 ::-WebKit-scrollbar{
 width: 7px;
 height: 7px;
@@ -587,11 +596,14 @@ font-size: 1em;
 margin-bottom: 0px;
 }
 /* footer */
+
 .footer-world {
   background-color: #024873;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
   width: 100%;
+	position: absolute;
+	top:100%;
   text-align: left;
   font: normal 16px sans-serif;
   padding: 45px 50px;

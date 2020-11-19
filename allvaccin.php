@@ -10,7 +10,7 @@ $var->execute();
 $vaccins = $var->fetchAll();
 // debug($vaccins);
 include('inc/header.php');?>
-<h1>infos sur les divers maladies</h1>
+<h1>Infos sur les divers maladies</h1>
 <?php foreach ($vaccins as $vaccin) { ?>
   <div class="part-vaccin">
     <a href="singlevaccin.php?id=<?php echo $vaccin['id']; ?>"><?php echo $vaccin['name']; ?></a>
