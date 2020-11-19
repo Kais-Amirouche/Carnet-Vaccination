@@ -3,14 +3,8 @@ session_start();
 include('inc/pdo.php');
 include('inc/function.php');
 
-if(isLogged()){
-  if (($_SESSION['user']['role']=='admin') || $_SESSION['user']['role']=='abonne'){
-    header('Location: connexion.php');
-    die();
-  }
-}else {
+if(!isLogged()){
   header('Location: connexion.php');
-  die();
 }
 
 $title = 'Ajout de vaccin';

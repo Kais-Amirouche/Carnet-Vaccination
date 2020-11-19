@@ -146,9 +146,9 @@ include('inc/header-back.php'); ?>
                                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                     <h4 class="small font-weight-bold">Affichage des tableaux<span
-                                            class="float-right">98%</span></h4>
+                                            class="float-right">96%</span></h4>
                                     <div class="progress mb-4">
-                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 98%"
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 96%"
                                             aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                     <h4 class="small font-weight-bold">Inscription/Connexion/Deconnexion<span
