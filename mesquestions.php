@@ -6,18 +6,18 @@ include('inc/function.php');
 
 $title = 'Mes Questions';
 
-$email = $_SESSION['user']['email'];
+$id = $_SESSION['user']['id'];
 
-$sql = "SELECT * FROM vac_contact WHERE email = :email AND statuts = 'attente'";
+$sql = "SELECT * FROM vac_contact WHERE id = :id AND statuts = 'attente'";
 $var = $pdo->prepare($sql);
-$var->bindValue(':email',$email,PDO::PARAM_STR);
+$var->bindValue(':id',$id,PDO::PARAM_STR);
 $var->execute();
 $asksAttente = $var->fetchAll();
 // debug($asksAttente);
 
-$sql = "SELECT * FROM vac_contact WHERE email = :email AND statuts = 'ok'";
+$sql = "SELECT * FROM vac_contact WHERE id = :id AND statuts = 'ok'";
 $var = $pdo->prepare($sql);
-$var->bindValue(':email',$email,PDO::PARAM_STR);
+$var->bindValue(':id',$id,PDO::PARAM_STR);
 $var->execute();
 $asksOk = $var->fetchAll();
 // debug($asksOk);

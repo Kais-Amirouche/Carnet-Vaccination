@@ -25,7 +25,7 @@ include('inc/header-back.php'); ?>
                     <!-- Content Row -->
                     <div class="row">
 
-                        <!-- Earnings (Monthly) Card Example -->
+                        <!-- Connectés -->
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-primary shadow h-100 py-2">
                                 <div class="card-body">
@@ -47,7 +47,7 @@ include('inc/header-back.php'); ?>
                             </div>
                         </div>
 
-                        <!-- Earnings (Monthly) Card Example -->
+                        <!-- Utilisateurs -->
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-success shadow h-100 py-2">
                                 <div class="card-body">
@@ -74,7 +74,7 @@ include('inc/header-back.php'); ?>
                             </div>
                         </div>
 
-                        <!-- Earnings (Monthly) Card Example -->
+                        <!-- Vaccins -->
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-info shadow h-100 py-2">
                                 <div class="card-body">
@@ -104,7 +104,7 @@ include('inc/header-back.php'); ?>
                             </div>
                         </div>
 
-                        <!-- Pending Requests Card Example -->
+                        <!-- Questions -->
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-warning shadow h-100 py-2">
                                 <div class="card-body">
@@ -132,154 +132,45 @@ include('inc/header-back.php'); ?>
                         </div>
                     </div>
 
-                    <!-- Content Row -->
 
-                    <!-- <div class="row">
-
-                        Area Chart
-                        <div class="col-xl-8 col-lg-7">
-                            <div class="card shadow mb-4">
-                                Card Header - Dropdown
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Aperçu des Gains</h6>
-                                    <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated-fade-in"
-                                            aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Menu Burger:</div>
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Autres action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Autre chose ici</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                Card Body
-                                <div class="card-body">
-                                    <div class="chart-area">
-                                        <canvas id="myAreaChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        Pie Chart
-                        <div class="col-xl-4 col-lg-5">
-                            <div class="card shadow mb-4">
-                                Card Header - Dropdown
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Sources Revenues</h6>
-                                    <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated-fade-in"
-                                            aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Menu Burger:</div>
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Autres action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Autre chose ici</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                Card Body
-                                <div class="card-body">
-                                    <div class="chart-pie pt-4 pb-2">
-                                        <canvas id="myPieChart"></canvas>
-                                    </div>
-                                    <div class="mt-4 text-center small">
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-primary"></i> Numéro 1
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-success"></i> Numéro 1
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-info"></i> Numéro 1
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-
-                    <!-- Content Row -->
-                    <div class="row">
-
-                        <!-- Content Column -->
-                        <div class="col-lg-6 mb-4">
-
-                            <!-- Project Card Example -->
+                            <!-- Avancement -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary">Projets</h6>
                                 </div>
                                 <div class="card-body">
-                                    <h4 class="small font-weight-bold">Migration de Serveur <span
-                                            class="float-right">20%</span></h4>
+                                    <h4 class="small font-weight-bold">La base de données<span
+                                            class="float-right">100%</span></h4>
                                     <div class="progress mb-4">
-                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 20%"
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 100%"
                                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
-                                    <h4 class="small font-weight-bold">Suivi des ventes <span
-                                            class="float-right">40%</span></h4>
+                                    <h4 class="small font-weight-bold">Affichage des tableaux<span
+                                            class="float-right">98%</span></h4>
                                     <div class="progress mb-4">
-                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 40%"
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 98%"
                                             aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
-                                    <h4 class="small font-weight-bold">BDD Consommateur <span
-                                            class="float-right">60%</span></h4>
+                                    <h4 class="small font-weight-bold">Inscription/Connexion/Deconnexion<span
+                                            class="float-right">100%</span></h4>
                                     <div class="progress mb-4">
-                                        <div class="progress-bar" role="progressbar" style="width: 60%"
+                                        <div class="progress-bar" role="progressbar" style="width: 100%"
                                             aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
-                                    <h4 class="small font-weight-bold">Détails de paiements <span
-                                            class="float-right">80%</span></h4>
+                                    <h4 class="small font-weight-bold">Questions/Réponses<span
+                                            class="float-right">100%</span></h4>
                                     <div class="progress mb-4">
-                                        <div class="progress-bar bg-info" role="progressbar" style="width: 80%"
+                                        <div class="progress-bar bg-info" role="progressbar" style="width: 100%"
                                             aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
-                                    <h4 class="small font-weight-bold">Config du Compte <span
-                                            class="float-right">Complete!</span></h4>
+                                    <h4 class="small font-weight-bold">Profil utilisateur<span
+                                            class="float-right">100%</span></h4>
                                     <div class="progress">
                                         <div class="progress-bar bg-success" role="progressbar" style="width: 100%"
                                             aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
                             </div>
-
-
-                        </div>
-
-                        <div class="col-lg-6 mb-4">
-
-                            <!-- Illustrations -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Images</h6>
-                                </div>
-                                <div class="card-body">
-                                    <div class="text-center">
-                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
-                                            src="img/undraw_posting_photo.svg" alt="">
-                                    </div>
-                                    <p>Ajoutez des images <a
-                                            target="_blank" rel="nofollow" href="https://undraw.co/">unDraw</a>, a
-                                        constantly updated collection of beautiful svg images that you can use
-                                        completely free and without attribution!</p>
-                                    <a target="_blank" rel="nofollow" href="https://undraw.co/">Parcourir les images sur unDraw &rarr;</a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
 
 
 <?php include('inc/footer-back.php');
