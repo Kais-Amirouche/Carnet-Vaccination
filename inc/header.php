@@ -7,11 +7,7 @@
   <link rel="stylesheet" href="asset/css/style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-<<<<<<< HEAD
-  <title>vaccitek</title>
-=======
   <title>Vaccitek | <?php echo $title; ?></title>
->>>>>>> dd2559685c5e7fb23ecca851783fddf40128f8b7
 </head>
 <body>
   <header>
@@ -41,7 +37,7 @@
                 <li class="dropdown">
                   <a href="javascript:void(0)" class="dropbtn">Informations</a>
                   <div class="dropdown-content">
-                    <a href="#">Généralisation <br>sur les vaccins</a>
+                    <a href="general-vac.php">Généralisation <br>sur les vaccins</a>
                     <a href="allvaccin.php">Les maladies <br>et leurs vaccins</a>
                     <a href="mentions.php">Les mentions<br>légales</a>
                   </div>

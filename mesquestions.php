@@ -44,10 +44,10 @@ include('inc/header.php'); ?>
   <!-- afficher les questions ok de l'utilisateur
   si l'email correspondont à l'email de lutilisateur, alors on affiche ses questions 'ok' / sinon on affiche rien -->
     <?php foreach ($asksOk as $askOk) { ?>
-      <p>Votre question:</p>
+      <h3>Votre question:</h3>
       <p><?php echo $askOk['message']; ?></p>
       <p><?php echo formatageDate($askOk['created_at']); ?></p>
-      <p>La réponse:</p>
+      <h3>La réponse:</h3>
       <p><?php echo $askOk['answer']; ?></p>
       <p><?php echo formatageDate($askOk['updated_at']); ?></p>
     <?php } ?>
