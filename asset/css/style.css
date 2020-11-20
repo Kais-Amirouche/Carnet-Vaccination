@@ -590,7 +590,6 @@ label:hover{
 	text-shadow: 4px 4px 7px rgba(0, 0, 0, 1);
 }
 
-<<<<<<< HEAD
 section {
   width: 100%;
   display: inline-block;
@@ -625,10 +624,12 @@ section {
   color: white;
 }
 /* mention legale  */
+
 h1{
 	font-size: 2em;
 	text-align: center;
 	margin-top: 40px;
+	margin-bottom: 30px;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	font-size: 26px;
 	letter-spacing: 4px;
