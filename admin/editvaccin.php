@@ -54,7 +54,7 @@ if(!empty($_GET['id']) && is_numeric($_GET['id']))
         $var->bindValue(':statuts',$statuts,PDO::PARAM_STR);
         $var->execute();
 
-        // header('Location: index.php');
+        header('Location: vaccins.php');
       }
     }
   }
@@ -87,6 +87,13 @@ include('inc/header-back.php'); ?>
             <label for="name">Rappel: </label>
             <input type="text" id="rappel" name="rappel" value="<?php if(!empty($_POST['rappel'])) {echo $_POST['rappel'];} else{echo $vaccin['rappel'];}?>">
             <span class="errorform"><?php if(!empty($errors['rappel'])) {echo $errors['rappel'];} ?></span>
+            <br>
+
+            <input type="radio" id="obligatoire" name="statuts" value="obligatoire">
+            <label for="statuts">Obligatoire</label>
+
+            <input type="radio" id="facultatif" name="statuts" value="facultatif">
+            <label for="statuts">Facultatif</label>
             <br>
 
             <input type="submit" name="submitted" value="Modifier">
