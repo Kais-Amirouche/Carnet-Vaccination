@@ -3,9 +3,6 @@ session_start();
 include('inc/pdo.php');
 include('inc/function.php');
 
-if(!isLogged()){
-  header('Location: connexion.php');
-}
 
 
 $title = 'Nouveau mmot de passe';
