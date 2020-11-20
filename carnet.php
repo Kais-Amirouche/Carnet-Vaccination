@@ -33,7 +33,7 @@ include('inc/header.php'); ?>
         <tr>
           <th>Mes Vaccins</th>
           <th>Fait le</th>
-          <th>Doses</th>
+          <th>Numéro de lot</th>
           <th>Rappel</th>
         </tr>
           <?php foreach ($vaccins_user as $vaccin_user) {
