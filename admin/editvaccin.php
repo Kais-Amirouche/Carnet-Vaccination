@@ -39,7 +39,7 @@ if(!empty($_GET['id']) && is_numeric($_GET['id']))
 
       $errors = validationText($errors,$name,'name',2,150);
       $errors = validationText($errors,$description,'description',20,5000);
-      $errors = validationText($errors,$age,'age',2,20);
+      $errors = validationText($errors,$age,'age',2,80);
       $errors = validationText($errors,$rappel,'rappel',2,5000);
 
       if(count($errors) == 0)
