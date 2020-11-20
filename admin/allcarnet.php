@@ -38,7 +38,7 @@ include('inc/header-back.php'); ?>
                           <th>Vaccin</th>
                           <th>Fait le</th>
                           <th>Rappel</th>
-                          <th>Dose</th>
+                          <th>Numéro de Lot</th>
                       </tr>
 
                   </thead>
@@ -49,7 +49,7 @@ include('inc/header-back.php'); ?>
                         <th>Vaccin</th>
                         <th>Fait le</th>
                         <th>Rappel</th>
-                        <th>Dose</th>
+                        <th>Numéro de Lot</th>
                       </tr>
                   </tfoot>
                   <tbody>

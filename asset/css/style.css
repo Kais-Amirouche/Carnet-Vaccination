@@ -409,7 +409,7 @@ form input[type="submit"]:hover{
 section {
   width: 100%;
   display: inline-block;
-  height: 60vh;
+  height: 100vh;
   text-align: center;
   font-size: 22px;
   font-weight: 700;
@@ -422,7 +422,11 @@ section {
   color: #fff;
 	text-transform: uppercase;
 	padding: 10px;
+	margin-bottom: 40px;
 	border-radius: 5px;
+}
+.succes{
+	margin-top: 30px;
 }
 .ask1:hover{
 	background-color: #FFF;
@@ -599,7 +603,6 @@ label:hover{
   border: 1px solid #ddd;
   padding: 8px;
 }
-=======
 
 #customers tr:nth-child(even){background-color: #f2f2f2;}
 
