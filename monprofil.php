@@ -28,7 +28,7 @@ if(!empty($_SESSION['user']['id'])) {
       $newmail = cleanXss($_POST['newmail']);
       $insertmail = $pdo->prepare("UPDATE vac_users SET email = ? WHERE id = ?");
       $insertmail->execute(array($newmail, $user['id']));
-      $valid= '<p style="color:green;">ce champ a bien été modifié</p>';
+      $valide= '<p style="color:green;">ce champ a bien été modifié</p>';
    }
 
    if(isset($_FILES['avatar']) AND !empty($_FILES['avatar']['name'])) {
@@ -68,7 +68,7 @@ include('inc/header.php');?>
   <label for="prenom">prenom :<?php if(!empty($valid)){ echo $valid; } ?></label>
   <input type="text" id="prenom" name="prenom" id="prenom" class="form-control" value="<?php if(!empty($_POST['prenom'])) { echo $_POST['prenom']; }else {echo $user['prenom'];} ?>" placeholder="prenom" />
   <span class="error"><?php if(!empty($errors['prenom'])) { echo $errors['prenom']; } ?></span>
-  <label for="email"for>Email :<?php if(!empty($valid)){ echo $valid; } ?></label>
+  <label for="email"for>Email :<?php if(!empty($valide)){ echo $valide; } ?></label>
   <input type="text" id="email"name="newmail" placeholder="Email" value="<?php echo $user['email']; ?>" /><br /><br />
   <!-- Newpassword -->
   <label for="tok" class="copier">copier ceci pour modifié votre mot de passe:</label>
