@@ -47,7 +47,7 @@ include('inc/header.php'); ?>
   <?php if(isLogged()){ ?>
   <a class="ask1" href="mesquestions.php?id=<?php echo $_SESSION['user']['id'];?>">Mes questions</a>
   <?php } ?>
-  
+
   <?php if($succes == true) {?>
 
     <p class="succes">Votre message a bien été envoyé !</p>
@@ -75,7 +75,7 @@ include('inc/header.php'); ?>
   <?php } ?>
 
 
-
+</section>
 
 
 
