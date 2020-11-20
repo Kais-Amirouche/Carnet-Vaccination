@@ -36,14 +36,14 @@ include('inc/header.php'); ?>
    <!-- afficher les questions en attente de l'utilisateur
    si l'email correspondont à l'email de lutilisateur, alors on affiche ses questions 'attente' / sinon on affiche rien -->
     <?php foreach ($asksAttente as $askAttente) { ?>
-      <p>Votre question:</p>
+      <h3>Votre question:</h3>
       <p><?php echo $askAttente['message']; ?></p>
       <p><?php echo formatageDate($askAttente['created_at']); ?></p>
     <?php } ?>
     </div>
 </div>
 
-<div class="ask-update">
+<div class="ask-attente">
   <h2>A jour:</h2>
     <div class="content-ask">
   <!-- afficher les questions ok de l'utilisateur
